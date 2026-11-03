@@ -15,11 +15,10 @@
 <div id="header"></div>
 
 <section class="page-banner">
-  <div class="bg"><img id="catBanner" src="" alt=""></div>
+  <div class="bg"><img id="catBanner" src="" alt="" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
   <div class="container">
     <div class="content">
       <p class="breadcrumb" id="catBreadcrumb"></p>
-      <p class="eyebrow">BALLIN Paris</p>
       <h1 id="catTitle"></h1>
       <p class="lead" id="catBaseline"></p>
     </div>
@@ -28,12 +27,25 @@
 
 <section class="section" style="padding-top:56px">
   <div class="container">
-    <div style="display:grid;grid-template-columns:240px 1fr;gap:44px" class="cat-layout">
-      <aside id="subNav" style="position:sticky;top:130px;align-self:start"></aside>
+    <div style="display:grid;grid-template-columns:220px 1fr;gap:56px" class="cat-layout">
+      <aside style="position:sticky;top:150px;align-self:start">
+        <div class="filters" id="filters">
+          <h4>Affiner</h4>
+          <div id="subNav"></div>
+          <div class="fgroup"><div class="ftitle">Prix</div>
+            <label><input type="checkbox" data-f="price" value="0-2000"> Moins de 2 000 €</label>
+            <label><input type="checkbox" data-f="price" value="2000-5000"> 2 000 € – 5 000 €</label>
+            <label><input type="checkbox" data-f="price" value="5000+"> Plus de 5 000 €</label>
+          </div>
+          <div class="fgroup"><div class="ftitle">Métal</div><div id="fMetals"></div></div>
+          <div class="fgroup"><div class="ftitle">Pierre</div><div id="fGems"></div></div>
+          <button class="link-u" id="clearFilters" style="margin-top:6px">Effacer tous les filtres</button>
+        </div>
+      </aside>
       <div>
         <div class="toolbar">
           <span class="count" id="catCount"></span>
-          <label style="display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--muted)">Trier :
+          <label style="display:flex;align-items:center;gap:10px;font-size:.78rem;color:var(--muted)">Trier :
             <select id="sortSel">
               <option value="default">Nouveautés</option>
               <option value="asc">Prix croissant</option>
@@ -53,6 +65,6 @@
 <script src="assets/js/data.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/category.js"></script>
-<style>@media(max-width:900px){.cat-layout{grid-template-columns:1fr!important}#subNav{position:static!important}#grid{grid-template-columns:repeat(2,1fr)!important}}@media(max-width:600px){#grid{grid-template-columns:1fr!important}}</style>
+<style>@media(max-width:900px){.cat-layout{grid-template-columns:1fr!important}aside{position:static!important}#grid{grid-template-columns:repeat(2,1fr)!important}}@media(max-width:600px){#grid{grid-template-columns:1fr!important}}</style>
 </body>
 </html>
