@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de cookies — BALLIN Paris</title>
+<meta name="description" content="Politique de cookies de BALLIN Paris : cookies essentiels, mesure d'audience et personnalisation. Gérez votre consentement à tout moment.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<section class="page-banner" style="min-height:34vh">
+  <div class="bg"><img src="assets/img/pages/cgv.svg" alt=""></div>
+  <div class="container"><div class="content">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> / <span>Cookies</span></p>
+    <h1>Politique de <em style="font-style:italic;color:var(--gold-deep)">cookies</em></h1>
+  </div></div>
+</section>
+
+<section class="legal">
+  <div class="container">
+    <p class="updated">Dernière mise à jour : janvier 2025</p>
+
+    <h2>Qu'est-ce qu'un cookie ?</h2>
+    <p>Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, mobile, tablette) lors de la consultation de notre site. Il permet de mémoriser des informations relatives à votre navigation et de faciliter votre expérience.</p>
+
+    <h2>Les cookies que nous utilisons</h2>
+    <h3>1. Cookies strictement nécessaires (exemptés de consentement)</h3>
+    <p>Indispensables au fonctionnement du site : panier, session, sécurité, mémorisation de votre choix de consentement. Durée : session ou 13 mois maximum.</p>
+    <h3>2. Cookies de mesure d'audience (soumis à consentement)</h3>
+    <p>Nous permettent de comprendre la fréquentation du site (pages vues, parcours) de manière anonymisée afin de l'améliorer. Durée : 13 mois maximum.</p>
+    <h3>3. Cookies de personnalisation (soumis à consentement)</h3>
+    <p>Ils mémorisent vos préférences (favoris, métaux choisis) et peuvent alimenter des contenus personnalisés. Durée : 13 mois maximum.</p>
+
+    <h2>Vos choix</h2>
+    <p>Lors de votre première visite, un bandeau vous permet d'accepter, de refuser ou de personnaliser les cookies non essentiels. Vous pouvez modifier votre choix à tout moment en supprimant les cookies de votre navigateur ou via le bouton ci-dessous.</p>
+    <p><button class="btn btn-outline" id="resetCookies">Réinitialiser mon choix de cookies</button></p>
+
+    <h2>Gestion via votre navigateur</h2>
+    <p>Vous pouvez à tout moment configurer votre navigateur pour refuser les cookies (Chrome, Firefox, Safari, Edge : paramètres de confidentialité). Le refus des cookies non essentiels n'empêche pas l'accès au site.</p>
+
+    <h2>Contact</h2>
+    <p>Pour toute question : contact@ballin-paris.fr — voir aussi notre <a href="politique-de-confidentialite.html">Politique de confidentialité</a>.</p>
+  </div>
+</section>
+
+<div id="footer"></div>
+<div id="cookie"></div>
+<div id="toast-slot"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  document.getElementById("resetCookies").addEventListener("click", () => {
+    localStorage.removeItem("ballin_cookies");
+    showToast("Choix de cookies réinitialisé — le bandeau réapparaîtra à votre prochaine visite.");
+  });
+</script>
+</body>
+</html>
