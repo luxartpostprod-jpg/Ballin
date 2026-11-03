@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160">
+<defs>
+ <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#C9A86A"/><stop offset=".5" stop-color="#A9834B"/><stop offset="1" stop-color="#8A6A3C"/>
+ </linearGradient>
+ <radialGradient id="dg" cx=".35" cy=".3" r=".9">
+  <stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#E9F0FA"/><stop offset="1" stop-color="#A9BEDC"/>
+ </radialGradient>
+</defs>
+<g>
+ <polygon points="80,18 112,44 80,96 48,44" fill="url(#dg)" stroke="url(#lg)" stroke-width="3"/>
+ <line x1="48" y1="44" x2="112" y2="44" stroke="#C9A86A" stroke-width="1.6"/>
+ <line x1="80" y1="18" x2="66" y2="44" stroke="#fff" stroke-width="1.2" opacity=".9"/>
+ <line x1="80" y1="18" x2="94" y2="44" stroke="#fff" stroke-width="1.2" opacity=".9"/>
+ <line x1="66" y1="44" x2="80" y2="96" stroke="#fff" stroke-width="1" opacity=".7"/>
+ <line x1="94" y1="44" x2="80" y2="96" stroke="#fff" stroke-width="1" opacity=".7"/>
+</g>
+<text x="140" y="82" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-size="64" letter-spacing="14" fill="#2E2A25">BALLIN</text>
+<text x="143" y="112" font-family="Jost, Montserrat, Arial, sans-serif" font-size="15" letter-spacing="9" fill="#A9834B">PARIS</text>
+<line x1="142" y1="126" x2="330" y2="126" stroke="#C9A86A" stroke-width="1"/>
+<text x="338" y="131" font-family="Jost, Montserrat, Arial, sans-serif" font-size="13" letter-spacing="4" fill="#7A7166">JOAILLERIE</text>
+</svg>
