@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alliances — BALLIN Paris</title>
+<meta name="description" content="Découvrez la collection Alliances BALLIN Paris : haute joaillerie façonnée à la main, or éthique et diamants certifiés. Livraison offerte, garantie à vie.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-cat="alliances">
+<div id="header"></div>
+
+<section class="page-banner">
+  <div class="bg"><img id="catBanner" src="" alt=""></div>
+  <div class="container">
+    <div class="content">
+      <p class="breadcrumb" id="catBreadcrumb"></p>
+      <p class="eyebrow">BALLIN Paris</p>
+      <h1 id="catTitle"></h1>
+      <p class="lead" id="catBaseline"></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:56px">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:240px 1fr;gap:44px" class="cat-layout">
+      <aside id="subNav" style="position:sticky;top:130px;align-self:start"></aside>
+      <div>
+        <div class="toolbar">
+          <span class="count" id="catCount"></span>
+          <label style="display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--muted)">Trier :
+            <select id="sortSel">
+              <option value="default">Nouveautés</option>
+              <option value="asc">Prix croissant</option>
+              <option value="desc">Prix décroissant</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid-3" id="grid" style="grid-template-columns:repeat(3,1fr)"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+<div id="cookie"></div>
+<div id="toast-slot"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/category.js"></script>
+<style>@media(max-width:900px){.cat-layout{grid-template-columns:1fr!important}#subNav{position:static!important}#grid{grid-template-columns:repeat(2,1fr)!important}}@media(max-width:600px){#grid{grid-template-columns:1fr!important}}</style>
+</body>
+</html>
