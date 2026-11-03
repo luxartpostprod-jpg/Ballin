@@ -7,24 +7,24 @@
   /* ---------- Header ---------- */
   const headerHTML = `
   <header class="site-header">
+    <div class="header-top">
+      <span>Service client 7j/7 · +33 1 84 60 20 24</span>
+      <span><a href="contact.html">Nous contacter</a> · <a href="contact.html">Prendre rendez-vous</a></span>
+      <span>Livraison offerte &amp; retour 30 jours</span>
+    </div>
     <div class="container">
-      <div class="header-top">
-        <span class="promise">Livraison offerte &amp; retour 30 jours</span>
-        <span>Garantie à vie — Atelier Paris</span>
-        <span>Service client 7j/7 · +33 1 84 60 20 24</span>
-      </div>
       <div class="header-main">
         <a class="logo" href="index.html" aria-label="BALLIN Paris — Accueil">
           <img src="assets/img/logo.svg" alt="BALLIN Paris">
         </a>
         <nav class="main-nav" id="mainNav">
-          <a href="index.html">Accueil</a>
+          <a href="joaillerie.html">Joaillerie</a>
           <a href="fiancailles.html">Fiançailles</a>
           <a href="alliances.html">Alliances</a>
-          <a href="joaillerie.html">Joaillerie</a>
+          <a href="bagues.html">Bagues</a>
+          <a href="colliers.html">Colliers</a>
+          <a href="boucles-oreilles.html">Boucles d'oreilles</a>
           <a href="la-maison.html">La Maison</a>
-          <a href="sav.html">SAV</a>
-          <a href="contact.html">Contact</a>
         </nav>
         <div class="header-actions">
           <button class="icon-btn" id="searchBtn" aria-label="Rechercher">
@@ -50,14 +50,14 @@
       <div class="footer-grid">
         <div>
           <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="BALLIN Paris"></a>
-          <p>Haute joaillerie française façonnée à la main dans notre atelier parisien. Or éthique, diamants certifiés, garantie à vie.</p>
+          <p>Haute joaillerie française façonnée à la main à Paris. Or éthique, diamants certifiés, garantie à vie.</p>
         </div>
         <div>
           <h4>Collections</h4>
           <ul>
+            <li><a href="joaillerie.html">Joaillerie</a></li>
             <li><a href="fiancailles.html">Fiançailles</a></li>
             <li><a href="alliances.html">Alliances</a></li>
-            <li><a href="joaillerie.html">Joaillerie</a></li>
             <li><a href="bagues.html">Bagues</a></li>
             <li><a href="bracelets.html">Bracelets</a></li>
             <li><a href="colliers.html">Colliers</a></li>
@@ -76,14 +76,14 @@
           </ul>
         </div>
         <div>
-          <h4>Service client</h4>
+          <h4>Aide &amp; services</h4>
           <ul>
             <li><a href="livraison-retours.html">Livraison &amp; retours</a></li>
             <li><a href="garanties.html">Garanties</a></li>
-            <li><a href="cgv.html">Conditions générales de vente</a></li>
+            <li><a href="sav.html#baguier">Baguier offert</a></li>
+            <li><a href="cgv.html">CGV</a></li>
             <li><a href="politique-de-confidentialite.html">Confidentialité</a></li>
-            <li><a href="cookies.html">Politique de cookies</a></li>
-            <li><a href="contact.html">Nous contacter</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
           </ul>
         </div>
       </div>
@@ -101,7 +101,6 @@
     <div class="cookie-actions">
       <button class="btn btn-primary" data-cookie="all">Tout accepter</button>
       <button class="btn btn-outline" data-cookie="essential">Uniquement essentiels</button>
-      <button class="btn btn-outline" data-cookie="custom">Personnaliser</button>
     </div>
   </div>`;
 
@@ -133,7 +132,7 @@
     toastTimer = setTimeout(() => el.classList.remove("show"), 3200);
   };
 
-  /* ---------- Cart & wishlist (localStorage) ---------- */
+  /* ---------- Panier & favoris (localStorage) ---------- */
   const store = {
     get(k, d) { try { return JSON.parse(localStorage.getItem("ballin_" + k)) ?? d; } catch (e) { return d; } },
     set(k, v) { localStorage.setItem("ballin_" + k, JSON.stringify(v)); },
@@ -162,7 +161,7 @@
     store.set("wishlist", w);
   };
 
-  /* ---------- Product cards ---------- */
+  /* ---------- Cartes produit ---------- */
   function fmt(n) { return n.toLocaleString("fr-FR") + " €"; }
   window.fmtPrice = fmt;
 
@@ -171,7 +170,7 @@
     return `
     <article class="product-card reveal">
       <a class="thumb" href="produit.html?id=${p.id}" aria-label="${p.name}">
-        <img src="${p.img}" alt="${p.name}" loading="lazy">
+        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'">
         ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
       </a>
       <button class="wish ${wished ? "active" : ""}" data-wish="${p.id}" aria-label="Ajouter aux favoris">
@@ -180,7 +179,6 @@
       <div class="info">
         <span class="cat-tag">${labelOf(p.cat)}${p.sub ? " · " + labelOf(p.sub) : ""}</span>
         <h3><a href="produit.html?id=${p.id}">${p.name}</a></h3>
-        <p class="short">${p.short}</p>
         <span class="price">${fmt(p.price)}</span>
       </div>
     </article>`;
@@ -195,6 +193,7 @@
   window.renderProducts = function (elId, list) {
     const el = document.getElementById(elId);
     if (!el) return;
+    if (!list.length) { el.innerHTML = `<p class="empty">Aucune création ne correspond à ces filtres.</p>`; return; }
     el.innerHTML = list.map(productCard).join("");
     bindWishes(el);
     observeReveals(el);
@@ -223,7 +222,7 @@
     banner.querySelectorAll("[data-cookie]").forEach(b => {
       b.addEventListener("click", () => {
         const choice = b.dataset.cookie;
-        store.set("cookies", { choice, date: new Date().toISOString(), essential: true, analytics: choice === "all", marketing: choice === "all" });
+        store.set("cookies", { choice, date: new Date().toISOString(), essential: true, analytics: choice === "all" });
         banner.classList.remove("show");
         showToast(choice === "all" ? "Tous les cookies acceptés" : "Préférences enregistrées");
       });
