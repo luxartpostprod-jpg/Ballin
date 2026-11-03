@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produit — BALLIN Paris</title>
+<meta name="description" content="Découvrez nos créations en haute joaillerie : fiche produit détaillée, vue 3D interactive, options de métal et de pierre, garantie à vie.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<main class="pdp">
+  <div class="container">
+    <p class="breadcrumb" id="breadcrumb"></p>
+    <div class="pdp-grid">
+
+      <!-- Galerie -->
+      <div class="gallery">
+        <div class="gallery-main" id="galleryMain"></div>
+        <div class="view-tabs" id="viewTabs"></div>
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+
+      <!-- Infos & achat -->
+      <div class="pdp-sticky">
+        <div class="pdp-info">
+          <span class="cat-tag" id="pdpCat"></span>
+          <h1 id="pdpName"></h1>
+          <div class="pdp-rating"><span class="stars">★★★★★</span> 4,9/5 · 212 avis clients vérifiés</div>
+          <div class="pdp-price" id="pdpPrice"></div>
+          <p class="pdp-short" id="pdpShort"></p>
+
+          <div class="opt-group" id="metalGroup"></div>
+          <div class="opt-group" id="stoneGroup"></div>
+          <div class="opt-group" id="sizeGroup"></div>
+          <div class="opt-group" id="engraveGroup"></div>
+
+          <div class="buy-row">
+            <div class="qty">
+              <button id="qMinus" aria-label="Diminuer">−</button>
+              <span id="qVal">1</span>
+              <button id="qPlus" aria-label="Augmenter">+</button>
+            </div>
+            <button class="btn btn-primary btn-block" id="addCart" style="flex:1">Ajouter au panier</button>
+          </div>
+          <div style="display:flex;gap:12px">
+            <a class="btn btn-outline btn-block" href="contact.html">Rendez-vous en boutique</a>
+          </div>
+          <p class="reassurance">🔒 Paiement sécurisé · 3× sans frais dès 300 € · Expédition sous 48 h</p>
+
+          <div class="pdp-perks">
+            <div class="perk"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>Garantie à vie</div>
+            <div class="perk"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>Livraison offerte &amp; assurée</div>
+            <div class="perk"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Retour gratuit 30 jours</div>
+            <div class="perk"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Certificat d'authenticité</div>
+          </div>
+
+          <div class="accordions" id="accordions"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommandations -->
+    <div class="divider"></div>
+    <div class="section-head reveal">
+      <p class="eyebrow">Compléter votre sélection</p>
+      <h2>Vous aimerez aussi</h2>
+    </div>
+    <div class="grid-4" id="related"></div>
+  </div>
+</main>
+
+<div id="footer"></div>
+<div id="cookie"></div>
+<div id="toast-slot"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/viewer3d.js"></script>
+<script src="assets/js/product.js"></script>
+<script>
+  let q = 1;
+  document.getElementById("qMinus").onclick = () => { q = Math.max(1, q - 1); document.getElementById("qVal").textContent = q; };
+  document.getElementById("qPlus").onclick = () => { q = Math.min(9, q + 1); document.getElementById("qVal").textContent = q; };
+</script>
+</body>
+</html>
