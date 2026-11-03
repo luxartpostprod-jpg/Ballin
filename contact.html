@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; rendez-vous — BALLIN Paris</title>
+<meta name="description" content="Contactez la maison BALLIN Paris : rendez-vous privé en boutique, demande de sur-mesure, SAV, baguier offert. Service client 7j/7.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<section class="page-banner">
+  <div class="bg"><img src="assets/img/pages/contact.svg" alt="Contact BALLIN Paris"></div>
+  <div class="container"><div class="content">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> / <span>Contact</span></p>
+    <p class="eyebrow">Nous sommes à votre écoute</p>
+    <h1>Contactez la <em style="font-style:italic;color:var(--gold-deep)">maison BALLIN</em></h1>
+    <p class="lead">Une question, un projet sur-mesure, une demande de SAV ? Notre équipe vous répond 7j/7.</p>
+  </div></div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-3" style="margin-bottom:56px">
+      <div class="pillar reveal center"><h3>Boutique &amp; rendez-vous</h3><p>12 rue de la Paix<br>75002 Paris</p><p style="margin-top:8px">Sur rendez-vous privé<br>du lundi au samedi, 10h–19h</p></div>
+      <div class="pillar reveal center"><h3>Service client</h3><p>+33 1 84 60 20 24<br>contact@ballin-paris.fr</p><p style="margin-top:8px">7j/7, de 9h à 20h</p></div>
+      <div class="pillar reveal center"><h3>Suivez-nous</h3><p>Instagram · Pinterest<br>@ballinparis</p><p style="margin-top:8px">Découvrez nos créations<br>et les coulisses de l'atelier</p></div>
+    </div>
+
+    <div class="form-card reveal">
+      <h2 style="text-align:center;margin-bottom:6px">Écrivez-nous</h2>
+      <p class="center" style="color:var(--muted);font-size:.9rem;margin-bottom:28px">Nous répondons sous 24 h ouvrées.</p>
+      <form id="contactForm" novalidate>
+        <div class="field-row">
+          <div class="field"><label for="fNom">Nom</label><input id="fNom" required placeholder="Votre nom"></div>
+          <div class="field"><label for="fPrenom">Prénom</label><input id="fPrenom" required placeholder="Votre prénom"></div>
+        </div>
+        <div class="field"><label for="fEmail">E-mail</label><input id="fEmail" type="email" required placeholder="vous@exemple.fr"></div>
+        <div class="field"><label for="fSujet">Sujet</label>
+          <select id="fSujet">
+            <option>Une question sur une création</option>
+            <option>Projet sur-mesure / rendez-vous</option>
+            <option>SAV, mise à taille ou réparation</option>
+            <option>Demande de baguier offert</option>
+            <option>Suivi de commande</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" rows="5" required placeholder="Bonjour, je souhaiterais…"></textarea></div>
+        <button class="btn btn-primary btn-block" type="submit">Envoyer le message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+<div id="cookie"></div>
+<div id="toast-slot"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const f = e.target;
+    if (!f.checkValidity()) { f.reportValidity(); return; }
+    showToast("Merci ! Votre message a bien été envoyé — réponse sous 24 h.");
+    f.reset();
+  });
+</script>
+</body>
+</html>
