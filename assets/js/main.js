@@ -114,7 +114,14 @@
 
     const nav = document.getElementById("mainNav");
     const burger = document.getElementById("burger");
-    if (burger && nav) burger.addEventListener("click", () => nav.classList.toggle("open"));
+    if (burger && nav) burger.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      burger.classList.toggle("open");
+    });
+    const header = document.querySelector(".site-header");
+    const onScroll = () => header && header.classList.toggle("scrolled", window.scrollY > 8);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
     const here = location.pathname.split("/").pop() || "index.html";
     document.querySelectorAll(".main-nav a").forEach(a => {
       if (a.getAttribute("href") === here) a.classList.add("active");
@@ -142,7 +149,12 @@
   function refreshCart() {
     const cart = store.get("cart", []);
     const el = document.getElementById("cartCount");
-    if (el) el.textContent = cart.reduce((n, i) => n + i.qty, 0);
+    if (el) {
+      el.textContent = cart.reduce((n, i) => n + i.qty, 0);
+      el.classList.remove("bump");
+      void el.offsetWidth;
+      el.classList.add("bump");
+    }
   }
   window.addToCart = function (productId, opts) {
     const cart = store.get("cart", []);
@@ -167,11 +179,13 @@
 
   window.productCard = function (p) {
     const wished = store.get("wishlist", []).includes(p.id);
+    const goldBadge = ["Icône", "Bestseller", "Haute joaillerie"].includes(p.badge);
     return `
     <article class="product-card reveal">
       <a class="thumb" href="produit.html?id=${p.id}" aria-label="${p.name}">
-        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'">
-        ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
+        <img src="${p.img}" alt="${p.name}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'">
+        ${p.badge ? `<span class="badge ${goldBadge ? "gold" : ""}">${p.badge}</span>` : ""}
+        <span class="quick-add" data-add="${p.id}" role="button" tabindex="0">Ajouter au panier</span>
       </a>
       <button class="wish ${wished ? "active" : ""}" data-wish="${p.id}" aria-label="Ajouter aux favoris">
         <svg viewBox="0 0 24 24"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.6 3.5 7 5.5 5 8 5c1.6 0 3.1.8 4 2.1C12.9 5.8 14.4 5 16 5c2.5 0 4.5 2 4.5 4.6 0 3.7-3.5 6.9-8.5 10.9z"/></svg>
@@ -196,12 +210,21 @@
     if (!list.length) { el.innerHTML = `<p class="empty">Aucune création ne correspond à ces filtres.</p>`; return; }
     el.innerHTML = list.map(productCard).join("");
     bindWishes(el);
+    bindQuickAdd(el);
     observeReveals(el);
   };
 
   function bindWishes(scope) {
     (scope || document).querySelectorAll("[data-wish]").forEach(b => {
       b.addEventListener("click", e => { e.preventDefault(); toggleWish(b.dataset.wish, b); });
+    });
+  }
+
+  function bindQuickAdd(scope) {
+    (scope || document).querySelectorAll("[data-add]").forEach(b => {
+      const add = e => { e.preventDefault(); addToCart(b.dataset.add, {}); };
+      b.addEventListener("click", add);
+      b.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") add(e); });
     });
   }
 
@@ -251,6 +274,7 @@
     initHeader();
     initCookies();
     bindWishes(document);
+    bindQuickAdd(document);
     observeReveals(document);
   });
 })();
