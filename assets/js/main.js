@@ -182,14 +182,16 @@
     const goldBadge = ["Icône", "Bestseller", "Haute joaillerie"].includes(p.badge);
     return `
     <article class="product-card reveal">
-      <a class="thumb" href="produit.html?id=${p.id}" aria-label="${p.name}">
-        <img src="${p.img}" alt="${p.name}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'">
+      <div class="thumb">
+        <a href="produit.html?id=${p.id}" aria-label="${p.name}">
+          <img src="${p.img}" alt="${p.name}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'">
+        </a>
         ${p.badge ? `<span class="badge ${goldBadge ? "gold" : ""}">${p.badge}</span>` : ""}
-        <span class="quick-add" data-add="${p.id}" role="button" tabindex="0">Ajouter au panier</span>
-      </a>
-      <button class="wish ${wished ? "active" : ""}" data-wish="${p.id}" aria-label="Ajouter aux favoris">
-        <svg viewBox="0 0 24 24"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.6 3.5 7 5.5 5 8 5c1.6 0 3.1.8 4 2.1C12.9 5.8 14.4 5 16 5c2.5 0 4.5 2 4.5 4.6 0 3.7-3.5 6.9-8.5 10.9z"/></svg>
-      </button>
+        <button class="quick-add" data-add="${p.id}">Ajouter au panier</button>
+        <button class="wish ${wished ? "active" : ""}" data-wish="${p.id}" aria-label="Ajouter aux favoris">
+          <svg viewBox="0 0 24 24"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.6 3.5 7 5.5 5 8 5c1.6 0 3.1.8 4 2.1C12.9 5.8 14.4 5 16 5c2.5 0 4.5 2 4.5 4.6 0 3.7-3.5 6.9-8.5 10.9z"/></svg>
+        </button>
+      </div>
       <div class="info">
         <span class="cat-tag">${labelOf(p.cat)}${p.sub ? " · " + labelOf(p.sub) : ""}</span>
         <h3><a href="produit.html?id=${p.id}">${p.name}</a></h3>

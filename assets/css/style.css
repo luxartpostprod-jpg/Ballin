@@ -128,7 +128,8 @@ h3{font-size:1.35rem}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .product-card{display:flex;flex-direction:column;position:relative}
-.product-card .thumb{position:relative;aspect-ratio:4/5;background:var(--soft);overflow:hidden;display:block}
+.product-card .thumb{position:relative;aspect-ratio:4/5;background:var(--soft);overflow:hidden}
+.product-card .thumb > a{display:block;width:100%;height:100%}
 .product-card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
 .product-card:hover .thumb img{transform:scale(1.07)}
 .badge{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.94);backdrop-filter:blur(4px);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;padding:7px 12px;color:var(--ink);z-index:2}
@@ -137,7 +138,7 @@ h3{font-size:1.35rem}
 .wish:hover{transform:scale(1.12)}
 .wish svg{width:17px;height:17px;stroke:var(--ink);fill:none;stroke-width:1.5;transition:fill .2s}
 .wish.active svg{fill:var(--ink);stroke:var(--ink)}
-.quick-add{position:absolute;left:0;right:0;bottom:0;z-index:2;background:rgba(25,22,19,.92);backdrop-filter:blur(6px);color:#fff;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;padding:15px;text-align:center;transform:translateY(100%);transition:transform .4s var(--ease)}
+.quick-add{position:absolute;left:0;right:0;bottom:0;z-index:2;width:100%;background:rgba(25,22,19,.92);backdrop-filter:blur(6px);color:#fff;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;padding:15px;text-align:center;transform:translateY(100%);transition:transform .4s var(--ease),background .25s}
 .product-card:hover .quick-add,.quick-add:focus-visible{transform:translateY(0)}
 .quick-add:hover{background:#000}
 @media (hover:none){.quick-add{transform:translateY(0)}}
