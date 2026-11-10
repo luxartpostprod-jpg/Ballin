@@ -48,11 +48,14 @@
               <button id="qPlus" aria-label="Augmenter">+</button>
             </div>
             <button class="btn btn-primary btn-block" id="addCart" style="flex:1">Ajouter au panier</button>
+            <button class="wish-btn" id="pdpWish" aria-label="Ajouter aux favoris" title="Ajouter aux favoris">
+              <svg viewBox="0 0 24 24"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.6 3.5 7 5.5 5 8 5c1.6 0 3.1.8 4 2.1C12.9 5.8 14.4 5 16 5c2.5 0 4.5 2 4.5 4.6 0 3.7-3.5 6.9-8.5 10.9z"/></svg>
+            </button>
           </div>
-          <div style="display:flex;gap:12px">
-            <a class="btn btn-outline btn-block" href="contact.html">Rendez-vous en boutique</a>
+          <div style="margin-top:16px;text-align:center">
+            <a class="link-u" href="contact.html">Prendre rendez-vous en boutique</a>
           </div>
-          <p class="reassurance">🔒 Paiement sécurisé · 3× sans frais dès 300 € · Expédition sous 48 h</p>
+          <p class="reassurance">Paiement sécurisé · 3× sans frais dès 300 € · Expédition sous 48 h · <span id="estDate"></span></p>
 
           <div class="accordions" id="accordions"></div>
         </div>
@@ -76,6 +79,14 @@
     <div class="grid-4" id="related"></div>
   </div>
 </main>
+
+
+<!-- Barre d'achat flottante -->
+<div class="pdp-bar" id="pdpBar">
+  <img id="pdpBarImg" src="" alt="">
+  <div class="pdp-bar-info"><b id="pdpBarName"></b><span id="pdpBarPrice"></span></div>
+  <button class="btn btn-primary" id="pdpBarAdd">Ajouter au panier</button>
+</div>
 
 <div id="footer"></div>
 <div id="cookie"></div>

@@ -21,6 +21,8 @@
     document.getElementById("pdpPrice").innerHTML = `${fmt(price())} <span class="tva">TTC, livraison offerte</span>`;
     const btn = document.getElementById("addCart");
     if (btn) btn.textContent = `Ajouter au panier · ${fmt(price())}`;
+    const barPrice = document.getElementById("pdpBarPrice");
+    if (barPrice) barPrice.textContent = fmt(price());
   }
 
   function render() {
@@ -154,11 +156,40 @@
     }));
     const first = acc.querySelector(".acc.open .acc-body"); if (first) first.style.maxHeight = first.scrollHeight + "px";
 
-    /* Panier */
-    document.getElementById("addCart").onclick = () => {
+    /* Panier (bouton + barre flottante) */
+    function doAdd() {
       if (p.sizes && !state.size) { showToast("Veuillez choisir une taille"); document.getElementById("sizeGroup").scrollIntoView({ behavior: "smooth", block: "center" }); return; }
       addToCart(p.id, { metal: state.metal, stone: p.stones ? p.stones[state.stone].label : null, size: state.size, engraving: state.engraving || null });
-    };
+    }
+    document.getElementById("addCart").onclick = doAdd;
+    const barAdd = document.getElementById("pdpBarAdd");
+    if (barAdd) barAdd.onclick = doAdd;
+
+    /* Barre d'achat flottante : visible quand le bouton principal est hors champ */
+    const bar = document.getElementById("pdpBar");
+    const buyRow = document.querySelector(".buy-row");
+    document.getElementById("pdpBarImg").src = p.img;
+    document.getElementById("pdpBarName").textContent = p.name;
+    if (bar && buyRow && "IntersectionObserver" in window) {
+      new IntersectionObserver(es => {
+        const e = es[0];
+        bar.classList.toggle("show", !e.isIntersecting && e.boundingClientRect.top < 0);
+      }, { threshold: 0 }).observe(buyRow);
+    }
+
+    /* Favori */
+    const wishBtn = document.getElementById("pdpWish");
+    if (wishBtn) {
+      if ((BallinStore.get("wishlist", [])).includes(p.id)) wishBtn.classList.add("active");
+      wishBtn.addEventListener("click", () => toggleWish(p.id, wishBtn));
+    }
+
+    /* Date de livraison estimée (J+2) */
+    const est = document.getElementById("estDate");
+    if (est) {
+      const d = new Date(Date.now() + 2 * 864e5);
+      est.textContent = "livraison estimée " + d.toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" });
+    }
 
     /* Produits liés */
     const rel = PRODUCTS.filter(x => x.id !== p.id && (x.cat === p.cat || x.sub === p.sub)).slice(0, 4);

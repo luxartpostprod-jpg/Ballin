@@ -348,7 +348,7 @@ h3{font-size:1.35rem}
 
 .pdp-info{max-width:520px;text-align:left}
 .pdp-info .cat-tag{font-size:.64rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
-.pdp-info h1{font-size:clamp(2.2rem,3vw,3rem);margin:14px 0 12px}
+.pdp-info h1{font-size:clamp(2.3rem,3.2vw,3.2rem);margin:16px 0 12px;letter-spacing:.005em}
 .pdp-rating{display:flex;align-items:center;gap:9px;font-size:.78rem;color:var(--muted);margin-bottom:20px}
 .stars{color:var(--gold);letter-spacing:3px;font-size:.85rem}
 .pdp-price{font-family:var(--serif);font-size:2rem;color:var(--ink);display:flex;align-items:baseline;gap:14px}
@@ -367,8 +367,9 @@ h3{font-size:1.35rem}
 .chip:hover{border-color:var(--ink);color:var(--ink)}
 .chip.active{border-color:var(--ink);background:var(--ink);color:#fff}
 .chip .mod{opacity:.7;font-size:.74rem;margin-left:6px}
-.engrave input{width:100%;padding:15px 18px;border:1px solid var(--line);font-family:inherit;font-size:.9rem;color:var(--ink);background:#fff;transition:border-color .25s}
-.engrave input:focus{outline:none;border-color:var(--ink)}
+.engrave input{width:100%;padding:13px 2px;border:none;border-bottom:1px solid var(--ink);border-radius:0;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--ink);background:transparent;transition:border-color .25s}
+.engrave input::placeholder{color:var(--muted);font-style:italic}
+.engrave input:focus{outline:none;border-bottom-color:var(--gold)}
 .engrave-panel{border:1px solid var(--line);background:transparent;padding:24px 26px;border-radius:0}
 .pdp-ref{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:10px}
 .engrave-head{display:flex;gap:14px;align-items:center;margin-bottom:16px}
@@ -393,7 +394,7 @@ h3{font-size:1.35rem}
 .pdp-badge{background:var(--ink);color:#fff;padding:5px 11px;font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;vertical-align:2px;margin-left:12px;font-family:var(--sans)}
 .accordions{margin-top:26px;border-top:1px solid var(--line)}
 .acc{border-bottom:1px solid var(--line)}
-.acc-head{width:100%;display:flex;justify-content:space-between;align-items:center;padding:19px 2px;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;text-align:left;transition:color .25s}
+.acc-head{width:100%;display:flex;justify-content:space-between;align-items:center;padding:21px 2px;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;text-align:left;transition:color .25s}
 .acc-head:hover{color:var(--gold)}
 .acc-head svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.5;transition:transform .35s var(--ease)}
 .acc.open .acc-head svg{transform:rotate(45deg)}
@@ -402,6 +403,24 @@ h3{font-size:1.35rem}
 .acc-body ul{padding-left:18px;list-style:disc}
 .acc-body li{margin-bottom:6px}
 .pdp-sticky{position:sticky;top:185px}
+
+/* ---------- Fiche produit : barre d'achat flottante + cœur ---------- */
+.pdp-bar{position:fixed;left:0;right:0;bottom:0;z-index:80;display:flex;align-items:center;gap:18px;padding:12px 30px;background:rgba(251,250,247,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .45s var(--ease)}
+.pdp-bar.show{transform:translateY(0)}
+.pdp-bar img{width:46px;height:58px;object-fit:cover;border:1px solid var(--line)}
+.pdp-bar-info{flex:1;min-width:0}
+.pdp-bar-info b{display:block;font-family:var(--serif);font-weight:500;font-size:1.1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pdp-bar-info span{font-size:.8rem;color:var(--muted)}
+.pdp-bar .btn{padding:14px 30px;white-space:nowrap}
+.wish-btn{width:54px;height:54px;flex:none;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:all .25s;background:#fff}
+.wish-btn svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.5;transition:all .2s}
+.wish-btn:hover{border-color:var(--ink);transform:scale(1.06)}
+.wish-btn.active{background:var(--ink);border-color:var(--ink)}
+.wish-btn.active svg{fill:#fff;stroke:#fff}
+@media (min-width:1021px){
+  .pdp-grid{gap:0}
+  .pdp-sticky{border-left:1px solid var(--line);padding-left:84px}
+}
 
 /* ---------- Filtres catégorie (barre horizontale façon Deloison) ---------- */
 .cat-grid{max-width:1180px;margin:0 auto;gap:34px 26px}
@@ -485,6 +504,7 @@ h3{font-size:1.35rem}
   .footer-grid{grid-template-columns:1fr 1fr}
   .pdp-grid{grid-template-columns:1fr;gap:46px}
   .gallery,.pdp-sticky{position:static}
+  .pdp-sticky{border-left:none;padding-left:0}
   .header-left{min-width:0}
   .header-main{flex-wrap:wrap;justify-content:center;row-gap:10px}
   .main-nav{order:3;flex-basis:100%;justify-content:center}
@@ -530,6 +550,9 @@ h3{font-size:1.35rem}
   .footer-grid{grid-template-columns:1fr}
   .field-row{grid-template-columns:1fr}
   .buy-row{flex-direction:column}
+  .wish-btn{width:100%;height:52px;border-radius:999px}
+  .pdp-bar{padding:10px 16px;gap:12px}
+  .pdp-bar .btn{padding:12px 20px;font-size:.62rem}
   .pdp-perks{grid-template-columns:1fr 1fr;margin-top:44px}
   .perk{border-bottom:1px solid var(--line)}
   .perk:nth-child(odd){border-right:1px solid var(--line)}
