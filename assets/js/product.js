@@ -17,6 +17,12 @@
     return p.price + m + s;
   }
 
+  function updatePriceUI() {
+    updatePriceUI();
+    const btn = document.getElementById("addCart");
+    if (btn) btn.textContent = `Ajouter au panier · ${fmt(price())}`;
+  }
+
   function render() {
     const cat = CATEGORIES.find(c => c.id === p.cat);
     const sub = SUBCATEGORIES.find(c => c.id === p.sub);
@@ -24,9 +30,10 @@
       `<a href="index.html">Accueil</a> / <a href="${cat.page}">${cat.label}</a>` +
       (sub ? ` / <a href="${sub.page}">${sub.label}</a>` : "") + ` / <span>${p.name}</span>`;
 
-    document.getElementById("pdpCat").textContent = `${cat.label}${sub ? " · " + sub.label : ""}`;
+    document.getElementById("pdpCat").innerHTML = `${cat.label}${sub ? " · " + sub.label : ""}` +
+      (p.badge ? ` <span class="pdp-badge">${p.badge}</span>` : "");
     document.getElementById("pdpName").textContent = p.name;
-    document.getElementById("pdpPrice").innerHTML = `${fmt(price())} <span class="tva">TTC, livraison offerte</span>`;
+    updatePriceUI();
     document.getElementById("pdpRef").textContent = "Réf. BALLIN-" + p.id.toUpperCase().replace(/-/g, "");
     document.getElementById("pdpShort").textContent = p.short;
 
@@ -70,7 +77,7 @@
       state.metal = b.dataset.metal;
       document.querySelectorAll("[data-metal]").forEach(x => x.classList.toggle("active", x === b));
       document.getElementById("metalLabel").textContent = METALS[state.metal].label;
-      document.getElementById("pdpPrice").innerHTML = `${fmt(price())} <span class="tva">TTC, livraison offerte</span>`;
+      updatePriceUI();
       const active = document.querySelector('.view-tab.active');
       if (active && active.dataset.view === "3d") showView("3d");
     });
@@ -88,7 +95,7 @@
         state.stone = +b.dataset.stone;
         sg.querySelectorAll("[data-stone]").forEach(x => x.classList.toggle("active", x === b));
         sg.querySelector("b").textContent = p.stones[state.stone].label;
-        document.getElementById("pdpPrice").innerHTML = `${fmt(price())} <span class="tva">TTC, livraison offerte</span>`;
+        updatePriceUI();
       });
     } else sg.style.display = "none";
 
