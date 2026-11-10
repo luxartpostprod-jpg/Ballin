@@ -46,11 +46,11 @@
           <div class="nav-item has-drop">
             <a class="drop-toggle" href="joaillerie.html">Joaillerie</a>
             <div class="dropdown">
-              <a href="joaillerie.html">Toute la joaillerie</a>
               <a href="bagues.html">Bagues</a>
               <a href="bracelets.html">Bracelets</a>
               <a href="colliers.html">Colliers</a>
               <a href="boucles-oreilles.html">Boucles d'oreilles</a>
+              <a href="joaillerie.html">Toute la joaillerie</a>
             </div>
           </div>
           <a href="nos-pierres.html">Nos pierres</a>
