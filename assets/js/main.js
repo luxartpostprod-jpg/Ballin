@@ -54,6 +54,7 @@
           <a href="nos-pierres.html">Nos pierres</a>
           <a href="la-maison.html">La Maison</a>
           <a href="showroom.html">Showroom</a>
+          <a href="contact.html">Prendre rendez-vous</a>
         </nav>
         <div class="header-actions">
           <button class="icon-btn" id="searchBtn" aria-label="Rechercher">
