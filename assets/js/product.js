@@ -18,7 +18,7 @@
   }
 
   function updatePriceUI() {
-    document.getElementById("pdpPrice").innerHTML = `${fmt(price())} <span class="tva">TTC, livraison offerte</span>`;
+    document.getElementById("pdpPrice").innerHTML = `${fmt(price())} <span class="tva">TTC</span> <span class="installments">ou 3× sans frais</span>`;
     const btn = document.getElementById("addCart");
     if (btn) btn.textContent = `Ajouter au panier · ${fmt(price())}`;
     const barPrice = document.getElementById("pdpBarPrice");
@@ -36,7 +36,6 @@
       (p.badge ? ` <span class="pdp-badge">${p.badge}</span>` : "");
     document.getElementById("pdpName").textContent = p.name;
     updatePriceUI();
-    document.getElementById("pdpRef").textContent = "Réf. BALLIN-" + p.id.toUpperCase().replace(/-/g, "");
     document.getElementById("pdpShort").textContent = p.short;
 
     /* Galerie : 2 vues 2D + vue 3D */

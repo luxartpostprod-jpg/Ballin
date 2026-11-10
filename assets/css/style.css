@@ -353,6 +353,7 @@ h3{font-size:1.35rem}
 .stars{color:var(--gold);letter-spacing:3px;font-size:.85rem}
 .pdp-price{font-family:var(--serif);font-size:2rem;color:var(--ink);display:flex;align-items:baseline;gap:14px}
 .pdp-price .tva{font-family:var(--sans);font-size:.68rem;color:var(--muted)}
+.pdp-price .installments{font-family:var(--sans);font-size:.64rem;color:var(--muted);letter-spacing:.08em;border-left:1px solid var(--line);padding-left:12px;margin-left:2px}
 .pdp-short{margin:20px 0 30px;color:var(--ink-soft)}
 .opt-group{margin-bottom:26px;padding-top:22px;border-top:1px solid var(--line)}
 .pdp-short{padding-bottom:26px}
