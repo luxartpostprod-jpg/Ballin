@@ -431,7 +431,6 @@ h3{font-size:1.35rem}
   .dropdown{position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;border:none;border-bottom:1px solid var(--line);padding:0 0 10px 16px;min-width:0}
   .dropdown a{padding:9px 0;border-bottom:none}
   .burger{display:flex}
-  .header-top span:last-child{display:none}
   .header-logo-row{padding:14px 0 2px}
   .logo img{height:42px}
   .header-left{gap:14px}

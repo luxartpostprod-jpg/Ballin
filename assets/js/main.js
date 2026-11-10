@@ -8,8 +8,7 @@
   const headerHTML = `
   <header class="site-header">
     <div class="header-top">
-      <span><a href="contact.html">Nous contacter</a> · <a href="contact.html">Prendre rendez-vous</a></span>
-      <span>Livraison offerte &amp; retour 30 jours</span>
+      <span><a href="showroom.html">Visiter notre showroom</a></span>
     </div>
     <div class="container">
       <div class="header-logo-row">
@@ -56,7 +55,6 @@
           <a href="alliances.html">Alliances</a>
           <a href="nos-pierres.html">Nos pierres</a>
           <a href="la-maison.html">La Maison</a>
-          <a href="showroom.html">Showroom</a>
         </nav>
         <div class="header-actions">
           <button class="icon-btn" id="searchBtn" aria-label="Rechercher">
