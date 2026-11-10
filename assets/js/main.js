@@ -8,15 +8,36 @@
   const headerHTML = `
   <header class="site-header">
     <div class="header-top">
-      <span>Service client 7j/7 · +33 1 84 60 20 24</span>
       <span><a href="contact.html">Nous contacter</a> · <a href="contact.html">Prendre rendez-vous</a></span>
       <span>Livraison offerte &amp; retour 30 jours</span>
     </div>
     <div class="container">
-      <div class="header-main">
+      <div class="header-logo-row">
         <a class="logo" href="index.html" aria-label="BALLIN Paris — Accueil">
           <img src="assets/img/logo.svg" alt="BALLIN Paris">
         </a>
+      </div>
+      <div class="header-main">
+        <div class="header-left">
+          <a class="phone-link" href="tel:+33184602024">
+            <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+            +33 1 84 60 20 24
+          </a>
+          <div class="nav-item lang-item">
+            <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-label="Choisir la langue">
+              <span id="langLabel">FR</span>
+            </button>
+            <div class="dropdown lang-menu" id="langMenu">
+              <a href="#" data-lang="fr" class="active">Français</a>
+              <a href="#" data-lang="en">English</a>
+              <a href="#" data-lang="de">Deutsch</a>
+              <a href="#" data-lang="es">Español</a>
+              <a href="#" data-lang="it">Italiano</a>
+              <a href="#" data-lang="ru">Русский</a>
+              <a href="#" data-lang="zh">中文</a>
+            </div>
+          </div>
+        </div>
         <nav class="main-nav" id="mainNav">
           <div class="nav-item has-drop">
             <a class="drop-toggle" href="joaillerie.html">Joaillerie</a>
@@ -136,6 +157,26 @@
     if (["joaillerie.html", "bagues.html", "bracelets.html", "colliers.html", "boucles-oreilles.html"].includes(here)) {
       const t = document.querySelector(".main-nav .drop-toggle");
       if (t) t.classList.add("active");
+    }
+
+    /* Sélecteur de langue */
+    const langMenu = document.getElementById("langMenu");
+    if (langMenu) {
+      const CODES = { fr: "FR", en: "EN", de: "DE", es: "ES", it: "IT", ru: "RU", zh: "ZH" };
+      const applyLang = code => {
+        langMenu.querySelectorAll("a[data-lang]").forEach(a => a.classList.toggle("active", a.dataset.lang === code));
+        document.getElementById("langLabel").textContent = CODES[code] || "FR";
+      };
+      langMenu.addEventListener("click", e => {
+        const a = e.target.closest("a[data-lang]");
+        if (!a) return;
+        e.preventDefault();
+        const code = a.dataset.lang;
+        store.set("lang", code);
+        applyLang(code);
+        showToast(code === "fr" ? "Langue : Français" : "Langue : " + a.textContent.trim() + " — traduction bientôt disponible");
+      });
+      applyLang(store.get("lang", "fr"));
     }
   }
 

@@ -43,9 +43,21 @@ h3{font-size:1.35rem}
 .header-top{display:flex;justify-content:center;gap:42px;padding:9px 0;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line)}
 .header-top a{transition:color .2s}
 .header-top a:hover{color:var(--ink)}
-.header-main{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 0}
+.header-logo-row{display:flex;justify-content:center;padding:18px 0 4px}
+.header-main{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 0 16px}
 .logo{display:flex;align-items:center}
-.logo img{height:44px;width:auto}
+.logo img{height:50px;width:auto}
+.header-left{display:flex;align-items:center;gap:20px;min-width:230px}
+.phone-link{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;letter-spacing:.06em;color:var(--ink-soft);white-space:nowrap;transition:color .25s}
+.phone-link:hover{color:var(--ink)}
+.phone-link svg{width:15px;height:15px;stroke:var(--gold);fill:none;stroke-width:1.6}
+.lang-item .lang-btn{display:inline-flex;align-items:center;gap:7px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ink-soft);padding:6px 0;transition:color .25s}
+.lang-item .lang-btn::after{content:"";width:5px;height:5px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .3s var(--ease)}
+.lang-item:hover .lang-btn,.lang-item:focus-within .lang-btn{color:var(--ink)}
+.lang-item:hover .lang-btn::after,.lang-item:focus-within .lang-btn::after{transform:rotate(225deg) translateY(1px)}
+.lang-menu{min-width:170px}
+.lang-menu a.active{color:var(--gold);font-weight:600}
+.lang-menu a.active::before{content:"✓ ";margin-right:2px}
 .main-nav{display:flex;align-items:center;gap:30px}
 .main-nav a{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);position:relative;padding:6px 0;transition:color .25s;white-space:nowrap}
 .main-nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .35s var(--ease)}
@@ -250,7 +262,7 @@ h3{font-size:1.35rem}
 .pdp .breadcrumb a{color:var(--ink-soft)}
 .pdp .breadcrumb a:hover{color:var(--ink)}
 .pdp-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:start}
-.gallery{position:sticky;top:130px}
+.gallery{position:sticky;top:185px}
 .gallery-main{position:relative;background:var(--soft);aspect-ratio:4/5;overflow:hidden}
 .gallery-main img,.gallery-main canvas{width:100%;height:100%;object-fit:cover;display:block}
 .gallery-main canvas{cursor:grab}
@@ -317,7 +329,7 @@ h3{font-size:1.35rem}
 .acc-body .inner{padding:0 2px 22px;font-size:.88rem;color:var(--ink-soft)}
 .acc-body ul{padding-left:18px;list-style:disc}
 .acc-body li{margin-bottom:6px}
-.pdp-sticky{position:sticky;top:130px}
+.pdp-sticky{position:sticky;top:185px}
 
 /* ---------- Filtres catégorie (barre horizontale façon Deloison) ---------- */
 .cat-grid{max-width:1180px;margin:0 auto}
@@ -394,6 +406,9 @@ h3{font-size:1.35rem}
   .footer-grid{grid-template-columns:1fr 1fr}
   .pdp-grid{grid-template-columns:1fr;gap:46px}
   .gallery,.pdp-sticky{position:static}
+  .header-left{min-width:0}
+  .header-main{flex-wrap:wrap;justify-content:center;row-gap:10px}
+  .main-nav{order:3;flex-basis:100%;justify-content:center}
   .feature{grid-template-columns:1fr;gap:44px}
   .feature.flip .media{order:0}
 }
@@ -413,7 +428,13 @@ h3{font-size:1.35rem}
   .dropdown{position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;border:none;border-bottom:1px solid var(--line);padding:0 0 10px 16px;min-width:0}
   .dropdown a{padding:9px 0;border-bottom:none}
   .burger{display:flex}
-  .header-top span:nth-child(2){display:none}
+  .header-top span:last-child{display:none}
+  .header-logo-row{padding:14px 0 2px}
+  .logo img{height:42px}
+  .header-left{gap:14px}
+  .phone-link{font-size:.7rem}
+  .lang-item .lang-btn::after{display:none}
+  .lang-item{align-self:flex-start}
   .grid-3,.grid-4,.univers,.stones{grid-template-columns:1fr 1fr;gap:16px}
   .steps{grid-template-columns:1fr 1fr}
   .section{padding:70px 0}
