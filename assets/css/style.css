@@ -235,12 +235,12 @@ h3{font-size:1.35rem}
 .footer-bottom a{transition:color .2s}
 .footer-bottom a:hover{color:#fff}
 
-/* ---------- Page produit ---------- */
-.pdp{padding:44px 0 110px}
+/* ---------- Page produit (style Deloison : aéré, filets fins) ---------- */
+.pdp{padding:52px 0 120px}
 .pdp .breadcrumb{color:var(--muted)}
 .pdp .breadcrumb a{color:var(--ink-soft)}
 .pdp .breadcrumb a:hover{color:var(--ink)}
-.pdp-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:start}
+.pdp-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:84px;align-items:start}
 .gallery{position:sticky;top:130px}
 .gallery-main{position:relative;background:var(--soft);aspect-ratio:4/5;overflow:hidden}
 .gallery-main img,.gallery-main canvas{width:100%;height:100%;object-fit:cover;display:block}
@@ -258,8 +258,9 @@ h3{font-size:1.35rem}
 .thumb.active{opacity:1;border-color:var(--ink)}
 .zoom-hint{position:absolute;right:14px;bottom:12px;background:rgba(255,255,255,.92);padding:7px 13px;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);z-index:2}
 
+.pdp-info{max-width:520px}
 .pdp-info .cat-tag{font-size:.64rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
-.pdp-info h1{font-size:clamp(2rem,3vw,2.8rem);margin:12px 0 10px}
+.pdp-info h1{font-size:clamp(2.1rem,3vw,2.9rem);margin:14px 0 12px}
 .pdp-rating{display:flex;align-items:center;gap:9px;font-size:.78rem;color:var(--muted);margin-bottom:20px}
 .stars{color:var(--gold);letter-spacing:3px;font-size:.85rem}
 .pdp-price{font-family:var(--serif);font-size:2rem;color:var(--ink);display:flex;align-items:baseline;gap:14px}
@@ -279,6 +280,14 @@ h3{font-size:1.35rem}
 .chip .mod{opacity:.7;font-size:.74rem;margin-left:6px}
 .engrave input{width:100%;padding:15px 18px;border:1px solid var(--line);font-family:inherit;font-size:.9rem;color:var(--ink);background:#fff;transition:border-color .25s}
 .engrave input:focus{outline:none;border-color:var(--ink)}
+.engrave-panel{border:1px solid var(--line);background:var(--soft-2);padding:24px 26px}
+.engrave-head{display:flex;gap:14px;align-items:center;margin-bottom:16px}
+.engrave-head svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.4;flex:none}
+.engrave-head b{display:block;font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--ink)}
+.engrave-head span{font-size:.76rem;color:var(--muted)}
+.engrave-foot{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:10px}
+.engrave-preview{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--gold)}
+.engrave-count{font-size:.68rem;letter-spacing:.14em;color:var(--muted)}
 .buy-row{display:flex;gap:14px;margin:30px 0 12px}
 .qty{display:flex;align-items:center;border:1px solid var(--line);background:#fff}
 .qty button{width:46px;height:54px;font-size:1.15rem;color:var(--ink);transition:background .2s}

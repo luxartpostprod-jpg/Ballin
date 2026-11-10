@@ -104,14 +104,27 @@
       });
     } else zg.style.display = "none";
 
-    /* Gravure */
+    /* Gravure — panneau dédié, offert sur les modèles gravables */
     const eg = document.getElementById("engraveGroup");
-    if (p.id === "chevaliere-heritage") {
+    if (p.id === "alliance-eternite-diamants") { eg.style.display = "none"; }
+    else {
       eg.style.display = "block";
-      eg.innerHTML = `<div class="opt-label"><span>Gravure offerte sur le chaton</span></div>
-        <div class="engrave"><input id="engraveInput" maxlength="12" placeholder="Ex. S + A · 14.07.2025"></div>`;
-      document.getElementById("engraveInput").addEventListener("input", e => { state.engraving = e.target.value; });
-    } else eg.style.display = "none";
+      eg.innerHTML = `
+        <div class="engrave-panel">
+          <div class="engrave-head">
+            <svg viewBox="0 0 24 24"><path d="M12 3l7 7-7 11L5 10l7-7z"/><line x1="5" y1="10" x2="19" y2="10"/></svg>
+            <div><b>Gravure offerte</b><span>Personnalisez votre bijou — 12 caractères max, offerte par la Maison</span></div>
+          </div>
+          <div class="engrave"><input id="engraveInput" maxlength="12" placeholder="Ex. S ♥ A · 14.07.2025" aria-label="Votre gravure"></div>
+          <div class="engrave-foot"><span class="engrave-preview" id="engravePreview"></span><span class="engrave-count" id="engraveCount">0/12</span></div>
+        </div>`;
+      const ei = document.getElementById("engraveInput");
+      ei.addEventListener("input", e => {
+        state.engraving = e.target.value;
+        document.getElementById("engraveCount").textContent = e.target.value.length + "/12";
+        document.getElementById("engravePreview").textContent = e.target.value ? `Aperçu : « ${e.target.value} »` : "";
+      });
+    }
 
     /* Accordéons */
     const acc = document.getElementById("accordions");
