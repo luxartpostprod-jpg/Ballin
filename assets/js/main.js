@@ -41,6 +41,8 @@
           </div>
         </div>
         <nav class="main-nav" id="mainNav">
+          <a href="fiancailles.html">Fiançailles</a>
+          <a href="alliances.html">Alliances</a>
           <div class="nav-item has-drop">
             <a class="drop-toggle" href="joaillerie.html">Joaillerie</a>
             <div class="dropdown">
@@ -51,8 +53,6 @@
               <a href="boucles-oreilles.html">Boucles d'oreilles</a>
             </div>
           </div>
-          <a href="fiancailles.html">Fiançailles</a>
-          <a href="alliances.html">Alliances</a>
           <a href="nos-pierres.html">Nos pierres</a>
           <a href="la-maison.html">La Maison</a>
           <a href="nos-guides.html">Nos guides</a>
