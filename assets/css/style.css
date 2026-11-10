@@ -346,16 +346,9 @@ h3{font-size:1.35rem}
 .thumb.active{opacity:1;border-color:var(--ink)}
 .zoom-hint{position:absolute;right:14px;bottom:12px;background:rgba(255,255,255,.92);padding:7px 13px;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);z-index:2}
 
-.pdp-info{max-width:520px;text-align:center}
+.pdp-info{max-width:520px;text-align:left}
 .pdp-info .cat-tag{font-size:.64rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
 .pdp-info h1{font-size:clamp(2.2rem,3vw,3rem);margin:14px 0 12px}
-.pdp-info .pdp-short{margin-left:auto;margin-right:auto}
-.swatches,.chips{justify-content:center}
-.opt-label{justify-content:center;gap:10px}
-.engrave input{text-align:center}
-.buy-row{justify-content:center}
-.accordions{text-align:left}
-.pdp-rating,.pdp-price{justify-content:center}
 .pdp-rating{display:flex;align-items:center;gap:9px;font-size:.78rem;color:var(--muted);margin-bottom:20px}
 .stars{color:var(--gold);letter-spacing:3px;font-size:.85rem}
 .pdp-price{font-family:var(--serif);font-size:2rem;color:var(--ink);display:flex;align-items:baseline;gap:14px}
