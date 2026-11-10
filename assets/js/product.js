@@ -18,11 +18,13 @@
   }
 
   function updatePriceUI() {
-    document.getElementById("pdpPrice").innerHTML = `${fmt(price())} <span class="tva">TTC</span> <span class="installments">ou 3× sans frais</span>`;
+    document.getElementById("pdpPrice").innerHTML = `${fmt(price())} <span class="tva">TTC, livraison offerte</span>`;
     const btn = document.getElementById("addCart");
     if (btn) btn.textContent = `Ajouter au panier · ${fmt(price())}`;
     const barPrice = document.getElementById("pdpBarPrice");
     if (barPrice) barPrice.textContent = fmt(price());
+    const inst = document.getElementById("pdpInstallments");
+    if (inst) inst.textContent = "3 × " + (price() / 3).toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " € sans frais";
   }
 
   function render() {
