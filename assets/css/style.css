@@ -209,7 +209,7 @@ h3{font-size:1.35rem}
 
 /* ---------- Barre de services ---------- */
 .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
-.trust .container{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:40px 36px}
+.trust .container{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:40px 36px}
 .trust-item{display:flex;gap:14px;align-items:center;justify-content:center}
 .trust-item + .trust-item{border-left:1px solid var(--line)}
 .trust-item svg{width:30px;height:30px;stroke:var(--gold);fill:none;stroke-width:1.2;flex:none}
