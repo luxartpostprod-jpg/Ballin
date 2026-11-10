@@ -53,6 +53,7 @@
           <a href="alliances.html">Alliances</a>
           <a href="nos-pierres.html">Nos pierres</a>
           <a href="la-maison.html">La Maison</a>
+          <a href="showroom.html">Showroom</a>
         </nav>
         <div class="header-actions">
           <button class="icon-btn" id="searchBtn" aria-label="Rechercher">
@@ -96,6 +97,7 @@
           <h4>La Maison</h4>
           <ul>
             <li><a href="la-maison.html">Notre histoire</a></li>
+            <li><a href="showroom.html">Showroom</a></li>
             <li><a href="atelier.html">L'atelier</a></li>
             <li><a href="engagements.html">Nos engagements</a></li>
             <li><a href="nos-pierres.html">Nos pierres &amp; diamants</a></li>
