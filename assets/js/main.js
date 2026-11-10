@@ -23,6 +23,9 @@
             <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
             +33 1 84 60 20 24
           </a>
+          <a class="phone-link rdv-link" href="contact.html" title="Prendre rendez-vous" aria-label="Prendre rendez-vous">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg>
+          </a>
           <div class="nav-item lang-item">
             <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-label="Choisir la langue">
               <span id="langLabel">FR</span>
@@ -54,7 +57,6 @@
           <a href="nos-pierres.html">Nos pierres</a>
           <a href="la-maison.html">La Maison</a>
           <a href="showroom.html">Showroom</a>
-          <a href="contact.html">Prendre rendez-vous</a>
         </nav>
         <div class="header-actions">
           <button class="icon-btn" id="searchBtn" aria-label="Rechercher">

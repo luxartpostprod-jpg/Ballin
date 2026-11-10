@@ -51,6 +51,9 @@ h3{font-size:1.35rem}
 .phone-link{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;letter-spacing:.06em;color:var(--ink-soft);white-space:nowrap;transition:color .25s}
 .phone-link:hover{color:var(--ink)}
 .phone-link svg{width:15px;height:15px;stroke:var(--gold);fill:none;stroke-width:1.6}
+.rdv-link{padding:6px;border:1px solid var(--line);border-radius:50%;transition:all .25s}
+.rdv-link svg{width:16px;height:16px}
+.rdv-link:hover{border-color:var(--ink);background:var(--soft)}
 .lang-item .lang-btn{display:inline-flex;align-items:center;gap:7px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ink-soft);padding:6px 0;transition:color .25s}
 .lang-item .lang-btn::after{content:"";width:5px;height:5px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .3s var(--ease)}
 .lang-item:hover .lang-btn,.lang-item:focus-within .lang-btn{color:var(--ink)}
