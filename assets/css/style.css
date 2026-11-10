@@ -118,22 +118,20 @@ h3{font-size:1.35rem}
 .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
 
 /* ---------- Tuiles univers ---------- */
-.univers{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.univers{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
 .univers a{display:block;position:relative}
 .univers .thumb{aspect-ratio:4/5;overflow:hidden;background:var(--soft);position:relative}
 .univers .thumb img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
-.univers .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,12,9,.55),rgba(15,12,9,0) 55%);opacity:0;transition:opacity .5s}
-.univers a:hover .thumb img{transform:scale(1.06)}
-.univers a:hover .thumb::after{opacity:1}
-.univers .lbl{position:absolute;left:0;right:0;bottom:0;padding:22px;text-align:center;color:#fff;font-family:var(--serif);font-size:1.45rem;z-index:2;transform:translateY(6px);transition:transform .5s var(--ease)}
-.univers a:hover .lbl{transform:translateY(0)}
-.univers .lbl span{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:6px}
+.univers a:hover .thumb img{transform:scale(1.05)}
+.univers .lbl{padding:20px 0 4px;text-align:center;color:var(--ink);font-family:var(--serif);font-size:1.4rem;transition:color .3s}
+.univers a:hover .lbl{color:var(--gold)}
+.univers .lbl span{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 
 /* ---------- Bannières éditoriales ---------- */
-.edito{position:relative;min-height:68vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--soft)}
+.edito{position:relative;min-height:72vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:var(--soft)}
 .edito img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.edito::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,12,9,.6),rgba(15,12,9,.12) 55%)}
-.edito .content{position:relative;z-index:2;padding:80px 0;max-width:580px;color:#fff}
+.edito::after{content:"";position:absolute;inset:0;background:rgba(15,12,9,.38)}
+.edito .content{position:relative;z-index:2;padding:90px 24px;max-width:640px;color:#fff;margin:0 auto}
 .edito .eyebrow{color:var(--gold-soft)}
 .edito h2{font-size:clamp(2.1rem,4vw,3.5rem);color:#fff}
 .edito h2 em{font-style:italic;font-weight:400}
@@ -184,6 +182,13 @@ h3{font-size:1.35rem}
 .breadcrumb{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:18px}
 .breadcrumb a{transition:color .2s}
 .breadcrumb a:hover{color:#fff}
+
+/* ---------- Bloc citation (histoire, façon Gemmyo) ---------- */
+.story{max-width:780px;margin:0 auto}
+.story h2{font-size:clamp(1.7rem,2.8vw,2.4rem);font-weight:500;line-height:1.3}
+.story h2 em{font-style:italic;color:var(--gold)}
+.story p{margin-top:22px;color:var(--ink-soft)}
+.story .link-u{margin-top:30px}
 
 /* ---------- Feature / maison ---------- */
 .feature{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center}
@@ -236,6 +241,8 @@ h3{font-size:1.35rem}
 .carnet-card h3{font-size:1.3rem;transition:color .3s}
 .carnet-card:hover h3{color:var(--gold)}
 .carnet-card p{font-size:.86rem;color:var(--ink-soft);margin-top:8px}
+.carnet-card .read{display:inline-block;margin-top:14px;font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;border-bottom:1px solid currentColor;padding-bottom:4px;transition:opacity .25s}
+.carnet-card:hover .read{opacity:.55}
 
 /* ---------- Newsletter ---------- */
 .newsletter{border-top:1px solid var(--line);background:var(--soft-2)}

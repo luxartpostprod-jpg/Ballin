@@ -88,18 +88,12 @@
 
 <!-- ================= NOTRE HISTOIRE ================= -->
 <section class="section section-soft">
-  <div class="container">
-    <div class="feature reveal">
-      <div class="media"><img src="assets/img/pages/maison.jpg" alt="L'atelier BALLIN Paris" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
-      <div class="txt">
-        <p class="eyebrow">Notre histoire</p>
-        <h2>BALLIN est une histoire de <em style="font-style:italic">famille</em></h2>
-        <p id="sfText"></p>
-        <p id="enText"></p>
-        <div style="margin-top:28px;display:flex;gap:22px;align-items:center;flex-wrap:wrap">
-          <a class="link-u" href="la-maison.html">Découvrir</a>
-        </div>
-      </div>
+  <div class="container center">
+    <div class="story reveal">
+      <p class="eyebrow">Notre histoire</p>
+      <h2>« BALLIN est une histoire de <em>famille</em> — quatre générations de joailliers parisiens. »</h2>
+      <p id="sfText"></p>
+      <a class="link-u" href="la-maison.html">Découvrir</a>
     </div>
   </div>
 </section>
@@ -133,18 +127,21 @@
         <p class="date">Guide des pierres</p>
         <h3>Quelle gemme correspond à votre personnalité ?</h3>
         <p>Saphir, émeraude, rubis… chaque pierre a un tempérament.</p>
+        <span class="read">Lire l'article</span>
       </a>
       <a class="carnet-card reveal" href="atelier.html">
         <div class="thumb"><img src="assets/img/pages/atelier.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
         <p class="date">Coulisses</p>
         <h3>Dans l'atelier : cinq étapes, une exigence</h3>
         <p>De la première esquisse au sceau de l'atelier, le processus de création.</p>
+        <span class="read">Lire l'article</span>
       </a>
       <a class="carnet-card reveal" href="sav.html">
         <div class="thumb"><img src="assets/img/pages/sav.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
         <p class="date">Savoir-faire</p>
         <h3>Comment entretenir son bijou toute une vie ?</h3>
         <p>Nos conseils d'entretien et notre service après-vente dédié.</p>
+        <span class="read">Lire l'article</span>
       </a>
     </div>
     <div class="center" style="margin-top:44px"><a class="link-u" href="nos-guides.html">Lire le Carnet</a></div>
@@ -176,7 +173,6 @@
 <script src="assets/js/main.js"></script>
 <script>
   document.getElementById("sfText").textContent = TEXTES.savoirFaire;
-  document.getElementById("enText").textContent = TEXTES.engagement;
 </script>
 </body>
 </html>
