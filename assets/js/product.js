@@ -27,6 +27,7 @@
     document.getElementById("pdpCat").textContent = `${cat.label}${sub ? " · " + sub.label : ""}`;
     document.getElementById("pdpName").textContent = p.name;
     document.getElementById("pdpPrice").innerHTML = `${fmt(price())} <span class="tva">TTC, livraison offerte</span>`;
+    document.getElementById("pdpRef").textContent = "Réf. BALLIN-" + p.id.toUpperCase().replace(/-/g, "");
     document.getElementById("pdpShort").textContent = p.short;
 
     /* Galerie : 2 vues 2D + vue 3D */

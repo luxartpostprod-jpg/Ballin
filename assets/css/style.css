@@ -328,9 +328,10 @@ h3{font-size:1.35rem}
 .pdp .breadcrumb{color:var(--muted)}
 .pdp .breadcrumb a{color:var(--ink-soft)}
 .pdp .breadcrumb a:hover{color:var(--ink)}
-.pdp-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:start}
+.pdp-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:84px;align-items:start}
+.pdp > .container > .breadcrumb{margin-bottom:30px}
 .gallery{position:sticky;top:185px}
-.gallery-main{position:relative;background:var(--soft);aspect-ratio:4/5;overflow:hidden}
+.gallery-main{position:relative;background:var(--soft);aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line);border-radius:0}
 .gallery-main img,.gallery-main canvas{width:100%;height:100%;object-fit:cover;display:block}
 .gallery-main canvas{cursor:grab}
 .gallery-main canvas:active{cursor:grabbing}
@@ -340,7 +341,7 @@ h3{font-size:1.35rem}
 .view-tab:hover{color:var(--ink)}
 .view-tab.active{background:var(--ink);color:#fff}
 .thumbs{display:flex;gap:10px;margin-top:12px}
-.thumb{width:72px;height:90px;overflow:hidden;border:1px solid var(--line);cursor:pointer;opacity:.65;background:var(--soft);transition:opacity .25s,border-color .25s}
+.thumb{width:72px;height:90px;overflow:hidden;border:1px solid var(--line);border-radius:0;cursor:pointer;opacity:.65;background:var(--soft);transition:opacity .25s,border-color .25s}
 .thumb img{width:100%;height:100%;object-fit:cover}
 .thumb:hover{opacity:1}
 .thumb.active{opacity:1;border-color:var(--ink)}
@@ -353,7 +354,8 @@ h3{font-size:1.35rem}
 .pdp-price{font-family:var(--serif);font-size:2rem;color:var(--ink);display:flex;align-items:baseline;gap:14px}
 .pdp-price .tva{font-family:var(--sans);font-size:.68rem;color:var(--muted)}
 .pdp-short{margin:20px 0 30px;color:var(--ink-soft)}
-.opt-group{margin-bottom:26px}
+.opt-group{margin-bottom:26px;padding-top:22px;border-top:1px solid var(--line)}
+.pdp-short{padding-bottom:26px}
 .opt-label{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:13px;display:flex;justify-content:space-between}
 .opt-label b{color:var(--ink);font-weight:600}
 .swatches{display:flex;gap:12px}
@@ -367,7 +369,8 @@ h3{font-size:1.35rem}
 .chip .mod{opacity:.7;font-size:.74rem;margin-left:6px}
 .engrave input{width:100%;padding:15px 18px;border:1px solid var(--line);font-family:inherit;font-size:.9rem;color:var(--ink);background:#fff;transition:border-color .25s}
 .engrave input:focus{outline:none;border-color:var(--ink)}
-.engrave-panel{border:1px solid var(--line);background:var(--soft-2);padding:24px 26px}
+.engrave-panel{border:1px solid var(--line);background:transparent;padding:24px 26px;border-radius:0}
+.pdp-ref{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:10px}
 .engrave-head{display:flex;gap:14px;align-items:center;margin-bottom:16px}
 .engrave-head svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.4;flex:none}
 .engrave-head b{display:block;font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--ink)}
