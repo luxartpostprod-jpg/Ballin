@@ -200,15 +200,12 @@ h3{font-size:1.35rem}
 .best-grid{gap:20px}
 .best-grid .product-card .thumb{aspect-ratio:4/5}
 
-.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,270px);gap:20px}
+.mosaic{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:360px;gap:22px;max-width:1060px;margin:0 auto}
 .m-tile{position:relative;overflow:hidden;display:block;background:#221E19}
-.m-tile.big{grid-column:span 2;grid-row:span 2}
-.m-tile.wide{grid-column:span 2}
 .m-tile img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
 .m-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,12,9,.62),rgba(15,12,9,0) 55%);transition:opacity .5s}
 .m-tile:hover img{transform:scale(1.06)}
-.m-tile .lbl{position:absolute;left:24px;bottom:20px;z-index:2;color:#fff;font-family:var(--serif);font-size:1.6rem}
-.m-tile.big .lbl{font-size:2.3rem}
+.m-tile .lbl{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:2;color:#fff;font-family:var(--serif);font-size:1.7rem;text-align:center;white-space:nowrap}
 .m-tile .lbl span{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:6px}
 
 .stats{display:flex;gap:56px;flex-wrap:wrap;margin-top:34px}
@@ -443,9 +440,7 @@ h3{font-size:1.35rem}
 /* ---------- Responsive ---------- */
 @media (max-width:1020px){
   .grid-4,.univers,.stones,.carnet-grid{grid-template-columns:repeat(2,1fr)}
-  .mosaic{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,240px)}
-  .m-tile.big{grid-column:span 2;grid-row:span 2}
-  .m-tile.wide{grid-column:span 2}
+  .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:280px;max-width:100%}
   .grid-3{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:repeat(3,1fr);gap:32px}
   .trust .container{grid-template-columns:repeat(2,1fr);gap:26px}
@@ -484,8 +479,7 @@ h3{font-size:1.35rem}
   .grid-3,.grid-4,.stones{grid-template-columns:1fr 1fr;gap:16px}
   .univers{grid-template-columns:1fr 1fr;gap:12px}
   .container-wide{padding:0 20px}
-  .mosaic{grid-template-columns:1fr;grid-template-rows:none;grid-auto-rows:300px}
-  .m-tile.big,.m-tile.wide{grid-column:span 1;grid-row:span 1}
+  .mosaic{grid-template-columns:1fr;grid-auto-rows:320px;max-width:100%}
   .carnet-grid{grid-template-columns:1fr;gap:36px}
   .carnet-grid .thumb{aspect-ratio:16/10}
   .steps{grid-template-columns:1fr 1fr}
