@@ -103,7 +103,7 @@ h3{font-size:1.35rem}
 .hero-ctas{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
 
 /* ---------- Boutons ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;transition:all .35s var(--ease);border:1px solid var(--ink);border-radius:999px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;transition:all .35s var(--ease);border:1px solid var(--ink);border-radius:2px}
 .btn-primary{background:var(--ink);color:#fff}
 .btn-primary:hover{background:#000;transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(25,22,19,.5)}
 .btn-outline{background:transparent;color:var(--ink)}
@@ -370,7 +370,8 @@ h3{font-size:1.35rem}
 .engrave input{width:100%;padding:13px 2px;border:none;border-bottom:1px solid var(--ink);border-radius:0;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--ink);background:transparent;transition:border-color .25s}
 .engrave input::placeholder{color:var(--muted);font-style:italic}
 .engrave input:focus{outline:none;border-bottom-color:var(--gold)}
-.engrave-panel{border:1px solid var(--line);background:transparent;padding:24px 26px;border-radius:0}
+.engrave-panel{border:1px solid var(--line);background:var(--soft-2);padding:24px 26px;border-radius:0}
+.buy-row.center{justify-content:center}
 .pdp-ref{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:10px}
 .engrave-head{display:flex;gap:14px;align-items:center;margin-bottom:16px}
 .engrave-head svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.4;flex:none}

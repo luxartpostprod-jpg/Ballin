@@ -179,13 +179,6 @@
       }, { threshold: 0 }).observe(buyRow);
     }
 
-    /* Favori */
-    const wishBtn = document.getElementById("pdpWish");
-    if (wishBtn) {
-      if ((BallinStore.get("wishlist", [])).includes(p.id)) wishBtn.classList.add("active");
-      wishBtn.addEventListener("click", () => toggleWish(p.id, wishBtn));
-    }
-
     /* Date de livraison estimée (J+2) */
     const est = document.getElementById("estDate");
     if (est) {

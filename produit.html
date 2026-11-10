@@ -41,16 +41,8 @@
           <div class="opt-group" id="sizeGroup"></div>
           <div class="opt-group" id="engraveGroup"></div>
 
-          <div class="buy-row">
-            <div class="qty">
-              <button id="qMinus" aria-label="Diminuer">−</button>
-              <span id="qVal">1</span>
-              <button id="qPlus" aria-label="Augmenter">+</button>
-            </div>
-            <button class="btn btn-primary btn-block" id="addCart" style="flex:1">Ajouter au panier</button>
-            <button class="wish-btn" id="pdpWish" aria-label="Ajouter aux favoris" title="Ajouter aux favoris">
-              <svg viewBox="0 0 24 24"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.6 3.5 7 5.5 5 8 5c1.6 0 3.1.8 4 2.1C12.9 5.8 14.4 5 16 5c2.5 0 4.5 2 4.5 4.6 0 3.7-3.5 6.9-8.5 10.9z"/></svg>
-            </button>
+          <div class="buy-row center">
+            <button class="btn btn-primary btn-block" id="addCart">Ajouter au panier</button>
           </div>
           <div style="margin-top:16px;text-align:center">
             <a class="link-u" href="contact.html">Prendre rendez-vous en boutique</a>
@@ -95,10 +87,5 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/viewer3d.js"></script>
 <script src="assets/js/product.js"></script>
-<script>
-  let q = 1;
-  document.getElementById("qMinus").onclick = () => { q = Math.max(1, q - 1); document.getElementById("qVal").textContent = q; };
-  document.getElementById("qPlus").onclick = () => { q = Math.min(9, q + 1); document.getElementById("qVal").textContent = q; };
-</script>
 </body>
 </html>
