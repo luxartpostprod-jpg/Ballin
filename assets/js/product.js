@@ -18,7 +18,7 @@
   }
 
   function updatePriceUI() {
-    updatePriceUI();
+    document.getElementById("pdpPrice").innerHTML = `${fmt(price())} <span class="tva">TTC, livraison offerte</span>`;
     const btn = document.getElementById("addCart");
     if (btn) btn.textContent = `Ajouter au panier · ${fmt(price())}`;
   }
