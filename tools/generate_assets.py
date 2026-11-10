@@ -223,41 +223,42 @@ def boucles_svg(metal, gem, style="creoles"):
     return "".join(g)
 
 # ---------------- LOGO ----------------
+# Logo monochrome encre (#1B1815) : fin, sérif espacé, petit losange.
+# Le filtre CSS invert(1) du footer le rend clair sur fond sombre.
 def logo_svg():
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160">
-<defs>
- <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0" stop-color="#C9A86A"/><stop offset=".5" stop-color="#A9834B"/><stop offset="1" stop-color="#8A6A3C"/>
- </linearGradient>
- <radialGradient id="dg" cx=".35" cy=".3" r=".9">
-  <stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#E9F0FA"/><stop offset="1" stop-color="#A9BEDC"/>
- </radialGradient>
-</defs>
-<g>
- <polygon points="80,18 112,44 80,96 48,44" fill="url(#dg)" stroke="url(#lg)" stroke-width="3"/>
- <line x1="48" y1="44" x2="112" y2="44" stroke="#C9A86A" stroke-width="1.6"/>
- <line x1="80" y1="18" x2="66" y2="44" stroke="#fff" stroke-width="1.2" opacity=".9"/>
- <line x1="80" y1="18" x2="94" y2="44" stroke="#fff" stroke-width="1.2" opacity=".9"/>
- <line x1="66" y1="44" x2="80" y2="96" stroke="#fff" stroke-width="1" opacity=".7"/>
- <line x1="94" y1="44" x2="80" y2="96" stroke="#fff" stroke-width="1" opacity=".7"/>
+    return '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150">
+<g fill="none" stroke="#1B1815" stroke-width="2">
+  <polygon points="260,12 276,30 260,48 244,30"/>
+  <line x1="244" y1="30" x2="276" y2="30" stroke-width="1.2"/>
+  <line x1="260" y1="12" x2="252" y2="30" stroke-width="1" opacity=".6"/>
+  <line x1="260" y1="12" x2="268" y2="30" stroke-width="1" opacity=".6"/>
 </g>
-<text x="140" y="82" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-size="64" letter-spacing="14" fill="#2E2A25">BALLIN</text>
-<text x="143" y="112" font-family="Jost, Montserrat, Arial, sans-serif" font-size="15" letter-spacing="9" fill="#A9834B">PARIS</text>
-<line x1="142" y1="126" x2="330" y2="126" stroke="#C9A86A" stroke-width="1"/>
-<text x="338" y="131" font-family="Jost, Montserrat, Arial, sans-serif" font-size="13" letter-spacing="4" fill="#7A7166">JOAILLERIE</text>
+<text x="267" y="102" text-anchor="middle" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-size="62" font-weight="500" letter-spacing="16" fill="#1B1815">BALLIN</text>
+<line x1="180" y1="120" x2="340" y2="120" stroke="#1B1815" stroke-width="1" opacity=".55"/>
+<text x="265" y="141" text-anchor="middle" font-family="Jost, Montserrat, Arial, sans-serif" font-size="13" letter-spacing="10" fill="#1B1815" opacity=".8">PARIS</text>
 </svg>'''
 
 def logo_mark_svg():
     return '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
-<defs>
- <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A86A"/><stop offset="1" stop-color="#8A6A3C"/></linearGradient>
- <radialGradient id="dg" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="#E9F0FA"/><stop offset="1" stop-color="#A9BEDC"/></radialGradient>
-</defs>
-<circle cx="80" cy="80" r="74" fill="#FBF7EF" stroke="url(#lg)" stroke-width="3"/>
-<polygon points="80,34 116,64 80,122 44,64" fill="url(#dg)" stroke="url(#lg)" stroke-width="3"/>
-<line x1="44" y1="64" x2="116" y2="64" stroke="#C9A86A" stroke-width="1.6"/>
-<line x1="80" y1="34" x2="64" y2="64" stroke="#fff" stroke-width="1.3"/><line x1="80" y1="34" x2="96" y2="64" stroke="#fff" stroke-width="1.3"/>
-<line x1="64" y1="64" x2="80" y2="122" stroke="#fff" stroke-width="1.1" opacity=".75"/><line x1="96" y1="64" x2="80" y2="122" stroke="#fff" stroke-width="1.1" opacity=".75"/>
+<circle cx="80" cy="80" r="72" fill="none" stroke="#A5814B" stroke-width="1.5"/>
+<g fill="none" stroke="#A5814B" stroke-width="2">
+  <polygon points="80,42 106,66 80,118 54,66"/>
+  <line x1="54" y1="66" x2="106" y2="66" stroke-width="1.2"/>
+  <line x1="80" y1="42" x2="67" y2="66" stroke-width="1" opacity=".7"/>
+  <line x1="80" y1="42" x2="93" y2="66" stroke-width="1" opacity=".7"/>
+  <line x1="67" y1="66" x2="80" y2="118" stroke-width=".9" opacity=".5"/>
+  <line x1="93" y1="66" x2="80" y2="118" stroke-width=".9" opacity=".5"/>
+</g>
+</svg>'''
+
+def favicon_svg():
+    return '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+<circle cx="80" cy="80" r="78" fill="#FBFAF7"/>
+<circle cx="80" cy="80" r="72" fill="none" stroke="#A5814B" stroke-width="2"/>
+<g fill="none" stroke="#A5814B" stroke-width="2.5">
+  <polygon points="80,42 106,66 80,118 54,66"/>
+  <line x1="54" y1="66" x2="106" y2="66" stroke-width="1.5"/>
+</g>
 </svg>'''
 
 # ---------------- BANNIERES PAGES ----------------
@@ -329,7 +330,7 @@ for name, svg in PRODUCTS_IMG:
 
 write(os.path.join(ROOT, "logo.svg"), logo_svg())
 write(os.path.join(ROOT, "logo-mark.svg"), logo_mark_svg())
-write(os.path.join(ROOT, "favicon.svg"), logo_mark_svg())
+write(os.path.join(ROOT, "favicon.svg"), favicon_svg())
 write(os.path.join(G, "hero-home.svg"), hero_home())
 
 # Bannieres categories (piece = extrait du svg produit correspondant, mis à droite)

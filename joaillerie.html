@@ -27,36 +27,32 @@
 
 <section class="section" style="padding-top:56px">
   <div class="container">
-    <div style="display:grid;grid-template-columns:220px 1fr;gap:56px" class="cat-layout">
-      <aside style="position:sticky;top:150px;align-self:start">
-        <div class="filters" id="filters">
-          <h4>Affiner</h4>
-          <div id="subNav"></div>
-          <div class="fgroup"><div class="ftitle">Prix</div>
-            <label><input type="checkbox" data-f="price" value="0-2000"> Moins de 2 000 €</label>
-            <label><input type="checkbox" data-f="price" value="2000-5000"> 2 000 € – 5 000 €</label>
-            <label><input type="checkbox" data-f="price" value="5000+"> Plus de 5 000 €</label>
-          </div>
-          <div class="fgroup"><div class="ftitle">Métal</div><div id="fMetals"></div></div>
-          <div class="fgroup"><div class="ftitle">Pierre</div><div id="fGems"></div></div>
-          <button class="link-u" id="clearFilters" style="margin-top:6px">Effacer tous les filtres</button>
+        <div class="filter-bar" id="filters">
+      <div class="filter-bar-row">
+        <span class="count" id="catCount"></span>
+        <div class="filter-groups">
+          <details class="fdrop"><summary>Prix</summary>
+            <div class="fgroup">
+              <label><input type="checkbox" data-f="price" value="0-2000"> Moins de 2 000 €</label>
+              <label><input type="checkbox" data-f="price" value="2000-5000"> 2 000 € – 5 000 €</label>
+              <label><input type="checkbox" data-f="price" value="5000+"> Plus de 5 000 €</label>
+            </div>
+          </details>
+          <details class="fdrop"><summary>Métal</summary><div class="fgroup"><div id="fMetals"></div></div></details>
+          <details class="fdrop"><summary>Pierre</summary><div class="fgroup"><div id="fGems"></div></div></details>
+          <span id="subNav" class="subnav-chips"></span>
+          <button class="link-u" id="clearFilters">Effacer</button>
         </div>
-      </aside>
-      <div>
-        <div class="toolbar">
-          <span class="count" id="catCount"></span>
-          <label style="display:flex;align-items:center;gap:10px;font-size:.78rem;color:var(--muted)">Trier :
-            <select id="sortSel">
-              <option value="default">Nouveautés</option>
-              <option value="asc">Prix croissant</option>
-              <option value="desc">Prix décroissant</option>
-            </select>
-          </label>
-        </div>
-        <div class="grid-3" id="grid" style="grid-template-columns:repeat(3,1fr)"></div>
+        <label class="sort-wrap">Trier :
+          <select id="sortSel">
+            <option value="default">Nouveautés</option>
+            <option value="asc">Prix croissant</option>
+            <option value="desc">Prix décroissant</option>
+          </select>
+        </label>
       </div>
     </div>
-  </div>
+    <div class="grid-3 cat-grid" id="grid" style="grid-template-columns:repeat(3,1fr)"></div>
 </section>
 
 <div id="footer"></div>
@@ -65,6 +61,6 @@
 <script src="assets/js/data.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/category.js"></script>
-<style>@media(max-width:900px){.cat-layout{grid-template-columns:1fr!important}aside{position:static!important}#grid{grid-template-columns:repeat(2,1fr)!important}}@media(max-width:600px){#grid{grid-template-columns:1fr!important}}</style>
+
 </body>
 </html>

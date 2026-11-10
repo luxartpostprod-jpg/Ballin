@@ -18,12 +18,19 @@
           <img src="assets/img/logo.svg" alt="BALLIN Paris">
         </a>
         <nav class="main-nav" id="mainNav">
-          <a href="joaillerie.html">Joaillerie</a>
+          <div class="nav-item has-drop">
+            <a class="drop-toggle" href="joaillerie.html">Joaillerie</a>
+            <div class="dropdown">
+              <a href="joaillerie.html">Toute la joaillerie</a>
+              <a href="bagues.html">Bagues</a>
+              <a href="bracelets.html">Bracelets</a>
+              <a href="colliers.html">Colliers</a>
+              <a href="boucles-oreilles.html">Boucles d'oreilles</a>
+            </div>
+          </div>
           <a href="fiancailles.html">Fiançailles</a>
           <a href="alliances.html">Alliances</a>
-          <a href="bagues.html">Bagues</a>
-          <a href="colliers.html">Colliers</a>
-          <a href="boucles-oreilles.html">Boucles d'oreilles</a>
+          <a href="nos-pierres.html">Nos pierres</a>
           <a href="la-maison.html">La Maison</a>
         </nav>
         <div class="header-actions">
@@ -126,6 +133,10 @@
     document.querySelectorAll(".main-nav a").forEach(a => {
       if (a.getAttribute("href") === here) a.classList.add("active");
     });
+    if (["joaillerie.html", "bagues.html", "bracelets.html", "colliers.html", "boucles-oreilles.html"].includes(here)) {
+      const t = document.querySelector(".main-nav .drop-toggle");
+      if (t) t.classList.add("active");
+    }
   }
 
   /* ---------- Toast ---------- */
@@ -187,8 +198,7 @@
           <img src="${p.img}" alt="${p.name}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'">
         </a>
         ${p.badge ? `<span class="badge ${goldBadge ? "gold" : ""}">${p.badge}</span>` : ""}
-        <button class="quick-add" data-add="${p.id}">Ajouter au panier</button>
-        <button class="wish ${wished ? "active" : ""}" data-wish="${p.id}" aria-label="Ajouter aux favoris">
+        <button class="wish ${wished ? "active" : ""}" data-wish="${p.id}" aria-label="Ajouter aux favoris" title="Ajouter aux favoris">
           <svg viewBox="0 0 24 24"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.6 3.5 7 5.5 5 8 5c1.6 0 3.1.8 4 2.1C12.9 5.8 14.4 5 16 5c2.5 0 4.5 2 4.5 4.6 0 3.7-3.5 6.9-8.5 10.9z"/></svg>
         </button>
       </div>
@@ -212,21 +222,12 @@
     if (!list.length) { el.innerHTML = `<p class="empty">Aucune création ne correspond à ces filtres.</p>`; return; }
     el.innerHTML = list.map(productCard).join("");
     bindWishes(el);
-    bindQuickAdd(el);
     observeReveals(el);
   };
 
   function bindWishes(scope) {
     (scope || document).querySelectorAll("[data-wish]").forEach(b => {
       b.addEventListener("click", e => { e.preventDefault(); toggleWish(b.dataset.wish, b); });
-    });
-  }
-
-  function bindQuickAdd(scope) {
-    (scope || document).querySelectorAll("[data-add]").forEach(b => {
-      const add = e => { e.preventDefault(); addToCart(b.dataset.add, {}); };
-      b.addEventListener("click", add);
-      b.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") add(e); });
     });
   }
 
@@ -276,7 +277,6 @@
     initHeader();
     initCookies();
     bindWishes(document);
-    bindQuickAdd(document);
     observeReveals(document);
   });
 })();
