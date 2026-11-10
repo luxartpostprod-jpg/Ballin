@@ -164,16 +164,16 @@ h3{font-size:1.35rem}
 .wish:hover svg{stroke:var(--ink);filter:none}
 .wish.active{background:rgba(255,255,255,.92)}
 .wish.active svg{fill:var(--ink);stroke:var(--ink);filter:none}
-.product-card .info{padding:18px 4px 0;text-align:center;display:flex;flex-direction:column;gap:4px}
+.product-card .info{padding:20px 4px 0;text-align:center;display:flex;flex-direction:column;gap:5px}
 .product-card .cat-tag{font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
-.product-card h3{font-size:1.18rem;font-weight:500}
+.product-card h3{font-size:1.22rem;font-weight:500;letter-spacing:.01em}
 .product-card h3 a{transition:opacity .25s}
 .product-card h3 a:hover{opacity:.6}
 .product-card .short{font-size:.82rem;color:var(--ink-soft);display:none}
 .product-card .price{margin-top:5px;font-family:var(--serif);font-size:1.08rem;color:var(--ink);letter-spacing:.03em}
 
 /* ---------- Bannières de page ---------- */
-.page-banner{position:relative;min-height:54vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--soft);border-bottom:1px solid var(--line)}
+.page-banner{position:relative;min-height:46vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--soft);border-bottom:1px solid var(--line)}
 .page-banner .bg{position:absolute;inset:0}
 .page-banner .bg img{width:100%;height:100%;object-fit:cover}
 .page-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,12,9,.62),rgba(15,12,9,.15) 60%)}
@@ -399,18 +399,19 @@ h3{font-size:1.35rem}
 .pdp-sticky{position:sticky;top:185px}
 
 /* ---------- Filtres catégorie (barre horizontale façon Deloison) ---------- */
-.cat-grid{max-width:1180px;margin:0 auto}
-.filter-bar{margin:44px auto 36px;max-width:1180px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cat-grid{max-width:1180px;margin:0 auto;gap:34px 26px}
+.filter-bar{margin:40px auto 40px;max-width:1180px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cat-edito{min-height:56vh}
 .filter-bar-row{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
 .filter-bar .count{font-size:.76rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
 .filter-groups{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .fdrop{position:relative}
-.fdrop summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid var(--line);background:#fff;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:var(--ink-soft);transition:all .25s;border-radius:2px}
+.fdrop summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:none;background:none;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;color:var(--ink-soft);transition:color .25s;border-radius:0;border-bottom:1px solid transparent}
+.fdrop summary:hover{color:var(--ink)}
+.fdrop[open] summary{color:var(--ink);border-bottom-color:var(--ink)}
 .fdrop summary::-webkit-details-marker{display:none}
 .fdrop summary::after{content:"";width:5px;height:5px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .3s}
-.fdrop[open] summary{border-color:var(--ink);color:var(--ink)}
 .fdrop[open] summary::after{transform:rotate(225deg) translateY(-1px)}
-.fdrop:hover summary{border-color:var(--ink);color:var(--ink)}
 .fdrop > .fgroup{position:absolute;top:calc(100% + 8px);left:0;z-index:70;min-width:230px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-lg);padding:16px 20px;margin:0}
 .fgroup label{display:flex;align-items:center;gap:11px;font-size:.85rem;color:var(--ink-soft);padding:6px 0;cursor:pointer;transition:color .2s;white-space:nowrap}
 .fgroup label:hover{color:var(--ink)}
