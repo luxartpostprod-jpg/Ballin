@@ -55,6 +55,7 @@
           <a href="alliances.html">Alliances</a>
           <a href="nos-pierres.html">Nos pierres</a>
           <a href="la-maison.html">La Maison</a>
+          <a href="nos-guides.html">Nos guides</a>
         </nav>
         <div class="header-actions">
           <button class="icon-btn" id="searchBtn" aria-label="Rechercher">
