@@ -105,12 +105,14 @@
     const zg = document.getElementById("sizeGroup");
     if (p.sizes) {
       zg.style.display = "block";
-      zg.innerHTML = `<div class="opt-label"><span>Taille</span><a href="sav.html#baguier" style="color:var(--gold-deep);text-decoration:underline">Guide des tailles / baguier offert</a></div>
-        <div class="chips">${p.sizes.map(s => `<button class="chip" data-size="${s}">${s}</button>`).join("")}</div>`;
-      zg.addEventListener("click", e => {
-        const b = e.target.closest("[data-size]"); if (!b) return;
-        state.size = b.dataset.size;
-        zg.querySelectorAll("[data-size]").forEach(x => x.classList.toggle("active", x === b));
+      zg.innerHTML = `<div class="opt-label"><span>Taille</span><a class="size-guide" href="sav.html#baguier">Guide des tailles</a></div>
+        <select id="sizeSel" class="size-select" aria-label="Choisir une taille">
+          <option value="">Choisir une taille…</option>
+          ${p.sizes.map(s => `<option value="${s}">Taille ${s}</option>`).join("")}
+        </select>`;
+      zg.querySelector("#sizeSel").addEventListener("change", e => {
+        state.size = e.target.value || null;
+        e.target.classList.toggle("filled", !!state.size);
       });
     } else zg.style.display = "none";
 

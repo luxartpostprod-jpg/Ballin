@@ -103,7 +103,7 @@ h3{font-size:1.35rem}
 .hero-ctas{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
 
 /* ---------- Boutons ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 40px;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;transition:all .35s var(--ease);border:1px solid var(--ink);border-radius:999px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;transition:all .35s var(--ease);border:1px solid var(--ink);border-radius:999px}
 .btn-primary{background:var(--ink);color:#fff}
 .btn-primary:hover{background:#000;transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(25,22,19,.5)}
 .btn-outline{background:transparent;color:var(--ink)}
@@ -363,7 +363,7 @@ h3{font-size:1.35rem}
 .swatch:hover{transform:scale(1.08)}
 .swatch.active{box-shadow:0 0 0 2px var(--bg),0 0 0 3.5px var(--ink)}
 .chips{display:flex;gap:10px;flex-wrap:wrap}
-.chip{padding:11px 19px;border:1px solid var(--line);font-size:.82rem;color:var(--ink-soft);transition:all .25s;background:#fff}
+.chip{padding:9px 15px;border:1px solid var(--line);font-size:.78rem;color:var(--ink-soft);transition:all .25s;background:#fff}
 .chip:hover{border-color:var(--ink);color:var(--ink)}
 .chip.active{border-color:var(--ink);background:var(--ink);color:#fff}
 .chip .mod{opacity:.7;font-size:.74rem;margin-left:6px}
@@ -379,11 +379,15 @@ h3{font-size:1.35rem}
 .engrave-foot{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:10px}
 .engrave-preview{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--gold)}
 .engrave-count{font-size:.68rem;letter-spacing:.14em;color:var(--muted)}
-.buy-row{display:flex;gap:14px;margin:30px 0 12px}
+.buy-row{display:flex;gap:12px;margin:26px 0 12px}
 .qty{display:flex;align-items:center;border:1px solid var(--line);background:#fff}
-.qty button{width:46px;height:54px;font-size:1.15rem;color:var(--ink);transition:background .2s}
+.qty button{width:40px;height:48px;font-size:1.05rem;color:var(--ink);transition:background .2s}
 .qty button:hover{background:var(--soft)}
-.qty span{min-width:28px;text-align:center;font-weight:500}
+.qty span{min-width:26px;text-align:center;font-weight:500;font-size:.9rem}
+.size-select{width:100%;padding:12px 2px;border:none;border-bottom:1px solid var(--line);border-radius:0;background:transparent;font-family:inherit;font-size:.92rem;color:var(--ink);cursor:pointer;transition:border-color .25s}
+.size-select:focus{outline:none;border-bottom-color:var(--ink)}
+.size-select.filled{border-bottom-color:var(--ink)}
+.size-guide{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 .reassurance{font-size:.72rem;color:var(--muted);margin-top:14px;letter-spacing:.04em;text-align:center}
 .pdp-perks{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);margin:70px 0 0;background:#fff}
 .perk{display:flex;gap:13px;align-items:center;padding:22px 24px;border-right:1px solid var(--line)}
@@ -412,7 +416,7 @@ h3{font-size:1.35rem}
 .pdp-bar-info b{display:block;font-family:var(--serif);font-weight:500;font-size:1.1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pdp-bar-info span{font-size:.8rem;color:var(--muted)}
 .pdp-bar .btn{padding:14px 30px;white-space:nowrap}
-.wish-btn{width:54px;height:54px;flex:none;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:all .25s;background:#fff}
+.wish-btn{width:50px;height:50px;flex:none;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:all .25s;background:#fff}
 .wish-btn svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.5;transition:all .2s}
 .wish-btn:hover{border-color:var(--ink);transform:scale(1.06)}
 .wish-btn.active{background:var(--ink);border-color:var(--ink)}
