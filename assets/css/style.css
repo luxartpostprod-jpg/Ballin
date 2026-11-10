@@ -46,11 +46,20 @@ h3{font-size:1.35rem}
 .header-main{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 0}
 .logo{display:flex;align-items:center}
 .logo img{height:44px;width:auto}
-.main-nav{display:flex;gap:32px}
-.main-nav a{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);position:relative;padding:6px 0;transition:color .25s}
+.main-nav{display:flex;align-items:center;gap:30px}
+.main-nav a{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);position:relative;padding:6px 0;transition:color .25s;white-space:nowrap}
 .main-nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .35s var(--ease)}
 .main-nav a:hover,.main-nav a.active{color:var(--ink)}
 .main-nav a:hover::after,.main-nav a.active::after{width:100%}
+.nav-item{position:relative;display:flex;align-items:center}
+.main-nav a.drop-toggle{padding-right:14px}
+.main-nav a.drop-toggle::after{content:"";left:auto;right:0;bottom:50%;margin-bottom:-2px;width:5px;height:5px;background:none;border-right:1px solid var(--ink-soft);border-bottom:1px solid var(--ink-soft);transform:rotate(45deg);transition:transform .3s var(--ease),border-color .25s}
+.main-nav a.drop-toggle:hover::after,.main-nav a.drop-toggle.active::after{border-color:var(--ink);transform:rotate(225deg) translateY(1px)}
+.dropdown{position:absolute;top:100%;left:50%;transform:translate(-50%,10px);min-width:236px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-lg);padding:10px 0;opacity:0;visibility:hidden;transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s;z-index:70}
+.nav-item:hover .dropdown,.nav-item:focus-within .dropdown{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.dropdown a{display:block;padding:11px 24px;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);transition:background .2s,color .2s,padding-left .25s var(--ease)}
+.dropdown a::after{display:none}
+.dropdown a:hover,.dropdown a.active{background:var(--soft-2);color:var(--ink);padding-left:30px}
 .header-actions{display:flex;align-items:center;gap:6px}
 .icon-btn{position:relative;width:40px;height:40px;display:grid;place-items:center;border-radius:50%;transition:background .25s}
 .icon-btn:hover{background:var(--soft)}
@@ -395,9 +404,14 @@ h3{font-size:1.35rem}
   .fdrop{width:100%}
   .fdrop > .fgroup{position:static;box-shadow:none;margin-top:8px;padding:10px 14px}
   .cat-grid{grid-template-columns:1fr 1fr!important}
-  .main-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;gap:0;border-bottom:1px solid var(--line);padding:10px 22px 20px;box-shadow:0 24px 40px -24px rgba(25,22,19,.25)}
+  .main-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--line);padding:10px 22px 20px;box-shadow:0 24px 40px -24px rgba(25,22,19,.25)}
   .main-nav.open{display:flex}
   .main-nav a{padding:14px 0;border-bottom:1px solid var(--line)}
+  .nav-item{flex-direction:column;align-items:stretch}
+  .main-nav a.drop-toggle{padding-right:0}
+  .main-nav a.drop-toggle::after{display:none}
+  .dropdown{position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;border:none;border-bottom:1px solid var(--line);padding:0 0 10px 16px;min-width:0}
+  .dropdown a{padding:9px 0;border-bottom:none}
   .burger{display:flex}
   .header-top span:nth-child(2){display:none}
   .grid-3,.grid-4,.univers,.stones{grid-template-columns:1fr 1fr;gap:16px}
