@@ -29,6 +29,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 h1,h2,h3,.serif{font-family:var(--serif);font-weight:500;line-height:1.08;color:var(--ink)}
 h1{font-size:clamp(2.7rem,5.4vw,4.6rem);letter-spacing:.004em}
 h2{font-size:clamp(2rem,3.4vw,2.9rem)}
+h2 em{font-style:italic;color:var(--gold);font-weight:400}
 h3{font-size:1.35rem}
 .eyebrow{font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:18px}
 .lead{font-size:1.06rem;color:var(--ink-soft);max-width:56ch}
@@ -102,7 +103,7 @@ h3{font-size:1.35rem}
 .hero-ctas{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
 
 /* ---------- Boutons ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 38px;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;transition:all .35s var(--ease);border:1px solid var(--ink);border-radius:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 40px;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;transition:all .35s var(--ease);border:1px solid var(--ink);border-radius:999px}
 .btn-primary{background:var(--ink);color:#fff}
 .btn-primary:hover{background:#000;transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(25,22,19,.5)}
 .btn-outline{background:transparent;color:var(--ink)}
@@ -183,6 +184,31 @@ h3{font-size:1.35rem}
 .breadcrumb{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:18px}
 .breadcrumb a{transition:color .2s}
 .breadcrumb a:hover{color:#fff}
+
+/* ---------- Concept « arches & champagne » ---------- */
+.arches{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;max-width:1240px;margin:0 auto;padding-bottom:44px}
+.arch-tile{display:block;text-align:center}
+.arch-tile:nth-child(even){transform:translateY(44px)}
+.arch{aspect-ratio:3/4.1;border-radius:999px 999px 16px 16px;overflow:hidden;background:var(--soft)}
+.arch img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.arch-tile:hover .arch img{transform:scale(1.06)}
+.arch-tile .lbl{display:block;margin-top:20px;font-family:var(--serif);font-size:1.5rem;color:var(--ink)}
+.arch-tile:hover .lbl{color:var(--gold)}
+
+.best-grid .product-card .thumb{border-radius:180px 180px 14px 14px}
+
+.feature .media.arch{border-radius:320px 320px 16px 16px}
+.feature .media.arch img{aspect-ratio:4/5}
+
+.services-row{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
+.srv{padding:14px 36px}
+.srv + .srv{border-left:1px solid var(--line)}
+.srv .num{font-family:var(--serif);font-style:italic;font-size:2.1rem;color:var(--gold)}
+.srv h3{margin:12px 0 8px;font-size:1.2rem}
+.srv p{font-size:.87rem;color:var(--ink-soft)}
+.srv .link-u{margin-top:14px;font-size:.64rem}
+
+.product-card .thumb{border-radius:12px}
 
 /* ---------- Concept éditorial « encre & or » ---------- */
 .dark{background:#161310;color:#EFEAE0}
@@ -441,6 +467,11 @@ h3{font-size:1.35rem}
 @media (max-width:1020px){
   .grid-4,.univers,.stones,.carnet-grid{grid-template-columns:repeat(2,1fr)}
   .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:280px;max-width:100%}
+  .arches{grid-template-columns:repeat(2,1fr);gap:18px;max-width:640px}
+  .arch-tile:nth-child(even){transform:translateY(26px)}
+  .services-row{grid-template-columns:1fr;gap:8px}
+  .srv{padding:22px 10px}
+  .srv + .srv{border-left:none;border-top:1px solid var(--line)}
   .grid-3{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:repeat(3,1fr);gap:32px}
   .trust .container{grid-template-columns:repeat(2,1fr);gap:26px}
@@ -480,6 +511,10 @@ h3{font-size:1.35rem}
   .univers{grid-template-columns:1fr 1fr;gap:12px}
   .container-wide{padding:0 20px}
   .mosaic{grid-template-columns:1fr;grid-auto-rows:320px;max-width:100%}
+  .arches{grid-template-columns:repeat(2,1fr);gap:12px;max-width:100%;padding-bottom:26px}
+  .arch-tile:nth-child(even){transform:translateY(18px)}
+  .arch-tile .lbl{font-size:1.15rem;margin-top:12px}
+  .best-grid .product-card .thumb{border-radius:120px 120px 10px 10px}
   .carnet-grid{grid-template-columns:1fr;gap:36px}
   .carnet-grid .thumb{aspect-ratio:16/10}
   .steps{grid-template-columns:1fr 1fr}
