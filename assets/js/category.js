@@ -31,12 +31,16 @@
     document.getElementById("fGems").innerHTML = gems.map(g =>
       `<label><input type="checkbox" data-f="gem" value="${g}"> ${gemLabel(g)}</label>`).join("");
 
-    /* Sous-navigation joaillerie */
+    /* Sous-navigation joaillerie (puces dans la barre de filtres) */
     if (catId === "joaillerie") {
       document.getElementById("subNav").innerHTML =
-        `<div class="fgroup"><div class="ftitle">Explorer</div>` +
-        SUBCATEGORIES.map(s => `<label><a href="${s.page}" style="font-size:.85rem">${s.label}</a></label>`).join("") + `</div>`;
+        SUBCATEGORIES.map(s => `<a class="chip-link" href="${s.page}">${s.label}</a>`).join("");
     }
+
+    /* Ferme les filtres d\u00e9pliants au clic ailleurs */
+    document.addEventListener("click", e => {
+      if (!e.target.closest(".fdrop")) document.querySelectorAll(".fdrop[open]").forEach(d => d.removeAttribute("open"));
+    });
 
     const state = { price: [], metal: [], gem: [] };
 
