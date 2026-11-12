@@ -487,14 +487,13 @@ h3{font-size:1.35rem}
 .pdp-sticky{position:sticky;top:185px}
 
 /* ---------- Recommandations PDP ---------- */
-.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 24px}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px 32px;max-width:920px;margin:0 auto}
 .related-grid .product-card .thumb{aspect-ratio:4/5}
 .related-grid .product-card .cat-tag{display:none}
-.related-grid .product-card h3{font-size:1.15rem}
-.related-grid .product-card .price{font-size:.78rem;color:var(--muted)}
+.related-grid .product-card h3{font-size:1.25rem}
+.related-grid .product-card .price{font-size:.82rem;color:var(--muted)}
 .related-grid .product-card .price::before{content:"Prix de vente ";letter-spacing:.14em;text-transform:uppercase;font-size:.58rem;color:var(--muted);margin-right:6px}
-@media (max-width:1020px){ .related-grid{grid-template-columns:repeat(3,1fr)} }
-@media (max-width:760px){ .related-grid{grid-template-columns:repeat(2,1fr);gap:26px 14px} }
+@media (max-width:760px){ .related-grid{grid-template-columns:1fr 1fr;gap:28px 16px;max-width:100%} }
 
 /* ---------- Fiche produit : barre d'achat flottante + cœur ---------- */
 .pdp-bar{position:fixed;left:0;right:0;bottom:0;z-index:80;display:flex;align-items:center;gap:18px;padding:12px 30px;background:rgba(251,250,247,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .45s var(--ease)}
