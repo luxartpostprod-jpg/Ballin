@@ -133,11 +133,35 @@
               <a class="size-guide" href="guide-tailles.html">Trouvez la taille idéale — guide complet</a>
             </div>
           </div>
+          <div class="size-how">
+            <p class="drawer-title">Trouvez la taille idéale</p>
+            <div class="size-how-cols">
+              <div>
+                <p class="size-how-lead"><b>Mesurez la circonférence de votre doigt</b> à l'aide d'un mètre ruban ou d'une bande de papier.</p>
+                <ol>
+                  <li>Enroulez-le autour de la base du doigt (sans trop serrer).</li>
+                  <li>Marquez le point de jonction.</li>
+                  <li>Mesurez la longueur obtenue en millimètres (mm) : elle correspond à la circonférence.</li>
+                  <li>Reportez-vous au tableau pour connaître votre taille française.</li>
+                </ol>
+              </div>
+              <div>
+                <p class="size-how-lead"><b>Mesurez le diamètre intérieur de votre bague</b></p>
+                <ol>
+                  <li>Choisissez une bague qui vous va parfaitement, sur le même doigt que celui concerné.</li>
+                  <li>Posez la bague sur une surface plane (bien à plat).</li>
+                  <li>Mesurez le diamètre intérieur (d'un bord intérieur à l'autre, en passant par le centre) à l'aide d'une règle. Ne mesurez pas les bords extérieurs.</li>
+                  <li>Notez la mesure en mm : elle correspond au diamètre intérieur.</li>
+                  <li>Reportez-vous au tableau pour connaître votre taille française.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
         </div>`;
       const sd = document.getElementById("sizeDrawer");
       sd.addEventListener("click", () => {
         const open = sd.classList.toggle("open");
-        document.getElementById("sizeDrawerBody").style.maxHeight = open ? "600px" : "0";
+        document.getElementById("sizeDrawerBody").style.maxHeight = open ? "1200px" : "0";
       });
       zg.querySelector("#sizeSel").addEventListener("change", e => {
         state.size = e.target.value || null;

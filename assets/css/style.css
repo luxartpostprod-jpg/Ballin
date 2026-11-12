@@ -368,6 +368,12 @@ h3{font-size:1.35rem}
 .est-line b{color:var(--ink);font-weight:600}
 .card-note{margin-top:12px;font-size:.7rem;color:var(--muted);line-height:1.6;text-align:center}
 .size-note{font-size:.72rem;color:var(--muted);margin:12px 0 10px;line-height:1.6}
+.size-how{margin-top:26px;border-top:1px solid var(--line);padding-top:20px}
+.size-how-cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.size-how-lead{font-size:.84rem;margin-bottom:10px}
+.size-how ol{margin-left:18px;font-size:.8rem;color:var(--ink-soft);line-height:1.8}
+.size-how li{margin-bottom:4px}
+@media (max-width:760px){ .size-how-cols{grid-template-columns:1fr;gap:20px} }
 .pdp-short{margin:20px 0 30px;color:var(--ink-soft)}
 .opt-group{margin-bottom:26px;padding-top:22px;border-top:1px solid var(--line)}
 .pdp-short{padding-bottom:26px}
