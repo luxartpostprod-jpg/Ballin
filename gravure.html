@@ -37,7 +37,7 @@
       </div>
       <p class="drawer-title">Rédigez votre gravure</p>
       <input id="engraveInput" maxlength="12" placeholder="Texte de la gravure" aria-label="Texte de la gravure" style="display:block;width:100%;max-width:420px;margin:0 auto 14px;padding:13px 2px;border:none;border-bottom:1px solid var(--ink);background:transparent;font-family:var(--serif);font-style:italic;font-size:1.1rem;text-align:center">
-      <div class="eng-foot"><span class="engrave-count" id="engraveCount">0/12</span><button type="button" class="btn-validate" id="engraveValidate">Valider</button></div>
+      <div class="eng-foot"><button type="button" class="btn-validate" id="engraveValidate">Valider</button></div>
       <p class="engrave-done" id="engraveDone" hidden></p>
       <p class="eng-note">Pour toute demande de gravure différente de ce que nous proposons, n'hésitez pas à contacter l'un de nos conseillers par e-mail ou par téléphone au 01 84 60 20 24. Nous serons ravis de vous accompagner dans votre personnalisation.</p>
     </div>
@@ -52,7 +52,6 @@
 <script src="assets/js/main.js"></script>
 <script>
   const ei = document.getElementById("engraveInput");
-  ei.addEventListener("input", () => document.getElementById("engraveCount").textContent = ei.value.length + "/12");
   document.getElementById("engraveValidate").addEventListener("click", () => {
     if (!ei.value.trim()) { showToast("Saisissez un texte de gravure"); return; }
     const d = document.getElementById("engraveDone");

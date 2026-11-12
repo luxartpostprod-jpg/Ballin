@@ -201,7 +201,6 @@
             <p class="drawer-title">Rédigez votre gravure</p>
             <input id="engraveInput" maxlength="12" placeholder="Texte de la gravure" aria-label="Texte de la gravure">
             <div class="eng-foot">
-              <span class="engrave-count" id="engraveCount">0/12</span>
               <button type="button" class="btn-validate" id="engraveValidate">Valider</button>
             </div>
             <p class="engrave-done" id="engraveDone" hidden></p>
@@ -215,9 +214,6 @@
         document.getElementById("engDrawerBody").style.maxHeight = open ? "700px" : "0";
       });
       const ei = document.getElementById("engraveInput");
-      ei.addEventListener("input", e => {
-        document.getElementById("engraveCount").textContent = e.target.value.length + "/12";
-      });
       document.getElementById("engraveValidate").addEventListener("click", () => {
         const v = ei.value.trim();
         if (!v) { showToast("Saisissez un texte de gravure (12 caractères max)"); return; }
