@@ -58,7 +58,7 @@ const PRODUCTS = [
 
   /* ---------------- ALLIANCES ---------------- */
   { id: "alliance-eternite", name: "Alliance « Éternité » lisse", cat: "alliances", sub: "bagues",
-    price: 1290, badge: "Bestseller", metal: "or", gem: null, model3d: "alliance",
+    price: 1290, badge: null, metal: "or", gem: null, model3d: "alliance",
     img: "assets/img/products/alliance-eternite.jpg",
     short: "L'alliance classique en or jaune 18 ct, demi-jonc poli miroir. Intemporelle.",
     desc: "L'alliance « Éternité » est notre modèle emblématique : un demi-jonc en or jaune 18 ct au poli miroir, dessiné pour être portée seule ou accompagnée d'une bague de fiançailles. Son profil confort, légèrement bombé à l'intérieur, la rend aussi agréable à porter qu'elle est belle à regarder.",
