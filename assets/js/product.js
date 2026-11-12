@@ -218,7 +218,6 @@
             </div>
             <p class="engrave-done" id="engraveDone" hidden></p>
             <p class="eng-note">Pour toute demande de gravure différente de ce que nous proposons, n'hésitez pas à contacter l'un de nos conseillers par e-mail ou par téléphone au 01 84 60 20 24. Nous serons ravis de vous accompagner dans votre personnalisation.</p>
-            <p class="center" style="margin-top:14px"><a class="size-guide" href="gravure.html">Voir les exemples de gravure</a></p>
           </div>
         </div>`;
       const ed = document.getElementById("engDrawer");
