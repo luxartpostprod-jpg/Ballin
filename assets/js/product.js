@@ -114,7 +114,7 @@
       });
     } else sg.style.display = "none";
 
-    /* Tailles — ligne dépliante façon Deloison */
+    /* Tailles — déroulant : grille de tailles design + tableau repliable */
     const zg = document.getElementById("sizeGroup");
     if (p.sizes) {
       zg.style.display = "block";
@@ -125,58 +125,31 @@
           <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
         </button>
         <div class="drawer-body" id="sizeDrawerBody">
-          <div class="drawer-cols">
-            <div>
-              <p class="drawer-title">Sélectionner votre taille</p>
-              <select id="sizeSel" class="size-select" aria-label="Choisir une taille">
-                <option value="">Choisir une taille…</option>
-                ${p.sizes.map(s => `<option value="${s}">Taille ${s}</option>`).join("")}
-              </select>
+          <div class="size-picker">
+            <p class="drawer-title">Sélectionnez votre taille</p>
+            <div class="size-grid">
+              ${p.sizes.map(s => `<button type="button" class="size-btn${s === state.size ? " active" : ""}" data-size="${s}">${s}</button>`).join("")}
             </div>
-            <div>
-              <p class="drawer-title">Guide des tailles</p>
+            <p class="size-note">Si vous hésitez entre deux tailles, choisissez la plus grande.</p>
+            <details class="size-table-toggle">
+              <summary>Voir le tableau des tailles (diamètre / circonférence)</summary>
               <table class="size-mini">
                 <thead><tr><th>Taille</th><th>Diamètre</th><th>Circonférence</th></tr></thead>
                 <tbody>${miniRows}</tbody>
               </table>
-              <p class="size-note">Si vous hésitez entre deux tailles, choisissez la plus grande.</p>
-              <a class="size-guide" href="guide-tailles.html">Trouvez la taille idéale — guide complet</a>
-            </div>
-          </div>
-          <div class="size-how">
-            <p class="drawer-title">Trouvez la taille idéale</p>
-            <div class="size-how-cols">
-              <div>
-                <p class="size-how-lead"><b>Mesurez la circonférence de votre doigt</b> à l'aide d'un mètre ruban ou d'une bande de papier.</p>
-                <ol>
-                  <li>Enroulez-le autour de la base du doigt (sans trop serrer).</li>
-                  <li>Marquez le point de jonction.</li>
-                  <li>Mesurez la longueur obtenue en millimètres (mm) : elle correspond à la circonférence.</li>
-                  <li>Reportez-vous au tableau pour connaître votre taille française.</li>
-                </ol>
-              </div>
-              <div>
-                <p class="size-how-lead"><b>Mesurez le diamètre intérieur de votre bague</b></p>
-                <ol>
-                  <li>Choisissez une bague qui vous va parfaitement, sur le même doigt que celui concerné.</li>
-                  <li>Posez la bague sur une surface plane (bien à plat).</li>
-                  <li>Mesurez le diamètre intérieur (d'un bord intérieur à l'autre, en passant par le centre) à l'aide d'une règle. Ne mesurez pas les bords extérieurs.</li>
-                  <li>Notez la mesure en mm : elle correspond au diamètre intérieur.</li>
-                  <li>Reportez-vous au tableau pour connaître votre taille française.</li>
-                </ol>
-              </div>
-            </div>
+            </details>
+            <p style="margin-top:14px"><a class="size-guide" href="guide-tailles.html">Trouvez ma taille : méthode de mesure — guide complet</a></p>
           </div>
         </div>`;
       const sd = document.getElementById("sizeDrawer");
       sd.addEventListener("click", () => {
         const open = sd.classList.toggle("open");
-        document.getElementById("sizeDrawerBody").style.maxHeight = open ? "1200px" : "0";
+        document.getElementById("sizeDrawerBody").style.maxHeight = open ? "640px" : "0";
       });
-      zg.querySelector("#sizeSel").addEventListener("change", e => {
-        state.size = e.target.value || null;
-        e.target.classList.toggle("filled", !!state.size);
-      });
+      zg.querySelectorAll(".size-btn").forEach(b => b.addEventListener("click", () => {
+        state.size = b.dataset.size;
+        zg.querySelectorAll(".size-btn").forEach(x => x.classList.toggle("active", x === b));
+      }));
     } else zg.style.display = "none";
 
     /* Gravure — ligne dépliante façon Deloison, offerte sur les modèles gravables */

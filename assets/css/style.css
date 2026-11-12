@@ -370,6 +370,16 @@ h3{font-size:1.35rem}
 .size-note{font-size:.72rem;color:var(--muted);margin:12px 0 10px;line-height:1.6}
 .guide-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;border-bottom:1px solid var(--line);padding-bottom:16px}
 .guide-col-title{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;font-weight:600}
+.size-picker{padding:24px 2px 28px;border-bottom:1px solid var(--line)}
+.size-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;max-width:460px}
+.size-btn{aspect-ratio:1/1;display:grid;place-items:center;border:1px solid var(--line);background:#fff;font-size:.85rem;font-weight:500;color:var(--ink);cursor:pointer;transition:all .2s var(--ease)}
+.size-btn:hover{border-color:var(--ink);transform:translateY(-2px)}
+.size-btn.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.size-table-toggle{margin-top:16px}
+.size-table-toggle summary{list-style:none;cursor:pointer;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.size-table-toggle summary::-webkit-details-marker{display:none}
+.size-table-toggle .size-mini{margin-top:14px}
+@media (max-width:560px){ .size-grid{grid-template-columns:repeat(4,1fr)} }
 .size-how{margin-top:26px;border-top:1px solid var(--line);padding-top:20px}
 .size-how-cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}
 .size-how-lead{font-size:.84rem;margin-bottom:10px}
