@@ -146,11 +146,13 @@
         <div class="acc-body"><div class="inner"><p>${p.desc}</p></div></div></div>
       <div class="acc"><button class="acc-head">Détails &amp; matériaux<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
         <div class="acc-body"><div class="inner"><ul>${p.details.map(d => `<li>${d}</li>`).join("")}</ul></div></div></div>
-      <div class="acc"><button class="acc-head">Livraison &amp; retours<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="acc"><button class="acc-head">Livraison et retours<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
         <div class="acc-body"><div class="inner"><p>Livraison offerte et assurée en France métropolitaine, UE et Suisse (2 à 5 jours ouvrés). Expédition sous 48 h dans un écrin cadeau signé BALLIN. <b>Retour gratuit sous 30 jours</b>, remboursement sous 5 jours ouvrés. <a href="livraison-retours.html">En savoir plus</a>.</p></div></div></div>
-      <div class="acc"><button class="acc-head">Garantie &amp; entretien<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="acc"><button class="acc-head">Garantie à vie<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
         <div class="acc-body"><div class="inner"><p><b>Garantie à vie</b> contre tout défaut de fabrication. Nettoyage et polissage offerts à vie dans notre atelier, mise à taille offerte sous 30 jours pour les bagues. <a href="garanties.html">Découvrir nos garanties</a>.</p></div></div></div>
-      <div class="acc"><button class="acc-head">Certification des pierres<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="acc"><button class="acc-head">Entretien du bijou<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="acc-body"><div class="inner"><p>Évitez le contact avec parfums, cosmétiques et produits ménagers. Nettoyage doux à l'eau tiède savonneuse, séchage au chiffon doux. Nettoyage professionnel offert à vie en atelier.</p></div></div></div>
+      <div class="acc"><button class="acc-head">Certificat d'authenticité<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
         <div class="acc-body"><div class="inner"><p>Tous nos diamants sont certifiés par des laboratoires indépendants (GIA, HRD, IGI) et respectent le processus de Kimberley. Or recyclé 18 ct, poinçon de garantie. <a href="nos-pierres.html">Nos engagements</a>.</p></div></div></div>`;
     acc.querySelectorAll(".acc-head").forEach(h => h.addEventListener("click", () => {
       const a = h.parentElement, open = a.classList.contains("open");

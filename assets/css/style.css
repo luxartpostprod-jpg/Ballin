@@ -398,14 +398,14 @@ h3{font-size:1.35rem}
 .perk b{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
 .perk span{font-size:.72rem;color:var(--muted)}
 .pdp-badge{background:var(--ink);color:#fff;padding:5px 11px;font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;vertical-align:2px;margin-left:12px;font-family:var(--sans)}
-.accordions{margin-top:26px;border-top:1px solid var(--line)}
+.accordions{margin-top:30px;border-top:1px solid var(--line)}
 .acc{border-bottom:1px solid var(--line)}
 .acc-head{width:100%;display:flex;justify-content:space-between;align-items:center;padding:21px 2px;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;text-align:left;transition:color .25s}
 .acc-head:hover{color:var(--gold)}
 .acc-head svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.5;transition:transform .35s var(--ease)}
 .acc.open .acc-head svg{transform:rotate(45deg)}
 .acc-body{max-height:0;overflow:hidden;transition:max-height .45s var(--ease)}
-.acc-body .inner{padding:0 2px 22px;font-size:.88rem;color:var(--ink-soft)}
+.acc-body .inner{padding:0 2px 24px;font-size:.88rem;line-height:1.75;color:var(--ink-soft)}
 .acc-body ul{padding-left:18px;list-style:disc}
 .acc-body li{margin-bottom:6px}
 .pdp-sticky{position:sticky;top:185px}
