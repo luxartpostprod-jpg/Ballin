@@ -202,7 +202,7 @@
             <input id="engraveInput" maxlength="12" placeholder="Texte de la gravure" aria-label="Texte de la gravure">
             <div class="eng-foot">
               <span class="engrave-count" id="engraveCount">0/12</span>
-              <button type="button" class="btn btn-primary" id="engraveValidate">Valider</button>
+              <button type="button" class="btn-validate" id="engraveValidate">Valider</button>
             </div>
             <p class="engrave-done" id="engraveDone" hidden></p>
             <p class="eng-note">Pour toute demande de gravure différente de ce que nous proposons, n'hésitez pas à contacter l'un de nos conseillers par e-mail ou par téléphone au 01 84 60 20 24. Nous serons ravis de vous accompagner dans votre personnalisation.</p>
