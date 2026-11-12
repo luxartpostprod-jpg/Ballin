@@ -322,17 +322,17 @@ h3{font-size:1.35rem}
 .newsletter button:hover{color:var(--gold)}
 
 /* ---------- Footer ---------- */
-.site-footer{background:#171410;color:#EDE8DF;border-top:1px solid var(--line)}
+.site-footer{background:#fff;color:var(--ink-soft);border-top:1px solid var(--line)}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:44px;padding:78px 0 56px}
-.site-footer .logo img{height:48px;filter:invert(1)}
-.footer-grid p{font-size:.85rem;color:rgba(237,232,223,.62);margin-top:20px;max-width:32ch}
-.site-footer h4{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:#fff;margin-bottom:20px;font-weight:600}
+.site-footer .logo img{height:48px;filter:none}
+.footer-grid p{font-size:.85rem;color:var(--muted);margin-top:20px;max-width:32ch}
+.site-footer h4{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);margin-bottom:20px;font-weight:600}
 .site-footer li{margin-bottom:11px}
-.site-footer li a{font-size:.86rem;color:rgba(237,232,223,.62);transition:color .25s,padding-left .25s}
-.site-footer li a:hover{color:#fff;padding-left:5px}
-.footer-bottom{border-top:1px solid rgba(237,232,223,.14);padding:22px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.72rem;color:rgba(237,232,223,.45);letter-spacing:.06em}
+.site-footer li a{font-size:.86rem;color:var(--ink-soft);transition:color .25s,padding-left .25s}
+.site-footer li a:hover{color:var(--ink);padding-left:5px}
+.footer-bottom{border-top:1px solid var(--line);padding:22px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.72rem;color:var(--muted);letter-spacing:.06em}
 .footer-bottom a{transition:color .2s}
-.footer-bottom a:hover{color:#fff}
+.footer-bottom a:hover{color:var(--ink)}
 
 /* ---------- Page produit ---------- */
 .pdp{padding:52px 0 120px;background:var(--soft-2)}
