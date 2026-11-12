@@ -511,7 +511,13 @@ h3{font-size:1.35rem}
 }
 
 /* ---------- Filtres catégorie (barre horizontale façon Deloison) ---------- */
-.cat-grid{max-width:1180px;margin:0 auto;gap:34px 26px}
+.cat-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px 24px}
+.cat-grid .product-card .thumb{aspect-ratio:1/1}
+.cat-grid .product-card .cat-tag{display:none}
+.cat-grid .product-card h3{font-family:var(--sans);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500}
+.cat-grid .product-card .price{font-family:var(--sans);font-size:.8rem;color:var(--muted);letter-spacing:.04em}
+@media (max-width:1020px){ .cat-grid{grid-template-columns:repeat(3,1fr)} }
+@media (max-width:760px){ .cat-grid{grid-template-columns:repeat(2,1fr);gap:26px 14px} }
 .filter-bar{margin:40px auto 40px;max-width:1180px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .cat-edito{min-height:56vh}
 .filter-bar-row{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
