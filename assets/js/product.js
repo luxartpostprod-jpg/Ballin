@@ -208,8 +208,8 @@
             <p class="eng-intro">Nous offrons la gravure sur l'ensemble de nos bagues.</p>
             <p class="drawer-title">Sélectionnez votre style</p>
             <div class="style-opts">
-              <label class="style-opt"><input type="radio" name="gstyle" value="Bâton" checked> Bâton</label>
-              <label class="style-opt"><input type="radio" name="gstyle" value="Italique"> <em>Italique</em></label>
+              <label class="style-opt"><input type="radio" name="gstyle" value="Bâton" checked> <span class="style-baton">Bâton</span></label>
+              <label class="style-opt"><input type="radio" name="gstyle" value="Italique"> <span class="style-italique">Italique</span></label>
             </div>
             <p class="drawer-title">Rédigez votre gravure</p>
             <input id="engraveInput" maxlength="12" placeholder="Texte de la gravure" aria-label="Texte de la gravure">

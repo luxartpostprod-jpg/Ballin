@@ -450,6 +450,8 @@ h3{font-size:1.35rem}
 .style-opts{display:flex;gap:28px;justify-content:center;margin-bottom:22px}
 .style-opt{display:flex;align-items:center;gap:8px;font-size:.84rem;cursor:pointer;color:var(--ink)}
 .style-opt input{accent-color:var(--ink)}
+.style-baton{font-family:var(--sans);font-style:normal;letter-spacing:.1em;font-weight:500}
+.style-italique{font-family:var(--serif);font-style:italic;font-size:1.15em}
 .eng-modal input#engraveInput{width:100%;max-width:420px;margin:0 auto 14px;padding:13px 2px;border:none;border-bottom:1px solid var(--ink);border-radius:0;background:transparent;font-family:var(--serif);font-style:italic;font-size:1.1rem;text-align:center;color:var(--ink)}
 .eng-modal input#engraveInput:focus{outline:none;border-bottom-color:var(--gold)}
 .eng-foot{display:flex;justify-content:center;align-items:center;max-width:420px;margin:0 auto}
