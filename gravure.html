@@ -52,6 +52,13 @@
 <script src="assets/js/main.js"></script>
 <script>
   const ei = document.getElementById("engraveInput");
+  const syncStyle = () => {
+    const checked = document.querySelector('input[name="gstyle"]:checked');
+    const isItalic = checked.nextElementSibling.classList.contains("style-italique");
+    ei.classList.toggle("baton", !isItalic);
+  };
+  document.querySelectorAll('input[name="gstyle"]').forEach(r => r.addEventListener("change", syncStyle));
+  syncStyle();
   document.getElementById("engraveValidate").addEventListener("click", () => {
     if (!ei.value.trim()) { showToast("Saisissez un texte de gravure"); return; }
     const d = document.getElementById("engraveDone");

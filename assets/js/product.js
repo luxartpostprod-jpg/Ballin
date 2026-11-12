@@ -227,6 +227,12 @@
         document.getElementById("engDrawerBody").style.maxHeight = open ? "700px" : "0";
       });
       const ei = document.getElementById("engraveInput");
+      const syncStyle = () => {
+        const it = document.querySelector('input[name="gstyle"]:checked').value === "Italique";
+        ei.classList.toggle("baton", !it);
+      };
+      document.querySelectorAll('input[name="gstyle"]').forEach(r => r.addEventListener("change", syncStyle));
+      syncStyle();
       document.getElementById("engraveValidate").addEventListener("click", () => {
         const v = ei.value.trim();
         if (!v) { showToast("Saisissez un texte de gravure (12 caractères max)"); return; }
