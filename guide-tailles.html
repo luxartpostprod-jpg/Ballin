@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide des tailles — baguier offert | BALLIN Paris</title>
+<meta name="description" content="Guide des tailles BALLIN : tableau de correspondance France / US / UK / diamètre, baguier offert pour trouver votre taille de bague ou d'alliance.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<section class="page-banner">
+  <div class="bg"><img src="assets/img/pages/sav.jpg" alt="Guide des tailles" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
+  <div class="container"><div class="content">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> / <span>Guide des tailles</span></p>
+    <p class="eyebrow">Bagues &amp; alliances</p>
+    <h1>Guide des <em>tailles</em></h1>
+    <p class="lead">Trouvez votre taille en 2 minutes — baguier offert avec chaque commande.</p>
+  </div></div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="feature reveal">
+      <div class="media"><img src="assets/img/pages/atelier.jpg" alt="Mesure de la taille" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
+      <div class="txt">
+        <p class="eyebrow">Comment mesurer ?</p>
+        <h2>Le baguier, offert</h2>
+        <p>Le plus fiable : glissez un baguier autour de votre doigt — il ne doit ni serrer ni flotter. Nous offrons le baguier avec chaque commande ; en boutique, notre conseiller mesure votre taille en quelques minutes, sur rendez-vous.</p>
+        <p>À défaut : mesurez le <b>diamètre intérieur</b> d'une bague que vous portez déjà (au millimètre près) et reportez-vous au tableau ci-dessous.</p>
+        <div style="margin-top:28px;display:flex;gap:22px;align-items:center;flex-wrap:wrap">
+          <a class="btn btn-primary" href="contact.html">Demander mon baguier offert</a>
+          <a class="link-u" href="sav.html">Mise à taille offerte</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-head center reveal"><p class="eyebrow">Tableau de correspondance</p><h2>Votre taille, partout</h2></div>
+    <div class="table-wrap reveal" style="overflow-x:auto">
+      <table style="width:100%;max-width:760px;margin:0 auto;border-collapse:collapse;text-align:center;font-size:.88rem">
+        <thead><tr style="border-bottom:1px solid var(--ink)">
+          <th style="padding:14px 10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase">Taille FR</th>
+          <th style="padding:14px 10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase">Diamètre (mm)</th>
+          <th style="padding:14px 10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase">US</th>
+          <th style="padding:14px 10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase">UK</th>
+        </tr></thead>
+        <tbody id="sizeTable"></tbody>
+      </table>
+    </div>
+    <p class="center" style="color:var(--muted);font-size:.8rem;margin-top:18px">Entre deux tailles ? Choisissez la plus grande — la mise à taille est offerte sous 30 jours.</p>
+  </div>
+</section>
+
+<div id="footer"></div>
+<div id="cookie"></div>
+<div id="toast-slot"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  const rows = [
+    [46, 14.7, 4, "H"], [48, 15.3, "5", "J"], [50, 15.9, "6", "L"], [52, 16.5, "6¼", "M"],
+    [53, 16.9, "7", "N"], [54, 17.2, "7¼", "O"], [55, 17.5, "7¾", "P"], [56, 17.8, "8", "Q"],
+    [57, 18.2, "8½", "R"], [58, 18.5, "9", "S"], [59, 18.8, "9¼", "T"], [60, 19.1, "9¾", "U"],
+    [62, 19.7, "10½", "W"], [64, 20.3, "11½", "Y"]
+  ];
+  document.getElementById("sizeTable").innerHTML = rows.map(r =>
+    `<tr style="border-bottom:1px solid var(--line)"><td style="padding:12px 10px;font-family:var(--serif);font-size:1.05rem">${r[0]}</td><td style="padding:12px 10px">${r[1].toFixed(1).replace(".", ",")}</td><td style="padding:12px 10px">${r[2]}</td><td style="padding:12px 10px">${r[3]}</td></tr>`
+  ).join("");
+</script>
+</body>
+</html>

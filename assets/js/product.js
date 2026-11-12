@@ -106,7 +106,7 @@
     const zg = document.getElementById("sizeGroup");
     if (p.sizes) {
       zg.style.display = "block";
-      zg.innerHTML = `<div class="opt-label"><span>Taille</span><a class="size-guide" href="sav.html#baguier">Guide des tailles</a></div>
+      zg.innerHTML = `<div class="opt-label"><span>Taille</span><a class="size-guide" href="guide-tailles.html">Guide des tailles</a></div>
         <select id="sizeSel" class="size-select" aria-label="Choisir une taille">
           <option value="">Choisir une taille…</option>
           ${p.sizes.map(s => `<option value="${s}">Taille ${s}</option>`).join("")}
@@ -126,7 +126,7 @@
         <div class="engrave-panel">
           <div class="engrave-head">
             <svg viewBox="0 0 24 24"><path d="M12 3l7 7-7 11L5 10l7-7z"/><line x1="5" y1="10" x2="19" y2="10"/></svg>
-            <div><b>Gravure offerte</b><span>Personnalisez votre bijou — 12 caractères max, offerte par la Maison</span></div>
+            <div><b>Gravure offerte</b><span>Personnalisez votre bijou — 12 caractères max, offerte par la Maison · <a class="size-guide" href="gravure.html">voir les exemples</a></span></div>
           </div>
           <div class="engrave"><input id="engraveInput" maxlength="12" placeholder="Ex. S ♥ A · 14.07.2025" aria-label="Votre gravure"></div>
           <div class="engrave-foot"><span class="engrave-preview" id="engravePreview"></span><span class="engrave-count" id="engraveCount">0/12</span></div>
