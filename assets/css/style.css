@@ -368,6 +368,8 @@ h3{font-size:1.35rem}
 .est-line b{color:var(--ink);font-weight:600}
 .card-note{margin-top:12px;font-size:.7rem;color:var(--muted);line-height:1.6;text-align:center}
 .size-note{font-size:.72rem;color:var(--muted);margin:12px 0 10px;line-height:1.6}
+.guide-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;border-bottom:1px solid var(--line);padding-bottom:16px}
+.guide-col-title{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;font-weight:600}
 .size-how{margin-top:26px;border-top:1px solid var(--line);padding-top:20px}
 .size-how-cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}
 .size-how-lead{font-size:.84rem;margin-bottom:10px}
