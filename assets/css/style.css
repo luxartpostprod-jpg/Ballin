@@ -432,11 +432,8 @@ h3{font-size:1.35rem}
 .hairline{border:none;border-top:1px solid var(--line);margin:16px auto;max-width:420px}
 .eng-intro{font-size:.88rem;color:var(--ink-soft)}
 .style-opts{display:flex;gap:28px;justify-content:center;margin-bottom:22px}
-.style-opt{display:flex;align-items:center;gap:10px;font-size:.82rem;cursor:pointer;color:var(--ink-soft)}
+.style-opt{display:flex;align-items:center;gap:8px;font-size:.84rem;cursor:pointer;color:var(--ink)}
 .style-opt input{accent-color:var(--ink)}
-.style-sample{display:inline-grid;place-items:center;width:40px;height:40px;border:1px solid var(--line);font-size:1rem}
-.style-sample.baton{font-family:var(--sans)}
-.style-sample.italique{font-family:var(--serif);font-style:italic}
 .eng-modal input#engraveInput{width:100%;max-width:420px;margin:0 auto 14px;padding:13px 2px;border:none;border-bottom:1px solid var(--ink);border-radius:0;background:transparent;font-family:var(--serif);font-style:italic;font-size:1.1rem;text-align:center;color:var(--ink)}
 .eng-modal input#engraveInput:focus{outline:none;border-bottom-color:var(--gold)}
 .eng-foot{display:flex;justify-content:flex-end;align-items:center;gap:18px;max-width:420px;margin:0 auto}
