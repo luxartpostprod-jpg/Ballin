@@ -355,15 +355,15 @@ h3{font-size:1.35rem}
 .pdp-price .tva{font-family:var(--sans);font-size:.68rem;color:var(--muted)}
 .pdp-price .pv-label{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
 .pdp-price .pv-inst{font-family:var(--sans);font-size:.8rem;color:var(--ink);font-weight:600;margin-left:10px}
-.metal-rows{display:flex;flex-direction:column}
-.metal-row{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--line);cursor:pointer;font-size:.9rem;transition:background .2s}
-.metal-row:first-child{border-top:1px solid var(--line)}
+.metal-rows{display:flex;flex-direction:column;padding:20px 2px 26px;border-bottom:1px solid var(--line)}
+.metal-row{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--line);cursor:pointer;font-size:.86rem;transition:background .2s}
+.metal-row:last-child{border-bottom:none}
 .metal-row:hover{background:var(--soft)}
 .metal-row.active{background:var(--soft)}
 .metal-row input{accent-color:var(--ink)}
 .metal-row .dot{width:16px;height:16px;border-radius:50%;border:1px solid var(--line);flex:none}
 .metal-row .m-name{flex:1}
-.metal-row .m-price{font-size:.84rem;color:var(--ink-soft)}
+.metal-row .m-price{font-size:.8rem;color:var(--ink-soft)}
 .est-line{margin-top:18px;font-size:.78rem;color:var(--ink-soft);text-align:center}
 .est-line b{color:var(--ink);font-weight:600}
 .card-note{margin-top:12px;font-size:.7rem;color:var(--muted);line-height:1.6;text-align:center}
@@ -412,7 +412,7 @@ h3{font-size:1.35rem}
 .size-guide{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 
 /* Lignes dépliantes façon Deloison (taille / gravure) */
-.drawer-head{width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 2px;background:none;border:none;border-top:1px solid var(--line);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;color:var(--ink);cursor:pointer;transition:color .25s}
+.drawer-head{width:100%;display:flex;justify-content:space-between;align-items:center;padding:22px 2px;background:none;border:none;border-top:1px solid var(--line);font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;color:var(--ink);cursor:pointer;transition:color .25s}
 .drawer-head:hover{color:var(--gold)}
 .drawer-head svg{width:16px;height:16px;stroke:var(--ink);fill:none;stroke-width:1.6;transition:transform .35s var(--ease)}
 .drawer-head.open svg{transform:rotate(90deg)}

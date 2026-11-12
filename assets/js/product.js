@@ -66,19 +66,29 @@
     tabs.addEventListener("click", e => { const t = e.target.closest(".view-tab"); if (t) showView(t.dataset.view); });
     document.getElementById("thumbs").addEventListener("click", e => { const t = e.target.closest(".thumb"); if (t) showView(t.dataset.view); });
 
-    /* Métal — lignes avec prix individuel façon Deloison */
+    /* Métal — déroulant à flèche comme Taille/Gravure, lignes avec prix façon Deloison */
     const metals = Object.keys(METALS).filter(m => m === p.metal || ["or", "blanc", "rose", "platine"].includes(m));
     const mg = document.getElementById("metalGroup");
-    mg.innerHTML = `<div class="opt-label"><span>Métal</span></div>
-      <div class="metal-rows">
-        ${metals.map(m => `
-          <label class="metal-row${m === state.metal ? " active" : ""}">
-            <input type="radio" name="metal" value="${m}" ${m === state.metal ? "checked" : ""}>
-            <span class="dot" style="background:${METALS[m].swatch}"></span>
-            <span class="m-name">${METALS[m].label}</span>
-            <span class="m-price">${fmt(p.price + METALS[m].priceMod)}</span>
-          </label>`).join("")}
+    mg.innerHTML = `
+      <button type="button" class="drawer-head" id="metalDrawer">Métal
+        <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
+      <div class="drawer-body" id="metalDrawerBody">
+        <div class="metal-rows">
+          ${metals.map(m => `
+            <label class="metal-row${m === state.metal ? " active" : ""}">
+              <input type="radio" name="metal" value="${m}" ${m === state.metal ? "checked" : ""}>
+              <span class="dot" style="background:${METALS[m].swatch}"></span>
+              <span class="m-name">${METALS[m].label}</span>
+              <span class="m-price">${fmt(p.price + METALS[m].priceMod)}</span>
+            </label>`).join("")}
+        </div>
       </div>`;
+    const md = document.getElementById("metalDrawer");
+    md.addEventListener("click", () => {
+      const open = md.classList.toggle("open");
+      document.getElementById("metalDrawerBody").style.maxHeight = open ? "400px" : "0";
+    });
     mg.querySelectorAll('input[name="metal"]').forEach(r => r.addEventListener("change", () => {
       state.metal = r.value;
       mg.querySelectorAll(".metal-row").forEach(x => x.classList.toggle("active", x.querySelector("input").checked));
