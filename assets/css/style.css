@@ -390,6 +390,36 @@ h3{font-size:1.35rem}
 .size-select:focus{outline:none;border-bottom-color:var(--ink)}
 .size-select.filled{border-bottom-color:var(--ink)}
 .size-guide{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+
+/* Lignes dépliantes façon Deloison (taille / gravure) */
+.drawer-head{width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 2px;background:none;border:none;border-top:1px solid var(--line);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;color:var(--ink);cursor:pointer;transition:color .25s}
+.drawer-head:hover{color:var(--gold)}
+.drawer-head svg{width:16px;height:16px;stroke:var(--ink);fill:none;stroke-width:1.6;transition:transform .35s var(--ease)}
+.drawer-head.open svg{transform:rotate(90deg)}
+.drawer-body{max-height:0;overflow:hidden;transition:max-height .45s var(--ease)}
+.drawer-cols{display:grid;grid-template-columns:1fr 1fr;gap:36px;padding:24px 2px 28px;border-bottom:1px solid var(--line)}
+.drawer-title{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:14px}
+.size-mini{width:100%;border-collapse:collapse;font-size:.8rem}
+.size-mini th{font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:left;padding:6px 8px;border-bottom:1px solid var(--ink);font-weight:600}
+.size-mini td{padding:5px 8px;border-bottom:1px solid var(--line);color:var(--ink-soft)}
+.size-mini td:first-child{color:var(--ink);font-weight:500}
+.eng-modal{padding:26px 4px 30px;border-bottom:1px solid var(--line);text-align:center}
+.eng-title{font-family:var(--serif);font-size:1.5rem;letter-spacing:.14em;text-transform:uppercase}
+.hairline{border:none;border-top:1px solid var(--line);margin:16px auto;max-width:420px}
+.eng-intro{font-size:.88rem;color:var(--ink-soft)}
+.style-opts{display:flex;gap:28px;justify-content:center;margin-bottom:22px}
+.style-opt{display:flex;align-items:center;gap:10px;font-size:.82rem;cursor:pointer;color:var(--ink-soft)}
+.style-opt input{accent-color:var(--ink)}
+.style-sample{display:inline-grid;place-items:center;width:40px;height:40px;border:1px solid var(--line);font-size:1rem}
+.style-sample.baton{font-family:var(--sans)}
+.style-sample.italique{font-family:var(--serif);font-style:italic}
+.eng-modal input#engraveInput{width:100%;max-width:420px;margin:0 auto 14px;padding:13px 2px;border:none;border-bottom:1px solid var(--ink);border-radius:0;background:transparent;font-family:var(--serif);font-style:italic;font-size:1.1rem;text-align:center;color:var(--ink)}
+.eng-modal input#engraveInput:focus{outline:none;border-bottom-color:var(--gold)}
+.eng-foot{display:flex;justify-content:flex-end;align-items:center;gap:18px;max-width:420px;margin:0 auto}
+.engrave-count{font-size:.68rem;color:var(--muted)}
+.engrave-done{margin-top:16px;font-size:.84rem;color:var(--gold-deep);font-weight:500}
+.eng-note{margin-top:20px;font-size:.74rem;color:var(--muted);line-height:1.7;max-width:520px;margin-left:auto;margin-right:auto}
+@media (max-width:760px){ .drawer-cols{grid-template-columns:1fr;gap:24px} }
 .reassurance{font-size:.72rem;color:var(--muted);margin-top:14px;letter-spacing:.04em;text-align:center}
 .pdp-perks{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);margin:70px 0 0;background:#fff}
 .perk{display:flex;gap:13px;align-items:center;padding:22px 24px;border-right:1px solid var(--line)}

@@ -30,9 +30,10 @@
       <div class="media"><img src="assets/img/pages/atelier.jpg" alt="Mesure de la taille" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
       <div class="txt">
         <p class="eyebrow">Comment mesurer ?</p>
-        <h2>Le baguier, offert</h2>
-        <p>Le plus fiable : glissez un baguier autour de votre doigt — il ne doit ni serrer ni flotter. Nous offrons le baguier avec chaque commande ; en boutique, notre conseiller mesure votre taille en quelques minutes, sur rendez-vous.</p>
-        <p>À défaut : mesurez le <b>diamètre intérieur</b> d'une bague que vous portez déjà (au millimètre près) et reportez-vous au tableau ci-dessous.</p>
+        <h2>Trouvez la taille idéale</h2>
+        <p><b>Circonférence du doigt :</b> entourez la base du doigt d'un mètre ruban ou d'une bande de papier (sans serrer), repérez le point de jonction et mesurez la longueur en millimètres — elle correspond à la circonférence.</p>
+        <p><b>Diamètre intérieur :</b> posez une bague qui vous va bien à plat, mesurez au réglette le diamètre intérieur (d'un bord intérieur à l'autre, en passant par le centre) en millimètres.</p>
+        <p>Reportez-vous au tableau pour trouver votre taille française.</p>
         <div style="margin-top:28px;display:flex;gap:22px;align-items:center;flex-wrap:wrap">
           <a class="btn btn-primary" href="contact.html">Demander mon baguier offert</a>
           <a class="link-u" href="sav.html">Mise à taille offerte</a>
@@ -46,10 +47,9 @@
     <div class="table-wrap reveal" style="overflow-x:auto">
       <table style="width:100%;max-width:760px;margin:0 auto;border-collapse:collapse;text-align:center;font-size:.88rem">
         <thead><tr style="border-bottom:1px solid var(--ink)">
-          <th style="padding:14px 10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase">Taille FR</th>
-          <th style="padding:14px 10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase">Diamètre (mm)</th>
-          <th style="padding:14px 10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase">US</th>
-          <th style="padding:14px 10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase">UK</th>
+          <th style="padding:14px 10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase">Taille</th>
+          <th style="padding:14px 10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase">Diamètre</th>
+          <th style="padding:14px 10px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase">Circonférence</th>
         </tr></thead>
         <tbody id="sizeTable"></tbody>
       </table>
@@ -65,13 +65,12 @@
 <script src="assets/js/main.js"></script>
 <script>
   const rows = [
-    [46, 14.7, 4, "H"], [48, 15.3, "5", "J"], [50, 15.9, "6", "L"], [52, 16.5, "6¼", "M"],
-    [53, 16.9, "7", "N"], [54, 17.2, "7¼", "O"], [55, 17.5, "7¾", "P"], [56, 17.8, "8", "Q"],
-    [57, 18.2, "8½", "R"], [58, 18.5, "9", "S"], [59, 18.8, "9¼", "T"], [60, 19.1, "9¾", "U"],
-    [62, 19.7, "10½", "W"], [64, 20.3, "11½", "Y"]
+    [45, 14.33], [46, 14.64], [47, 14.96], [48, 15.28], [49, 15.60],
+    [50, 15.92], [51, 16.24], [52, 16.56], [53, 16.88], [54, 17.20]
   ];
+
   document.getElementById("sizeTable").innerHTML = rows.map(r =>
-    `<tr style="border-bottom:1px solid var(--line)"><td style="padding:12px 10px;font-family:var(--serif);font-size:1.05rem">${r[0]}</td><td style="padding:12px 10px">${r[1].toFixed(1).replace(".", ",")}</td><td style="padding:12px 10px">${r[2]}</td><td style="padding:12px 10px">${r[3]}</td></tr>`
+    `<tr style="border-bottom:1px solid var(--line)"><td style="padding:12px 10px;font-family:var(--serif);font-size:1.05rem">${r[0]}</td><td style="padding:12px 10px">${r[1].toFixed(2).replace(".", ",")} mm</td><td style="padding:12px 10px">${r[0]},0 mm</td></tr>`
   ).join("");
 </script>
 </body>

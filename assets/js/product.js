@@ -102,40 +102,97 @@
       });
     } else sg.style.display = "none";
 
-    /* Tailles */
+    /* Tailles — ligne dépliante façon Deloison */
     const zg = document.getElementById("sizeGroup");
     if (p.sizes) {
       zg.style.display = "block";
-      zg.innerHTML = `<div class="opt-label"><span>Taille</span><a class="size-guide" href="guide-tailles.html">Guide des tailles</a></div>
-        <select id="sizeSel" class="size-select" aria-label="Choisir une taille">
-          <option value="">Choisir une taille…</option>
-          ${p.sizes.map(s => `<option value="${s}">Taille ${s}</option>`).join("")}
-        </select>`;
+      const miniRows = [[45,14.33],[46,14.64],[47,14.96],[48,15.28],[49,15.60],[50,15.92],[51,16.24],[52,16.56],[53,16.88],[54,17.20]]
+        .map(r => `<tr><td>${r[0]}</td><td>${r[1].toFixed(2).replace(".", ",")}</td><td>${r[0]},0</td></tr>`).join("");
+      zg.innerHTML = `
+        <button type="button" class="drawer-head" id="sizeDrawer">Sélectionnez votre taille
+          <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+        <div class="drawer-body" id="sizeDrawerBody">
+          <div class="drawer-cols">
+            <div>
+              <p class="drawer-title">Sélectionner votre taille</p>
+              <select id="sizeSel" class="size-select" aria-label="Choisir une taille">
+                <option value="">Choisir une taille…</option>
+                ${p.sizes.map(s => `<option value="${s}">Taille ${s}</option>`).join("")}
+              </select>
+            </div>
+            <div>
+              <p class="drawer-title">Guide des tailles</p>
+              <table class="size-mini">
+                <thead><tr><th>Taille</th><th>Diamètre</th><th>Circonférence</th></tr></thead>
+                <tbody>${miniRows}</tbody>
+              </table>
+              <a class="size-guide" href="guide-tailles.html">Guide complet</a>
+            </div>
+          </div>
+        </div>`;
+      const sd = document.getElementById("sizeDrawer");
+      sd.addEventListener("click", () => {
+        const open = sd.classList.toggle("open");
+        document.getElementById("sizeDrawerBody").style.maxHeight = open ? "600px" : "0";
+      });
       zg.querySelector("#sizeSel").addEventListener("change", e => {
         state.size = e.target.value || null;
         e.target.classList.toggle("filled", !!state.size);
       });
     } else zg.style.display = "none";
 
-    /* Gravure — panneau dédié, offert sur les modèles gravables */
+    /* Gravure — ligne dépliante façon Deloison, offerte sur les modèles gravables */
     const eg = document.getElementById("engraveGroup");
     if (p.id === "alliance-eternite-diamants") { eg.style.display = "none"; }
     else {
       eg.style.display = "block";
       eg.innerHTML = `
-        <div class="engrave-panel">
-          <div class="engrave-head">
-            <svg viewBox="0 0 24 24"><path d="M12 3l7 7-7 11L5 10l7-7z"/><line x1="5" y1="10" x2="19" y2="10"/></svg>
-            <div><b>Gravure offerte</b><span>Personnalisez votre bijou — 12 caractères max, offerte par la Maison · <a class="size-guide" href="gravure.html">voir les exemples</a></span></div>
+        <button type="button" class="drawer-head" id="engDrawer">Ajouter une gravure
+          <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+        <div class="drawer-body" id="engDrawerBody">
+          <div class="eng-modal">
+            <p class="eng-title">Ajouter une gravure</p>
+            <hr class="hairline">
+            <p class="eng-intro">Nous offrons la gravure sur l'ensemble de nos bagues.</p>
+            <p class="drawer-title">Sélectionnez votre style</p>
+            <div class="style-opts">
+              <label class="style-opt"><input type="radio" name="gstyle" value="Bâton" checked><span class="style-sample baton">Aa</span> Bâton</label>
+              <label class="style-opt"><input type="radio" name="gstyle" value="Italique"><span class="style-sample italique">Aa</span> Italique</label>
+            </div>
+            <p class="drawer-title">Rédigez votre gravure</p>
+            <input id="engraveInput" maxlength="12" placeholder="Texte de la gravure" aria-label="Texte de la gravure">
+            <div class="eng-foot">
+              <span class="engrave-count" id="engraveCount">0/12</span>
+              <button type="button" class="btn btn-primary" id="engraveValidate">Valider</button>
+            </div>
+            <p class="engrave-done" id="engraveDone" hidden></p>
+            <p class="eng-note">Pour toute demande de gravure différente de ce que nous proposons, n'hésitez pas à contacter l'un de nos conseillers par e-mail ou par téléphone au 01 84 60 20 24. Nous serons ravis de vous accompagner dans votre personnalisation.</p>
+            <p class="center" style="margin-top:14px"><a class="size-guide" href="gravure.html">Voir les exemples de gravure</a></p>
           </div>
-          <div class="engrave"><input id="engraveInput" maxlength="12" placeholder="Ex. S ♥ A · 14.07.2025" aria-label="Votre gravure"></div>
-          <div class="engrave-foot"><span class="engrave-preview" id="engravePreview"></span><span class="engrave-count" id="engraveCount">0/12</span></div>
         </div>`;
+      const ed = document.getElementById("engDrawer");
+      ed.addEventListener("click", () => {
+        const open = ed.classList.toggle("open");
+        document.getElementById("engDrawerBody").style.maxHeight = open ? "700px" : "0";
+      });
       const ei = document.getElementById("engraveInput");
       ei.addEventListener("input", e => {
-        state.engraving = e.target.value;
         document.getElementById("engraveCount").textContent = e.target.value.length + "/12";
-        document.getElementById("engravePreview").textContent = e.target.value ? `Aperçu : « ${e.target.value} »` : "";
+      });
+      document.getElementById("engraveValidate").addEventListener("click", () => {
+        const v = ei.value.trim();
+        if (!v) { showToast("Saisissez un texte de gravure (12 caractères max)"); return; }
+        const style = document.querySelector('input[name="gstyle"]:checked').value;
+        state.engraving = v;
+        state.engraveStyle = style;
+        const done = document.getElementById("engraveDone");
+        done.hidden = false;
+        done.textContent = `Gravure ajoutée : « ${v} » (${style}) — offerte`;
+        ed.classList.remove("open");
+        document.getElementById("engDrawerBody").style.maxHeight = "0";
+        ed.firstChild.textContent = "Gravure ajoutée ✓ ";
       });
     }
 
