@@ -147,6 +147,15 @@
                 </div>
                 <div>
                   <p class="size-how-lead"><b>Diamètre intérieur d'une bague</b> qui vous va :</p>
+                  <svg class="size-schema" viewBox="0 0 140 100" aria-label="Schéma : mesurer le diamètre intérieur d'une bague">
+                    <defs>
+                      <marker id="arrS" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1A1512"/></marker>
+                    </defs>
+                    <circle cx="70" cy="42" r="30" fill="none" stroke="#1A1512" stroke-width="2.5"/>
+                    <circle cx="70" cy="42" r="23" fill="none" stroke="#C9AE7E" stroke-width="1"/>
+                    <line x1="47" y1="42" x2="93" y2="42" stroke="#1A1512" stroke-width="1.3" marker-start="url(#arrS)" marker-end="url(#arrS)"/>
+                    <text x="70" y="88" text-anchor="middle" font-size="9" fill="#6B655C" letter-spacing="1">Ø intérieur (mm)</text>
+                  </svg>
                   <ol><li>Posez la bague à plat.</li><li>Mesurez le diamètre intérieur (bord à bord, par le centre).</li><li>Notez en mm = diamètre intérieur.</li><li>Reportez-vous au tableau.</li></ol>
                 </div>
               </div>
@@ -154,10 +163,14 @@
           </div>
         </div>`;
       const sd = document.getElementById("sizeDrawer");
+      const sizeBody = document.getElementById("sizeDrawerBody");
       sd.addEventListener("click", () => {
         const open = sd.classList.toggle("open");
-        document.getElementById("sizeDrawerBody").style.maxHeight = open ? "900px" : "0";
+        sizeBody.style.maxHeight = open ? sizeBody.scrollHeight + 80 + "px" : "0";
       });
+      zg.querySelectorAll("details").forEach(d => d.addEventListener("toggle", () => {
+        if (sd.classList.contains("open")) sizeBody.style.maxHeight = sizeBody.scrollHeight + 80 + "px";
+      }));
       zg.querySelectorAll(".size-btn").forEach(b => b.addEventListener("click", () => {
         state.size = b.dataset.size;
         zg.querySelectorAll(".size-btn").forEach(x => x.classList.toggle("active", x === b));

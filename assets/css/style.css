@@ -379,6 +379,7 @@ h3{font-size:1.35rem}
 .size-table-toggle summary{list-style:none;cursor:pointer;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 .size-table-toggle summary::-webkit-details-marker{display:none}
 .size-table-toggle .size-mini{margin-top:14px}
+.size-schema{display:block;width:130px;margin:12px auto 14px}
 @media (max-width:560px){ .size-grid{grid-template-columns:repeat(4,1fr)} }
 .size-how{margin-top:26px;border-top:1px solid var(--line);padding-top:20px}
 .size-how-cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}
