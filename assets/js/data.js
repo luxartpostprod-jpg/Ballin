@@ -3,19 +3,19 @@
    ============================================================ */
 
 const CATEGORIES = [
-  { id: "fiancailles", label: "Fiançailles", page: "fiancailles.html", banner: "assets/img/pages/cat-fiancailles.jpg",
+  { id: "fiancailles", label: "Fiançailles", page: "fiancailles.html", banner: "assets/img/pages/cat-fiancailles.jpg?v=2",
     baseline: "Le diamant d'une promesse" },
-  { id: "alliances", label: "Alliances", page: "alliances.html", banner: "assets/img/pages/cat-alliances.jpg",
+  { id: "alliances", label: "Alliances", page: "alliances.html", banner: "assets/img/pages/cat-alliances.jpg?v=2",
     baseline: "L'éternité à votre doigt" },
-  { id: "joaillerie", label: "Joaillerie", page: "joaillerie.html", banner: "assets/img/pages/cat-joaillerie.jpg",
+  { id: "joaillerie", label: "Joaillerie", page: "joaillerie.html", banner: "assets/img/pages/cat-joaillerie.jpg?v=2",
     baseline: "La haute joaillerie au quotidien" },
 ];
 
 const SUBCATEGORIES = [
-  { id: "bagues",    label: "Bagues",          page: "bagues.html",    banner: "assets/img/pages/cat-bagues.jpg" },
-  { id: "bracelets", label: "Bracelets",       page: "bracelets.html", banner: "assets/img/pages/cat-bracelets.jpg" },
-  { id: "colliers",  label: "Colliers",        page: "colliers.html",  banner: "assets/img/pages/cat-colliers.jpg" },
-  { id: "boucles",   label: "Boucles d'oreilles", page: "boucles-oreilles.html", banner: "assets/img/pages/cat-boucles.jpg" },
+  { id: "bagues",    label: "Bagues",          page: "bagues.html",    banner: "assets/img/pages/cat-bagues.jpg?v=2" },
+  { id: "bracelets", label: "Bracelets",       page: "bracelets.html", banner: "assets/img/pages/cat-bracelets.jpg?v=2" },
+  { id: "colliers",  label: "Colliers",        page: "colliers.html",  banner: "assets/img/pages/cat-colliers.jpg?v=2" },
+  { id: "boucles",   label: "Boucles d'oreilles", page: "boucles-oreilles.html", banner: "assets/img/pages/cat-boucles.jpg?v=2" },
 ];
 
 const METALS = {
