@@ -46,14 +46,16 @@
   </div>
 </section>
 
-<!-- ================= ICONIQUES ================= -->
-<section class="section section-soft">
-  <div class="container-wide">
-    <div class="section-head center reveal" style="margin-bottom:44px">
-      <p class="eyebrow" style="font-size:.72rem;letter-spacing:.34em">Les iconiques de la Maison</p>
+<!-- ================= ÉDITORIAL SUR-MESURE ================= -->
+<section class="edito">
+  <img class="bg" src="assets/img/pages/edito-home.jpg?v=2" alt="Création sur-mesure BALLIN" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'">
+  <div class="container">
+    <div class="content reveal">
+      <p class="eyebrow">Sur-mesure</p>
+      <h2>Votre bijou n'existe pas encore ? <em>Créons-le ensemble.</em></h2>
+      <p class="lead">Rendez-vous privé avec nos conseillers : choix de la pierre, du métal, gravure offerte.</p>
+      <a class="link-u light" href="contact.html">Prendre rendez-vous</a>
     </div>
-    <div class="grid-4 best-grid" id="bestGrid"></div>
-    <div class="center" style="margin-top:48px"><a class="link-u" href="joaillerie.html" style="text-transform:uppercase">Toute la joaillerie</a></div>
   </div>
 </section>
 
@@ -116,10 +118,6 @@
 <div id="toast-slot"></div>
 <script src="assets/js/data.js"></script>
 <script src="assets/js/main.js"></script>
-<script>
-  const best = ["solitaire-eclat-aube", "alliance-eternite", "collier-goutte-or", "boucles-creoles-lunaire"]
-    .map(id => PRODUCTS.find(p => p.id === id)).filter(Boolean);
-  renderProducts("bestGrid", best);
-</script>
+
 </body>
 </html>
