@@ -376,6 +376,8 @@ h3{font-size:1.35rem}
 @media (max-width:760px){ .size-how-cols{grid-template-columns:1fr;gap:20px} }
 .pdp-short{margin:20px 0 30px;color:var(--ink-soft)}
 .opt-group{margin-bottom:26px;padding-top:22px;border-top:1px solid var(--line)}
+.opt-group.drawer-group{margin-bottom:0;padding-top:0;border-top:none}
+.drawer-group .drawer-head{border-top:none;border-bottom:1px solid var(--line)}
 .pdp-short{padding-bottom:26px}
 .opt-label{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:13px;display:flex;justify-content:space-between}
 .opt-label b{color:var(--ink);font-weight:600}
