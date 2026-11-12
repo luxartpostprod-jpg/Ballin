@@ -18,13 +18,11 @@
   }
 
   function updatePriceUI() {
-    document.getElementById("pdpPrice").innerHTML = `${fmt(price())} <span class="tva">TTC, livraison offerte</span>`;
+    document.getElementById("pdpPrice").innerHTML = `<span class="pv-label">Prix de vente</span> ${fmt(price())} <span class="pv-inst">ou 3 x ${Math.round(price() / 3)} €</span>`;
     const btn = document.getElementById("addCart");
     if (btn) btn.textContent = `Ajouter au panier · ${fmt(price())}`;
     const barPrice = document.getElementById("pdpBarPrice");
     if (barPrice) barPrice.textContent = fmt(price());
-    const inst = document.getElementById("pdpInstallments");
-    if (inst) inst.textContent = "3 × " + (price() / 3).toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " € sans frais";
   }
 
   function render() {
@@ -68,22 +66,26 @@
     tabs.addEventListener("click", e => { const t = e.target.closest(".view-tab"); if (t) showView(t.dataset.view); });
     document.getElementById("thumbs").addEventListener("click", e => { const t = e.target.closest(".thumb"); if (t) showView(t.dataset.view); });
 
-    /* Options métal */
+    /* Métal — lignes avec prix individuel façon Deloison */
     const metals = Object.keys(METALS).filter(m => m === p.metal || ["or", "blanc", "rose", "platine"].includes(m));
-    document.getElementById("metalGroup").innerHTML = `
-      <div class="opt-label"><span>Métal — <b id="metalLabel">${METALS[state.metal].label}</b></span></div>
-      <div class="swatches">${metals.map(m => `
-        <button class="swatch ${m === state.metal ? "active" : ""}" data-metal="${m}" title="${METALS[m].label}" style="background:${METALS[m].swatch}"></button>`).join("")}
+    const mg = document.getElementById("metalGroup");
+    mg.innerHTML = `<div class="opt-label"><span>Métal</span></div>
+      <div class="metal-rows">
+        ${metals.map(m => `
+          <label class="metal-row${m === state.metal ? " active" : ""}">
+            <input type="radio" name="metal" value="${m}" ${m === state.metal ? "checked" : ""}>
+            <span class="dot" style="background:${METALS[m].swatch}"></span>
+            <span class="m-name">${METALS[m].label}</span>
+            <span class="m-price">${fmt(p.price + METALS[m].priceMod)}</span>
+          </label>`).join("")}
       </div>`;
-    document.getElementById("metalGroup").addEventListener("click", e => {
-      const b = e.target.closest("[data-metal]"); if (!b) return;
-      state.metal = b.dataset.metal;
-      document.querySelectorAll("[data-metal]").forEach(x => x.classList.toggle("active", x === b));
-      document.getElementById("metalLabel").textContent = METALS[state.metal].label;
+    mg.querySelectorAll('input[name="metal"]').forEach(r => r.addEventListener("change", () => {
+      state.metal = r.value;
+      mg.querySelectorAll(".metal-row").forEach(x => x.classList.toggle("active", x.querySelector("input").checked));
       updatePriceUI();
       const active = document.querySelector('.view-tab.active');
       if (active && active.dataset.view === "3d") showView("3d");
-    });
+    }));
 
     /* Pierres */
     const sg = document.getElementById("stoneGroup");
@@ -106,7 +108,7 @@
     const zg = document.getElementById("sizeGroup");
     if (p.sizes) {
       zg.style.display = "block";
-      const miniRows = [[45,14.33],[46,14.64],[47,14.96],[48,15.28],[49,15.60],[50,15.92],[51,16.24],[52,16.56],[53,16.88],[54,17.20]]
+      const miniRows = [[45,14.33],[46,14.64],[47,14.96],[48,15.28],[49,15.60],[50,15.92],[51,16.24],[52,16.56],[53,16.88],[54,17.20],[55,17.52],[56,17.70],[57,18.10],[58,18.47],[59,18.79],[60,19.11],[61,19.43],[62,19.75],[63,20.06],[64,20.38],[65,20.70],[66,21.02],[67,21.34],[68,21.66]]
         .map(r => `<tr><td>${r[0]}</td><td>${r[1].toFixed(2).replace(".", ",")}</td><td>${r[0]},0</td></tr>`).join("");
       zg.innerHTML = `
         <button type="button" class="drawer-head" id="sizeDrawer">Sélectionnez votre taille
@@ -127,7 +129,8 @@
                 <thead><tr><th>Taille</th><th>Diamètre</th><th>Circonférence</th></tr></thead>
                 <tbody>${miniRows}</tbody>
               </table>
-              <a class="size-guide" href="guide-tailles.html">Guide complet</a>
+              <p class="size-note">Si vous hésitez entre deux tailles, choisissez la plus grande.</p>
+              <a class="size-guide" href="guide-tailles.html">Trouvez la taille idéale — guide complet</a>
             </div>
           </div>
         </div>`;
@@ -199,7 +202,7 @@
     /* Accordéons */
     const acc = document.getElementById("accordions");
     acc.innerHTML = `
-      <div class="acc open"><button class="acc-head">Description<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="acc open"><button class="acc-head">Description et détails<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
         <div class="acc-body"><div class="inner"><p>${p.desc}</p></div></div></div>
       <div class="acc"><button class="acc-head">Détails &amp; matériaux<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
         <div class="acc-body"><div class="inner"><ul>${p.details.map(d => `<li>${d}</li>`).join("")}</ul></div></div></div>
@@ -243,7 +246,7 @@
     const est = document.getElementById("estDate");
     if (est) {
       const d = new Date(Date.now() + 2 * 864e5);
-      est.textContent = "livraison estimée " + d.toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" });
+      est.textContent = d.toLocaleDateString("fr-FR", { day: "2-digit", month: "2-digit", year: "2-digit" });
     }
 
     /* Produits liés */

@@ -353,7 +353,21 @@ h3{font-size:1.35rem}
 .stars{color:var(--gold);letter-spacing:3px;font-size:.85rem}
 .pdp-price{font-family:var(--serif);font-size:2rem;color:var(--ink);display:flex;align-items:baseline;gap:14px}
 .pdp-price .tva{font-family:var(--sans);font-size:.68rem;color:var(--muted)}
-.pdp-installments{font-size:.72rem;color:var(--muted);margin-top:7px;letter-spacing:.03em}
+.pdp-price .pv-label{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+.pdp-price .pv-inst{font-family:var(--sans);font-size:.8rem;color:var(--ink);font-weight:600;margin-left:10px}
+.metal-rows{display:flex;flex-direction:column}
+.metal-row{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--line);cursor:pointer;font-size:.9rem;transition:background .2s}
+.metal-row:first-child{border-top:1px solid var(--line)}
+.metal-row:hover{background:var(--soft)}
+.metal-row.active{background:var(--soft)}
+.metal-row input{accent-color:var(--ink)}
+.metal-row .dot{width:16px;height:16px;border-radius:50%;border:1px solid var(--line);flex:none}
+.metal-row .m-name{flex:1}
+.metal-row .m-price{font-size:.84rem;color:var(--ink-soft)}
+.est-line{margin-top:18px;font-size:.78rem;color:var(--ink-soft);text-align:center}
+.est-line b{color:var(--ink);font-weight:600}
+.card-note{margin-top:12px;font-size:.7rem;color:var(--muted);line-height:1.6;text-align:center}
+.size-note{font-size:.72rem;color:var(--muted);margin:12px 0 10px;line-height:1.6}
 .pdp-short{margin:20px 0 30px;color:var(--ink-soft)}
 .opt-group{margin-bottom:26px;padding-top:22px;border-top:1px solid var(--line)}
 .pdp-short{padding-bottom:26px}
