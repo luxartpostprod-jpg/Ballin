@@ -380,6 +380,11 @@ h3{font-size:1.35rem}
 .size-table-toggle summary::-webkit-details-marker{display:none}
 .size-table-toggle .size-mini{margin-top:14px}
 .size-schema{display:block;width:130px;margin:12px auto 14px}
+.size-guide-full{margin-top:16px}
+.size-guide-title{font-family:var(--serif);font-size:1.5rem;text-align:center} 
+.size-guide-full .size-how-lead{font-size:.86rem}
+.size-guide-full ol{margin-left:18px;font-size:.82rem;color:var(--ink-soft);line-height:1.85}
+.size-guide-full li{margin-bottom:5px}
 @media (max-width:560px){ .size-grid{grid-template-columns:repeat(4,1fr)} }
 .size-how{margin-top:26px;border-top:1px solid var(--line);padding-top:20px}
 .size-how-cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}

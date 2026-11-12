@@ -140,23 +140,38 @@
             </details>
             <details class="size-table-toggle">
               <summary>Trouvez ma taille : méthode de mesure</summary>
-              <div class="size-how-cols" style="margin-top:14px">
-                <div>
-                  <p class="size-how-lead"><b>Circonférence du doigt</b> (mètre ruban ou bande de papier) :</p>
-                  <ol><li>Enroulez la base du doigt, sans trop serrer.</li><li>Marquez le point de jonction.</li><li>Mesurez en mm = circonférence.</li><li>Reportez-vous au tableau.</li></ol>
-                </div>
-                <div>
-                  <p class="size-how-lead"><b>Diamètre intérieur d'une bague</b> qui vous va :</p>
-                  <svg class="size-schema" viewBox="0 0 140 100" aria-label="Schéma : mesurer le diamètre intérieur d'une bague">
-                    <defs>
-                      <marker id="arrS" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1A1512"/></marker>
-                    </defs>
-                    <circle cx="70" cy="42" r="30" fill="none" stroke="#1A1512" stroke-width="2.5"/>
-                    <circle cx="70" cy="42" r="23" fill="none" stroke="#C9AE7E" stroke-width="1"/>
-                    <line x1="47" y1="42" x2="93" y2="42" stroke="#1A1512" stroke-width="1.3" marker-start="url(#arrS)" marker-end="url(#arrS)"/>
-                    <text x="70" y="88" text-anchor="middle" font-size="9" fill="#6B655C" letter-spacing="1">Ø intérieur (mm)</text>
-                  </svg>
-                  <ol><li>Posez la bague à plat.</li><li>Mesurez le diamètre intérieur (bord à bord, par le centre).</li><li>Notez en mm = diamètre intérieur.</li><li>Reportez-vous au tableau.</li></ol>
+              <div class="size-guide-full">
+                <p class="size-guide-title">Trouvez la taille idéale</p>
+                <div class="size-how-cols" style="margin-top:18px">
+                  <div>
+                    <p class="size-how-lead"><b>Mesurez la circonférence de votre doigt</b> à l'aide d'un mètre ruban ou d'une bande de papier.</p>
+                    <ol>
+                      <li>Enroulez-le autour de la base du doigt (sans trop serrer).</li>
+                      <li>Marquez le point de jonction.</li>
+                      <li>Mesurez la longueur obtenue en millimètres (mm) : elle correspond à la circonférence.</li>
+                      <li>Reportez-vous au tableau pour connaître votre taille française.</li>
+                    </ol>
+                  </div>
+                  <div>
+                    <p class="size-how-lead"><b>Mesurez le diamètre intérieur de votre bague</b></p>
+                    <svg class="size-schema" viewBox="0 0 140 110" aria-label="Schéma : mesurer le diamètre intérieur d'une bague">
+                      <defs>
+                        <marker id="arrS2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1A1512"/></marker>
+                      </defs>
+                      <polygon points="70,4 78,14 62,14" fill="none" stroke="#C9AE7E" stroke-width="1.5"/>
+                      <circle cx="70" cy="48" r="30" fill="none" stroke="#1A1512" stroke-width="2.5"/>
+                      <circle cx="70" cy="48" r="23" fill="none" stroke="#C9AE7E" stroke-width="1"/>
+                      <line x1="47" y1="48" x2="93" y2="48" stroke="#1A1512" stroke-width="1.3" marker-start="url(#arrS2)" marker-end="url(#arrS2)"/>
+                      <text x="70" y="98" text-anchor="middle" font-size="9" fill="#6B655C" letter-spacing="1">Ø intérieur (mm)</text>
+                    </svg>
+                    <ol>
+                      <li>Choisissez une bague qui vous va parfaitement et que vous utilisez sur le même doigt que celui concerné.</li>
+                      <li>Posez la bague sur une surface plane (assurez-vous qu'elle soit bien à plat).</li>
+                      <li>Mesurez le diamètre intérieur (la distance d'un bord intérieur à l'autre, en passant par le centre de la bague) à l'aide d'une règle. Ne mesurez pas les bords extérieurs.</li>
+                      <li>Notez la mesure en millimètres (mm) : elle correspond au diamètre intérieur.</li>
+                      <li>Reportez-vous au tableau pour connaître votre taille française.</li>
+                    </ol>
+                  </div>
                 </div>
               </div>
             </details>
