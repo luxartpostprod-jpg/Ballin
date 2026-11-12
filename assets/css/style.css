@@ -486,6 +486,12 @@ h3{font-size:1.35rem}
 .acc-body li{margin-bottom:6px}
 .pdp-sticky{position:sticky;top:185px}
 
+/* ---------- Recommandations PDP ---------- */
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px 28px}
+.related-grid .product-card .thumb{aspect-ratio:4/3}
+.related-grid .product-card h3{font-size:1.3rem}
+@media (max-width:760px){ .related-grid{grid-template-columns:1fr;gap:32px} }
+
 /* ---------- Fiche produit : barre d'achat flottante + cœur ---------- */
 .pdp-bar{position:fixed;left:0;right:0;bottom:0;z-index:80;display:flex;align-items:center;gap:18px;padding:12px 30px;background:rgba(251,250,247,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .45s var(--ease)}
 .pdp-bar.show{transform:translateY(0)}
