@@ -138,13 +138,25 @@
                 <tbody>${miniRows}</tbody>
               </table>
             </details>
-            <p style="margin-top:14px"><a class="size-guide" href="guide-tailles.html">Trouvez ma taille : méthode de mesure — guide complet</a></p>
+            <details class="size-table-toggle">
+              <summary>Trouvez ma taille : méthode de mesure</summary>
+              <div class="size-how-cols" style="margin-top:14px">
+                <div>
+                  <p class="size-how-lead"><b>Circonférence du doigt</b> (mètre ruban ou bande de papier) :</p>
+                  <ol><li>Enroulez la base du doigt, sans trop serrer.</li><li>Marquez le point de jonction.</li><li>Mesurez en mm = circonférence.</li><li>Reportez-vous au tableau.</li></ol>
+                </div>
+                <div>
+                  <p class="size-how-lead"><b>Diamètre intérieur d'une bague</b> qui vous va :</p>
+                  <ol><li>Posez la bague à plat.</li><li>Mesurez le diamètre intérieur (bord à bord, par le centre).</li><li>Notez en mm = diamètre intérieur.</li><li>Reportez-vous au tableau.</li></ol>
+                </div>
+              </div>
+            </details>
           </div>
         </div>`;
       const sd = document.getElementById("sizeDrawer");
       sd.addEventListener("click", () => {
         const open = sd.classList.toggle("open");
-        document.getElementById("sizeDrawerBody").style.maxHeight = open ? "640px" : "0";
+        document.getElementById("sizeDrawerBody").style.maxHeight = open ? "900px" : "0";
       });
       zg.querySelectorAll(".size-btn").forEach(b => b.addEventListener("click", () => {
         state.size = b.dataset.size;

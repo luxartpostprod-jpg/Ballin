@@ -371,8 +371,8 @@ h3{font-size:1.35rem}
 .guide-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;border-bottom:1px solid var(--line);padding-bottom:16px}
 .guide-col-title{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;font-weight:600}
 .size-picker{padding:24px 2px 28px;border-bottom:1px solid var(--line)}
-.size-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;max-width:460px}
-.size-btn{aspect-ratio:1/1;display:grid;place-items:center;border:1px solid var(--line);background:#fff;font-size:.85rem;font-weight:500;color:var(--ink);cursor:pointer;transition:all .2s var(--ease)}
+.size-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;max-width:400px}
+.size-btn{aspect-ratio:1/1;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:#fff;font-size:.74rem;font-weight:400;color:var(--ink);cursor:pointer;transition:all .2s var(--ease)}
 .size-btn:hover{border-color:var(--ink);transform:translateY(-2px)}
 .size-btn.active{background:var(--ink);color:#fff;border-color:var(--ink)}
 .size-table-toggle{margin-top:16px}
