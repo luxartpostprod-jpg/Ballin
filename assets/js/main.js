@@ -8,7 +8,7 @@
   const headerHTML = `
   <header class="site-header">
     <div class="header-top">
-      <span><a href="showroom.html">Visiter notre showroom</a></span>
+      <span>Artisanat · Qualité · Élégance</span>
     </div>
     <div class="container">
       <div class="header-logo-row">
