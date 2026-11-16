@@ -67,8 +67,6 @@
                   <a href="nos-pierres.html#pierre-saphir" data-img="assets/img/pages/gem-saphir.jpg">Saphir</a>
                   <a href="nos-pierres.html#pierre-diamant" data-img="assets/img/pages/gem-diamant.jpg">Diamant</a>
                   <a href="nos-pierres.html#pierre-emeraude" data-img="assets/img/pages/gem-emeraude.jpg">Émeraude</a>
-                  <a href="nos-pierres.html#pierre-tourmaline" data-img="assets/img/pages/gem-tourmaline.jpg">Tourmaline</a>
-                  <a href="nos-pierres.html#pierre-aigue-marine" data-img="assets/img/pages/gem-aigue-marine.jpg">Aigue-marine</a>
                   <a href="nos-pierres.html" class="gem-all" data-img="assets/img/pages/gem-all.jpg">Toutes nos pierres</a>
                 </div>
                 <div class="drop-media"><img src="assets/img/pages/gem-all.jpg" alt="Nos pierres" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
