@@ -42,7 +42,20 @@
         </div>
         <nav class="main-nav" id="mainNav">
           <a href="fiancailles.html">Fiançailles</a>
-          <a href="alliances.html">Alliances</a>
+          <div class="nav-item has-drop">
+            <a class="drop-toggle" href="alliances.html">Alliances</a>
+            <div class="dropdown mega">
+              <div class="drop-inner">
+                <div class="drop-links">
+                  <a href="alliances.html#femmes" data-img="assets/img/pages/alliances-femmes.jpg">Alliances femmes</a>
+                  <a href="alliances.html#hommes" data-img="assets/img/pages/alliances-hommes.jpg">Alliances hommes</a>
+                  <a href="alliances.html#hommes" data-img="assets/img/pages/alliances-hommes.jpg">Toutes les alliances hommes</a>
+                  <a href="alliances.html#femmes" data-img="assets/img/pages/alliances-femmes.jpg">Toutes les alliances femmes</a>
+                </div>
+                <div class="drop-media"><img src="assets/img/pages/alliances-femmes.jpg" alt="Alliances" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
+              </div>
+            </div>
+          </div>
           <div class="nav-item has-drop">
             <a class="drop-toggle" href="joaillerie.html">Joaillerie</a>
             <div class="dropdown mega">
