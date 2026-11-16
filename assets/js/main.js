@@ -49,8 +49,8 @@
               <div class="drop-inner">
                 <div class="drop-links">
                   <a href="bagues.html" data-img="assets/img/pages/cat-bagues.jpg">Bagues</a>
-                  <a href="bracelets.html" data-img="assets/img/pages/cat-bracelets.jpg">Bracelets</a>
                   <a href="colliers.html" data-img="assets/img/pages/cat-colliers.jpg">Colliers</a>
+                  <a href="bracelets.html" data-img="assets/img/pages/cat-bracelets.jpg">Bracelets</a>
                   <a href="boucles-oreilles.html" data-img="assets/img/pages/cat-boucles.jpg">Boucles d'oreilles</a>
                   <a href="joaillerie.html" data-img="assets/img/pages/sel-joaillerie.jpg?v=13">Toute la joaillerie</a>
                 </div>
