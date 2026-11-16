@@ -65,7 +65,7 @@
                   <a href="colliers.html" data-img="assets/img/pages/cat-colliers.jpg">Colliers</a>
                   <a href="bracelets.html" data-img="assets/img/pages/cat-bracelets.jpg">Bracelets</a>
                   <a href="boucles-oreilles.html" data-img="assets/img/pages/cat-boucles.jpg">Boucles d'oreilles</a>
-                  <a href="joaillerie.html" data-img="assets/img/pages/sel-joaillerie.jpg?v=13">Toute la joaillerie</a>
+                  <a href="joaillerie.html" class="gem-all" data-img="assets/img/pages/sel-joaillerie.jpg?v=13">Toute la joaillerie</a>
                 </div>
                 <div class="drop-media"><img src="assets/img/pages/sel-joaillerie.jpg?v=13" alt="Joaillerie" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
               </div>
