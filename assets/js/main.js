@@ -91,8 +91,8 @@
             <div class="dropdown mega">
               <div class="drop-inner">
                 <div class="drop-links">
-                  <a href="la-maison.html">Notre histoire</a>
                   <a href="engagements.html">Nos engagements</a>
+                  <a href="la-maison.html">Notre histoire</a>
                   <a href="contact.html">Nous contacter</a>
                 </div>
                 <div class="drop-media"><img src="assets/img/pages/atelier-home.jpg?v=16" alt="BALLIN Paris" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
