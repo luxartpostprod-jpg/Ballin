@@ -63,9 +63,9 @@
             <div class="dropdown mega gems">
               <div class="drop-inner">
                 <div class="drop-links">
-                  <a href="nos-pierres.html#pierre-diamant" data-img="assets/img/pages/gem-diamant.jpg">Diamant</a>
-                  <a href="nos-pierres.html#pierre-saphir" data-img="assets/img/pages/gem-saphir.jpg">Saphir</a>
                   <a href="nos-pierres.html#pierre-rubis" data-img="assets/img/pages/gem-rubis.jpg">Rubis</a>
+                  <a href="nos-pierres.html#pierre-saphir" data-img="assets/img/pages/gem-saphir.jpg">Saphir</a>
+                  <a href="nos-pierres.html#pierre-diamant" data-img="assets/img/pages/gem-diamant.jpg">Diamant</a>
                   <a href="nos-pierres.html#pierre-emeraude" data-img="assets/img/pages/gem-emeraude.jpg">Émeraude</a>
                   <a href="nos-pierres.html#pierre-tourmaline" data-img="assets/img/pages/gem-tourmaline.jpg">Tourmaline</a>
                   <a href="nos-pierres.html#pierre-aigue-marine" data-img="assets/img/pages/gem-aigue-marine.jpg">Aigue-marine</a>
