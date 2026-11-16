@@ -53,7 +53,18 @@
               <a href="joaillerie.html">Toute la joaillerie</a>
             </div>
           </div>
-          <a href="nos-pierres.html">Nos pierres</a>
+          <div class="nav-item has-drop">
+            <a class="drop-toggle" href="nos-pierres.html">Nos pierres</a>
+            <div class="dropdown gems">
+              <a class="gem-item" href="nos-pierres.html#pierre-diamant"><img src="assets/img/pages/gem-diamant.jpg" alt="Diamant" onerror="this.style.display='none'"><span>Diamant</span></a>
+              <a class="gem-item" href="nos-pierres.html#pierre-saphir"><img src="assets/img/pages/gem-saphir.jpg" alt="Saphir" onerror="this.style.display='none'"><span>Saphir</span></a>
+              <a class="gem-item" href="nos-pierres.html#pierre-rubis"><img src="assets/img/pages/gem-rubis.jpg" alt="Rubis" onerror="this.style.display='none'"><span>Rubis</span></a>
+              <a class="gem-item" href="nos-pierres.html#pierre-emeraude"><img src="assets/img/pages/gem-emeraude.jpg" alt="Émeraude" onerror="this.style.display='none'"><span>Émeraude</span></a>
+              <a class="gem-item" href="nos-pierres.html#pierre-tourmaline"><img src="assets/img/pages/gem-tourmaline.jpg" alt="Tourmaline" onerror="this.style.display='none'"><span>Tourmaline</span></a>
+              <a class="gem-item" href="nos-pierres.html#pierre-aigue-marine"><img src="assets/img/pages/gem-aigue-marine.jpg" alt="Aigue-marine" onerror="this.style.display='none'"><span>Aigue-marine</span></a>
+              <a href="nos-pierres.html" class="gem-all">Toutes nos pierres</a>
+            </div>
+          </div>
           <a href="la-maison.html">La Maison</a>
           <a href="nos-guides.html">Nos guides</a>
         </nav>
