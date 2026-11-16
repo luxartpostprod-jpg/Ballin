@@ -61,9 +61,11 @@
               <div class="drop-inner">
                 <div class="drop-links">
                   <a href="alliances.html#femmes" data-img="assets/img/pages/alliances-femmes.jpg">Alliances femmes</a>
+                  <a class="drop-sub" href="alliances.html#femmes-diamant" data-img="assets/img/pages/alliances-femmes.jpg">Alliances diamant</a>
+                  <a class="drop-sub" href="alliances.html#femmes-classiques" data-img="assets/img/pages/alliances-femmes.jpg">Alliances classiques</a>
+                  <a href="alliances.html#femmes" class="gem-all" data-img="assets/img/pages/alliances-femmes.jpg">Toutes les alliances femme</a>
                   <a href="alliances.html#hommes" data-img="assets/img/pages/alliances-hommes.jpg">Alliances hommes</a>
                   <a href="alliances.html#hommes" data-img="assets/img/pages/alliances-hommes.jpg">Toutes les alliances hommes</a>
-                  <a href="alliances.html#femmes" data-img="assets/img/pages/alliances-femmes.jpg">Toutes les alliances femmes</a>
                 </div>
                 <div class="drop-media"><img src="assets/img/pages/alliances-femmes.jpg" alt="Alliances" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
               </div>
