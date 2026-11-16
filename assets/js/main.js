@@ -18,9 +18,9 @@
       </div>
       <div class="header-main">
         <div class="header-left">
-          <a class="phone-link" href="tel:+33184602024">
+          <a class="phone-link" href="tel:+33184602024" aria-label="Nous appeler">
             <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
-            +33 1 84 60 20 24
+            <span class="phone-tip">+33 1 84 60 20 24</span>
           </a>
           <a class="phone-link rdv-link" href="contact.html" title="Prendre rendez-vous" aria-label="Prendre rendez-vous">
             <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg>
@@ -196,6 +196,51 @@
   </div>`;
 
   const toastHTML = `<div class="toast" id="toast"></div>`;
+
+  // Assistant IA (pop-up bas droite, refermable)
+  const chatHTML = `
+  <div class="chat-widget" id="chatWidget">
+    <button class="chat-fab" id="chatFab" aria-label="Ouvrir l'assistant IA">
+      <svg viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1z"/></svg>
+    </button>
+    <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Assistant BALLIN">
+      <div class="chat-head">
+        <div><b>Assistant BALLIN</b><span class="chat-status">En ligne — réponse immédiate</span></div>
+        <button class="chat-close" id="chatClose" aria-label="Fermer">×</button>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <div class="msg bot">Bonjour 👋 Je suis l'assistant BALLIN. Une question sur une bague, une taille, une livraison ?</div>
+      </div>
+      <form class="chat-input" id="chatForm">
+        <input type="text" id="chatText" placeholder="Écrivez votre question…" autocomplete="off">
+        <button type="submit" aria-label="Envoyer">➤</button>
+      </form>
+    </div>
+  </div>`;
+
+  function mountChat() {
+    document.body.insertAdjacentHTML("beforeend", chatHTML);
+    const fab = document.getElementById("chatFab");
+    const panel = document.getElementById("chatPanel");
+    const close = document.getElementById("chatClose");
+    const form = document.getElementById("chatForm");
+    const body = document.getElementById("chatBody");
+    const input = document.getElementById("chatText");
+    if (!fab) return;
+    fab.addEventListener("click", () => panel.classList.toggle("open"));
+    close.addEventListener("click", () => panel.classList.remove("open"));
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const q = input.value.trim(); if (!q) return;
+      body.insertAdjacentHTML("beforeend", `<div class="msg user">${q.replace(/</g,"&lt;")}</div>`);
+      input.value = "";
+      setTimeout(() => {
+        body.insertAdjacentHTML("beforeend", `<div class="msg bot">Merci pour votre question ! Un conseiller BALLIN vous répond sous peu — ou appelez-nous au +33 1 84 60 20 24.</div>`);
+        body.scrollTop = body.scrollHeight;
+      }, 600);
+      body.scrollTop = body.scrollHeight;
+    });
+  }
 
   function mount() {
     const h = document.getElementById("header"); if (h) h.innerHTML = headerHTML;
@@ -387,6 +432,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     mount();
+    mountChat();
     initHeader();
     initCookies();
     bindWishes(document);

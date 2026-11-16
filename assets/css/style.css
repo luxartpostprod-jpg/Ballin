@@ -336,6 +336,30 @@ h3{font-size:1.35rem}
 .newsletter button:hover{color:var(--gold)}
 
 /* ---------- Footer ---------- */
+/* téléphone : numéro affiché au survol de l'icône */
+.phone-link{position:relative}
+.phone-tip{position:absolute;left:0;top:calc(100% + 8px);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-lg);padding:8px 14px;font-size:.78rem;letter-spacing:.08em;color:var(--ink);white-space:nowrap;opacity:0;visibility:hidden;transform:translateY(4px);transition:.25s var(--ease);z-index:70}
+.phone-link:hover .phone-tip,.phone-link:focus .phone-tip{opacity:1;visibility:visible;transform:translateY(0)}
+
+/* assistant IA : pop-up bas droite */
+.chat-widget{position:fixed;right:22px;bottom:22px;z-index:90}
+.chat-fab{width:56px;height:56px;border-radius:50%;border:none;background:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);transition:transform .25s var(--ease)}
+.chat-fab:hover{transform:scale(1.06)}
+.chat-fab svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:1.6}
+.chat-panel{position:absolute;right:0;bottom:70px;width:330px;max-width:calc(100vw - 44px);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-lg);display:flex;flex-direction:column;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(12px);transition:.3s var(--ease)}
+.chat-panel.open{opacity:1;visibility:visible;transform:translateY(0)}
+.chat-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--ink);color:#fff}
+.chat-head b{font-family:var(--serif);font-size:1rem;font-weight:500;display:block}
+.chat-status{font-size:.66rem;letter-spacing:.08em;color:rgba(255,255,255,.65)}
+.chat-close{background:none;border:none;color:#fff;font-size:1.4rem;line-height:1;cursor:pointer;padding:2px 6px}
+.chat-body{height:240px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:8px;background:var(--soft-2)}
+.msg{max-width:85%;padding:9px 12px;font-size:.82rem;line-height:1.45}
+.msg.bot{background:#fff;border:1px solid var(--line);align-self:flex-start}
+.msg.user{background:var(--ink);color:#fff;align-self:flex-end}
+.chat-input{display:flex;border-top:1px solid var(--line)}
+.chat-input input{flex:1;border:none;padding:12px 14px;font:inherit;font-size:.85rem;outline:none}
+.chat-input button{border:none;background:none;cursor:pointer;padding:0 14px;font-size:1rem;color:var(--gold)}
+
 .site-footer{background:#fff;color:var(--ink-soft);border-top:1px solid var(--line)}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:44px;padding:78px 0 56px}
 .site-footer .logo img{height:48px;filter:none}
