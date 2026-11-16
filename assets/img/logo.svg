@@ -13,10 +13,6 @@
     <path d="M254 18 L254 82" stroke-width="1.1" opacity=".75"/>
     <path d="M254 20 C279 20 279 48 254 50 C283 50 283 82 254 82" stroke-width="1.1" opacity=".75"/>
     <!-- facette de pierre au sommet -->
-    <polygon points="250.5,4 261,14 250.5,24 240,14" stroke-width="1.4"/>
-    <line x1="240" y1="14" x2="261" y2="14" stroke-width=".8" opacity=".7"/>
-    <line x1="250.5" y1="4" x2="246" y2="14" stroke-width=".7" opacity=".5"/>
-    <line x1="250.5" y1="4" x2="255" y2="14" stroke-width=".7" opacity=".5"/>
   </g>
   <text x="266" y="118" text-anchor="middle" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-size="56" font-weight="500" letter-spacing="15" fill="#1B1815">BALLIN</text>
   <line x1="186" y1="130" x2="346" y2="130" stroke="#A5814B" stroke-width=".9" opacity=".8"/>
