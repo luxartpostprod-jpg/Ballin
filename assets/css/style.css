@@ -87,13 +87,9 @@ h3{font-size:1.35rem}
 .drop-links a:hover,.drop-links a.active{background:var(--soft-2);color:var(--ink);padding-left:26px}
 .drop-media{position:relative;min-height:300px}
 .drop-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-/* variante pierres : grille 2 colonnes de vignettes */
-.dropdown.gems .drop-inner{grid-template-columns:1.25fr 400px}
-.gems-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;align-content:start;padding:18px 8px 18px 22px}
-.gem-item{display:flex;align-items:center;gap:12px;padding:10px 12px !important;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);transition:background .2s,color .2s}
-.gem-item img{width:38px;height:38px;object-fit:cover;border-radius:50%;border:1px solid var(--line);flex:none}
-.gem-item:hover{background:var(--soft-2);color:var(--ink);padding-left:16px !important}
-.gem-all{grid-column:1/-1;text-align:center;border-top:1px solid var(--line);margin-top:8px;padding-top:14px !important;color:var(--muted)}
+/* variante pierres : liste simple comme Joaillerie, photo à droite qui change */
+.dropdown.gems .drop-inner{grid-template-columns:1fr 400px}
+.gem-all{border-top:1px solid var(--line);margin-top:8px;color:var(--muted)}
 .header-actions{display:flex;align-items:center;gap:6px}
 .icon-btn{position:relative;width:40px;height:40px;display:grid;place-items:center;border-radius:50%;transition:background .25s}
 .icon-btn:hover{background:var(--soft)}

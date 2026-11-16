@@ -62,16 +62,16 @@
             <a class="drop-toggle" href="nos-pierres.html">Nos pierres</a>
             <div class="dropdown mega gems">
               <div class="drop-inner">
-                <div class="drop-links gems-grid">
-                  <a class="gem-item" href="nos-pierres.html#pierre-diamant" data-img="assets/img/pages/gem-diamant.jpg"><img src="assets/img/pages/gem-diamant.jpg" alt="Diamant" onerror="this.style.display='none'"><span>Diamant</span></a>
-                  <a class="gem-item" href="nos-pierres.html#pierre-saphir" data-img="assets/img/pages/gem-saphir.jpg"><img src="assets/img/pages/gem-saphir.jpg" alt="Saphir" onerror="this.style.display='none'"><span>Saphir</span></a>
-                  <a class="gem-item" href="nos-pierres.html#pierre-rubis" data-img="assets/img/pages/gem-rubis.jpg"><img src="assets/img/pages/gem-rubis.jpg" alt="Rubis" onerror="this.style.display='none'"><span>Rubis</span></a>
-                  <a class="gem-item" href="nos-pierres.html#pierre-emeraude" data-img="assets/img/pages/gem-emeraude.jpg"><img src="assets/img/pages/gem-emeraude.jpg" alt="Émeraude" onerror="this.style.display='none'"><span>Émeraude</span></a>
-                  <a class="gem-item" href="nos-pierres.html#pierre-tourmaline" data-img="assets/img/pages/gem-tourmaline.jpg"><img src="assets/img/pages/gem-tourmaline.jpg" alt="Tourmaline" onerror="this.style.display='none'"><span>Tourmaline</span></a>
-                  <a class="gem-item" href="nos-pierres.html#pierre-aigue-marine" data-img="assets/img/pages/gem-aigue-marine.jpg"><img src="assets/img/pages/gem-aigue-marine.jpg" alt="Aigue-marine" onerror="this.style.display='none'"><span>Aigue-marine</span></a>
-                  <a href="nos-pierres.html" class="gem-all" data-img="assets/img/pages/sel-pierres.jpg?v=13">Toutes nos pierres</a>
+                <div class="drop-links">
+                  <a href="nos-pierres.html#pierre-diamant" data-img="assets/img/pages/gem-diamant.jpg">Diamant</a>
+                  <a href="nos-pierres.html#pierre-saphir" data-img="assets/img/pages/gem-saphir.jpg">Saphir</a>
+                  <a href="nos-pierres.html#pierre-rubis" data-img="assets/img/pages/gem-rubis.jpg">Rubis</a>
+                  <a href="nos-pierres.html#pierre-emeraude" data-img="assets/img/pages/gem-emeraude.jpg">Émeraude</a>
+                  <a href="nos-pierres.html#pierre-tourmaline" data-img="assets/img/pages/gem-tourmaline.jpg">Tourmaline</a>
+                  <a href="nos-pierres.html#pierre-aigue-marine" data-img="assets/img/pages/gem-aigue-marine.jpg">Aigue-marine</a>
+                  <a href="nos-pierres.html" class="gem-all" data-img="assets/img/pages/gem-all.jpg">Toutes nos pierres</a>
                 </div>
-                <div class="drop-media"><img src="assets/img/pages/sel-pierres.jpg?v=13" alt="Nos pierres" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
+                <div class="drop-media"><img src="assets/img/pages/gem-all.jpg" alt="Nos pierres" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
               </div>
             </div>
           </div>
