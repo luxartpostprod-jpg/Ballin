@@ -1,22 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 210">
-  <defs>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#D9BE8C"/>
-      <stop offset=".5" stop-color="#A5814B"/>
-      <stop offset="1" stop-color="#7C5E33"/>
-    </linearGradient>
-  </defs>
-  <!-- wordmark -->
-  <text x="260" y="62" text-anchor="middle" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-size="58" font-weight="500" letter-spacing="16" fill="#1B1815">BALLIN</text>
-  <!-- monogramme du dessin : deux lettres entrelacées, traits fins dorés -->
-  <g fill="none" stroke="url(#gold)" stroke-linecap="round">
-    <!-- première boucle -->
-    <path d="M236 138 a24 24 0 1 1 24 24" stroke-width="2.4"/>
-    <path d="M212 138 L260 138" stroke-width="2.4"/>
-    <path d="M236 138 a24 24 0 0 1 -12 -20" stroke-width="2.4"/>
-    <!-- seconde boucle entrelacée (décalée) -->
-    <path d="M284 130 a24 24 0 1 0 -24 24" stroke-width="2.4" opacity=".92"/>
-    <path d="M308 130 L260 130" stroke-width="2.4" opacity=".92"/>
-    <path d="M284 130 a24 24 0 0 0 12 -20" stroke-width="2.4" opacity=".92"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160">
+<defs>
+ <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#C9A86A"/><stop offset=".5" stop-color="#A9834B"/><stop offset="1" stop-color="#8A6A3C"/>
+ </linearGradient>
+ <radialGradient id="dg" cx=".35" cy=".3" r=".9">
+  <stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#E9F0FA"/><stop offset="1" stop-color="#A9BEDC"/>
+ </radialGradient>
+</defs>
+
+<text x="140" y="82" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-size="64" letter-spacing="14" fill="#2E2A25">BALLIN</text>
+<text x="143" y="112" font-family="Jost, Montserrat, Arial, sans-serif" font-size="15" letter-spacing="9" fill="#A9834B">PARIS</text>
+<line x1="142" y1="126" x2="330" y2="126" stroke="#C9A86A" stroke-width="1"/>
+<text x="338" y="131" font-family="Jost, Montserrat, Arial, sans-serif" font-size="13" letter-spacing="4" fill="#7A7166">JOAILLERIE</text>
 </svg>
