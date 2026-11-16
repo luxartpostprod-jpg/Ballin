@@ -77,12 +77,21 @@ h3{font-size:1.35rem}
 .dropdown a{display:block;padding:11px 24px;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);transition:background .2s,color .2s,padding-left .25s var(--ease)}
 .dropdown a::after{display:none}
 .dropdown a:hover,.dropdown a.active{background:var(--soft-2);color:var(--ink);padding-left:30px}
-/* déroulant pierres avec vignettes */
-.dropdown.gems{min-width:300px;display:grid;grid-template-columns:1fr 1fr;padding:14px}
-.gem-item{display:flex;align-items:center;gap:12px;padding:9px 12px !important;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);transition:background .2s,color .2s}
-.gem-item img{width:36px;height:36px;object-fit:cover;border-radius:50%;border:1px solid var(--line);flex:none}
-.gem-item:hover{background:var(--soft-2);color:var(--ink)}
-.gem-all{grid-column:1/-1;text-align:center;border-top:1px solid var(--line);margin-top:6px;padding-top:12px !important;color:var(--muted)}
+/* mega-menu façon Gemmyo : grand panneau + visuel */
+.dropdown.mega{width:660px;min-width:0;left:auto;right:0;transform:translate(0,10px);display:grid;grid-template-columns:1fr 250px;padding:0;overflow:hidden}
+.nav-item:hover .dropdown.mega,.nav-item:focus-within .dropdown.mega{transform:translate(0,0)}
+.drop-links{padding:22px 8px 22px 26px}
+.drop-links a{display:block;padding:12px 18px;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);transition:background .2s,color .2s,padding-left .25s var(--ease)}
+.drop-links a:hover,.drop-links a.active{background:var(--soft-2);color:var(--ink);padding-left:26px}
+.drop-media{position:relative;min-height:100%}
+.drop-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* variante pierres : grille 2 colonnes de vignettes */
+.dropdown.gems{grid-template-columns:1.25fr 250px;width:720px}
+.gems-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;align-content:start;padding:18px 8px 18px 22px}
+.gem-item{display:flex;align-items:center;gap:12px;padding:10px 12px !important;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);transition:background .2s,color .2s}
+.gem-item img{width:38px;height:38px;object-fit:cover;border-radius:50%;border:1px solid var(--line);flex:none}
+.gem-item:hover{background:var(--soft-2);color:var(--ink);padding-left:16px !important}
+.gem-all{grid-column:1/-1;text-align:center;border-top:1px solid var(--line);margin-top:8px;padding-top:14px !important;color:var(--muted)}
 .header-actions{display:flex;align-items:center;gap:6px}
 .icon-btn{position:relative;width:40px;height:40px;display:grid;place-items:center;border-radius:50%;transition:background .25s}
 .icon-btn:hover{background:var(--soft)}
