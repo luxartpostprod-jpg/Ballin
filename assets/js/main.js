@@ -87,7 +87,7 @@
             </div>
           </div>
           <a href="la-maison.html">La Maison</a>
-          <a href="nos-guides.html">Nos guides</a>
+          <a href="showroom.html">Showroom</a>
         </nav>
         <div class="header-actions">
           <button class="icon-btn" id="searchBtn" aria-label="Rechercher">
