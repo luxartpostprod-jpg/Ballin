@@ -46,8 +46,9 @@ h3{font-size:1.35rem}
 .header-top a{transition:color .2s}
 .header-top a:hover{color:var(--ink)}
 .header-logo-row{display:flex;justify-content:center;padding:18px 0 4px}
-.header-main{display:flex;align-items:center;justify-content:center;gap:24px;padding:12px 0 16px;position:relative}
-.header-left{position:absolute;left:36px;top:50%;transform:translateY(-50%)}
+.header-main{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 0 16px;position:relative}
+/* nav décalée/centrée : le milieu (entre Joaillerie et Nos pierres) tombe sous le logo BALLIN, icônes inchangées */
+.main-nav{position:absolute;left:50%;transform:translateX(-50%)}
 .logo{display:flex;align-items:center}
 .logo img{height:50px;width:auto}
 .header-left{display:flex;align-items:center;gap:20px;min-width:230px}
