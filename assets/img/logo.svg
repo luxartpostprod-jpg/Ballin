@@ -6,15 +6,7 @@
       <stop offset="1" stop-color="#7C5E33"/>
     </linearGradient>
   </defs>
-  <!-- monogramme B entrelacé, traits fins façon calligraphie -->
-  <g fill="none" stroke="url(#gold)" stroke-linecap="round">
-    <path d="M247 22 L247 86" stroke-width="2.6"/>
-    <path d="M247 24 C276 24 276 54 247 54 C279 54 279 86 247 86" stroke-width="2.6"/>
-    <path d="M254 18 L254 82" stroke-width="1.1" opacity=".75"/>
-    <path d="M254 20 C279 20 279 48 254 50 C283 50 283 82 254 82" stroke-width="1.1" opacity=".75"/>
-    <!-- facette de pierre au sommet -->
-  </g>
   <text x="266" y="118" text-anchor="middle" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-size="56" font-weight="500" letter-spacing="15" fill="#1B1815">BALLIN</text>
   <line x1="186" y1="130" x2="346" y2="130" stroke="#A5814B" stroke-width=".9" opacity=".8"/>
-  <text x="266" y="146" text-anchor="middle" font-family="Jost, Montserrat, Arial, sans-serif" font-size="11.5" letter-spacing="9" fill="#8D877C">PARIS</text>
+  <text x="266" y="146" text-anchor="middle" font-family="Jost, Montserrat, Arial, sans-serif" font-size="15" letter-spacing="11" fill="#8D877C">PARIS</text>
 </svg>
