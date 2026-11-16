@@ -1,15 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160">
-<defs>
- <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0" stop-color="#C9A86A"/><stop offset=".5" stop-color="#A9834B"/><stop offset="1" stop-color="#8A6A3C"/>
- </linearGradient>
- <radialGradient id="dg" cx=".35" cy=".3" r=".9">
-  <stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#E9F0FA"/><stop offset="1" stop-color="#A9BEDC"/>
- </radialGradient>
-</defs>
-
-<text x="140" y="82" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-size="64" letter-spacing="14" fill="#2E2A25">BALLIN</text>
-<text x="143" y="112" font-family="Jost, Montserrat, Arial, sans-serif" font-size="15" letter-spacing="9" fill="#A9834B">PARIS</text>
-<line x1="142" y1="126" x2="330" y2="126" stroke="#C9A86A" stroke-width="1"/>
-<text x="338" y="131" font-family="Jost, Montserrat, Arial, sans-serif" font-size="13" letter-spacing="4" fill="#7A7166">JOAILLERIE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D9BE8C"/>
+      <stop offset=".5" stop-color="#A5814B"/>
+      <stop offset="1" stop-color="#7C5E33"/>
+    </linearGradient>
+  </defs>
+  <!-- monogramme B entrelacé, traits fins façon calligraphie -->
+  <g fill="none" stroke="url(#gold)" stroke-linecap="round">
+    <path d="M247 22 L247 86" stroke-width="2.6"/>
+    <path d="M247 24 C276 24 276 54 247 54 C279 54 279 86 247 86" stroke-width="2.6"/>
+    <path d="M254 18 L254 82" stroke-width="1.1" opacity=".75"/>
+    <path d="M254 20 C279 20 279 48 254 50 C283 50 283 82 254 82" stroke-width="1.1" opacity=".75"/>
+    <!-- facette de pierre au sommet -->
+    <polygon points="250.5,4 261,14 250.5,24 240,14" stroke-width="1.4"/>
+    <line x1="240" y1="14" x2="261" y2="14" stroke-width=".8" opacity=".7"/>
+    <line x1="250.5" y1="4" x2="246" y2="14" stroke-width=".7" opacity=".5"/>
+    <line x1="250.5" y1="4" x2="255" y2="14" stroke-width=".7" opacity=".5"/>
+  </g>
+  <text x="266" y="118" text-anchor="middle" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-size="56" font-weight="500" letter-spacing="15" fill="#1B1815">BALLIN</text>
+  <line x1="186" y1="130" x2="346" y2="130" stroke="#A5814B" stroke-width=".9" opacity=".8"/>
+  <text x="266" y="146" text-anchor="middle" font-family="Jost, Montserrat, Arial, sans-serif" font-size="11.5" letter-spacing="9" fill="#8D877C">PARIS</text>
 </svg>
