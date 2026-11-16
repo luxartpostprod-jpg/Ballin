@@ -41,7 +41,20 @@
           </div>
         </div>
         <nav class="main-nav" id="mainNav">
-          <a href="fiancailles.html">Fiançailles</a>
+          <div class="nav-item has-drop">
+            <a class="drop-toggle" href="fiancailles.html">Fiançailles</a>
+            <div class="dropdown mega">
+              <div class="drop-inner">
+                <div class="drop-links">
+                  <a href="fiancailles.html#solitaires" data-img="assets/img/pages/fin-solitaire.jpg">Solitaires</a>
+                  <a href="fiancailles.html#entoures" data-img="assets/img/pages/fin-halo.jpg">Solitaires entourés</a>
+                  <a href="fiancailles.html#epaules" data-img="assets/img/pages/fin-trilogie.jpg">Solitaires épaulés</a>
+                  <a href="fiancailles.html" class="gem-all" data-img="assets/img/pages/cat-fiancailles.jpg?v=2">Toutes nos bagues de fiançailles</a>
+                </div>
+                <div class="drop-media"><img src="assets/img/pages/fin-solitaire.jpg" alt="Fiançailles" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
+              </div>
+            </div>
+          </div>
           <div class="nav-item has-drop">
             <a class="drop-toggle" href="alliances.html">Alliances</a>
             <div class="dropdown mega">
