@@ -109,7 +109,8 @@
                 <div class="drop-links">
                   <a href="la-maison.html">Notre histoire</a>
                   <a href="engagements.html">Nos engagements</a>
-                  <a href="showroom.html">Prendre rendez-vous</a>
+                  <a href="livraison-retours.html">Livraisons et retour</a>
+                  <a href="showroom.html" class="gem-all">Prendre rendez-vous</a>
                 </div>
                 <div class="drop-media"><img src="assets/img/pages/atelier-home.jpg?v=16" alt="BALLIN Paris" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
               </div>
