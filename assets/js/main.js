@@ -62,11 +62,9 @@
               <div class="drop-inner">
                 <div class="drop-links">
                   <span class="drop-head">Alliances femme</span>
-                  <a class="drop-sub" href="alliances.html#femmes-diamant" data-img="assets/img/pages/alliances-femmes.jpg">Alliances diamant</a>
-                  <a class="drop-sub" href="alliances.html#femmes-classiques" data-img="assets/img/pages/alliances-femmes.jpg">Alliances classiques</a>
+                  <a class="drop-sub" href="alliances.html#femmes-classiques" data-img="assets/img/pages/alliances-femmes.jpg">Alliances femme classiques</a>
                   <span class="drop-head">Alliances homme</span>
-                  <a class="drop-sub" href="alliances.html#hommes-demi-jonc" data-img="assets/img/pages/alliances-hommes.jpg">Alliances demi-jonc</a>
-                  <a class="drop-sub" href="alliances.html#hommes-classiques" data-img="assets/img/pages/alliances-hommes.jpg">Alliances classiques</a>
+                  <a class="drop-sub" href="alliances.html#hommes-classiques" data-img="assets/img/pages/alliances-hommes.jpg">Alliances homme classiques</a>
                   <a href="alliances.html" class="gem-all" data-img="assets/img/pages/cat-alliances.jpg?v=2">Toutes nos alliances</a>
                 </div>
                 <div class="drop-media"><img src="assets/img/pages/alliances-femmes.jpg" alt="Alliances" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
