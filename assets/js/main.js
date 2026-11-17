@@ -173,6 +173,7 @@
           <ul>
             <li><a href="livraison-retours.html">Livraison &amp; retours</a></li>
             <li><a href="garanties.html">Garanties</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="sav.html#baguier">Baguier offert</a></li>
             <li><a href="cgv.html">CGV</a></li>
             <li><a href="politique-de-confidentialite.html">Confidentialité</a></li>

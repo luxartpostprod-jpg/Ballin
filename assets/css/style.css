@@ -709,3 +709,10 @@ h3{font-size:1.35rem}
   .perk:nth-child(n+3){border-bottom:none}
   .form-card{padding:30px 22px}
 }
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:8px}
+.faq-item{border-bottom:1px solid var(--line);padding:22px 4px}
+.faq-item h3{font-size:1.15rem;margin-bottom:8px}
+.faq-item p{color:var(--ink-soft);font-size:.95rem}
+.faq-item a{color:var(--gold-deep);text-decoration:underline}
