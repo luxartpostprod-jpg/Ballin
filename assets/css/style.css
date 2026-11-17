@@ -95,6 +95,7 @@ h3{font-size:1.35rem}
 .dropdown.gems .drop-inner{grid-template-columns:1fr 400px}
 .gem-all{border-top:1px solid var(--line);margin-top:8px;color:var(--muted)}
 .drop-sub{padding-left:34px !important;font-size:.62rem !important;color:var(--muted) !important}
+.drop-head{display:block;padding:12px 18px 4px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--ink)}
 .header-actions{display:flex;align-items:center;gap:6px}
 .icon-btn{position:relative;width:40px;height:40px;display:grid;place-items:center;border-radius:50%;transition:background .25s}
 .icon-btn:hover{background:var(--soft)}

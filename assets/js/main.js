@@ -61,12 +61,13 @@
             <div class="dropdown mega">
               <div class="drop-inner">
                 <div class="drop-links">
-                  <a href="alliances.html#femmes-diamant" data-img="assets/img/pages/alliances-femmes.jpg">Alliances femme diamant</a>
-                  <a href="alliances.html#femmes-classiques" data-img="assets/img/pages/alliances-femmes.jpg">Alliances femme classiques</a>
-                  <a href="alliances.html#femmes" data-img="assets/img/pages/alliances-femmes.jpg">Toutes les alliances femme</a>
-                  <a href="alliances.html#hommes-demi-jonc" class="gem-all" data-img="assets/img/pages/alliances-hommes.jpg">Alliances homme demi-jonc</a>
-                  <a href="alliances.html#hommes-classiques" data-img="assets/img/pages/alliances-hommes.jpg">Alliances homme classiques</a>
-                  <a href="alliances.html#hommes" data-img="assets/img/pages/alliances-hommes.jpg">Toutes les alliances homme</a>
+                  <span class="drop-head">Alliances femme</span>
+                  <a class="drop-sub" href="alliances.html#femmes-diamant" data-img="assets/img/pages/alliances-femmes.jpg">Alliances diamant</a>
+                  <a class="drop-sub" href="alliances.html#femmes-classiques" data-img="assets/img/pages/alliances-femmes.jpg">Alliances classiques</a>
+                  <span class="drop-head">Alliances homme</span>
+                  <a class="drop-sub" href="alliances.html#hommes-demi-jonc" data-img="assets/img/pages/alliances-hommes.jpg">Alliances demi-jonc</a>
+                  <a class="drop-sub" href="alliances.html#hommes-classiques" data-img="assets/img/pages/alliances-hommes.jpg">Alliances classiques</a>
+                  <a href="alliances.html" class="gem-all" data-img="assets/img/pages/cat-alliances.jpg?v=2">Toutes nos alliances</a>
                 </div>
                 <div class="drop-media"><img src="assets/img/pages/alliances-femmes.jpg" alt="Alliances" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
               </div>
