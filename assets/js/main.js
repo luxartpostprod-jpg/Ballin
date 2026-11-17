@@ -47,6 +47,7 @@
               <div class="drop-inner">
                 <div class="drop-links">
                   <a href="fiancailles.html#solitaires" data-img="assets/img/pages/fin-solitaire.jpg">Solitaires</a>
+                  <a href="fiancailles.html#paves" data-img="assets/img/pages/fin-halo.jpg">Solitaires pavés</a>
                   <a href="fiancailles.html#epaules" data-img="assets/img/pages/fin-trilogie.jpg">Solitaires épaulés</a>
                   <a href="fiancailles.html#entoures" data-img="assets/img/pages/fin-halo.jpg">Solitaires entourés</a>
                   <a href="fiancailles.html" class="gem-all" data-img="assets/img/pages/cat-fiancailles.jpg?v=2">Toutes nos bagues de fiançailles</a>
