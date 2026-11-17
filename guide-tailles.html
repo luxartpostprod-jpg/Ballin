@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide des tailles — baguier offert | BALLIN Paris</title>
+<meta name="description" content="Guide des tailles BALLIN : tableau de correspondance France / US / UK / diamètre, baguier offert pour trouver votre taille de bague ou d'alliance.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="header"></div>
+
+<section class="page-banner">
+  <div class="bg"><img src="assets/img/pages/sav.jpg" alt="Guide des tailles" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
+  <div class="container"><div class="content">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> / <span>Guide des tailles</span></p>
+    <p class="eyebrow">Bagues &amp; alliances</p>
+    <h1>Guide des <em>tailles</em></h1>
+    <p class="lead">Trouvez votre taille en 2 minutes — baguier offert avec chaque commande.</p>
+  </div></div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:980px">
+
+    <div class="guide-cols reveal">
+      <p class="guide-col-title">Sélectionner votre taille</p>
+      <p class="guide-col-title">Guide des tailles</p>
+    </div>
+
+    <div class="section-head center reveal" style="margin-top:44px">
+      <h2>Trouvez la <em>taille idéale</em></h2>
+    </div>
+
+    <div class="size-how-cols reveal" style="max-width:900px;margin:34px auto 0">
+      <div>
+        <p class="size-how-lead"><b>Mesurez la circonférence de votre doigt</b> à l'aide d'un mètre ruban ou d'une bande de papier.</p>
+        <ol>
+          <li>Enroulez-le autour de la base du doigt (sans trop serrer).</li>
+          <li>Marquez le point de jonction.</li>
+          <li>Mesurez la longueur obtenue en millimètres (mm) : elle correspond à la circonférence.</li>
+          <li>Reportez-vous au tableau pour connaître votre taille française.</li>
+        </ol>
+      </div>
+      <div>
+        <p class="size-how-lead"><b>Mesurez le diamètre intérieur de votre bague</b></p>
+        <ol>
+          <li>Choisissez une bague qui vous va parfaitement, sur le même doigt que celui concerné.</li>
+          <li>Posez la bague sur une surface plane (bien à plat).</li>
+          <li>Mesurez le diamètre intérieur (d'un bord intérieur à l'autre, en passant par le centre) à l'aide d'une règle. Ne mesurez pas les bords extérieurs.</li>
+          <li>Notez la mesure en mm : elle correspond au diamètre intérieur.</li>
+          <li>Reportez-vous au tableau pour connaître votre taille française.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="center reveal" style="margin:36px 0">
+      <img src="assets/img/pages/cat-alliances.jpg" alt="Mesure du diamètre intérieur d'une bague" style="max-width:420px;width:100%;border:1px solid var(--line)" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'">
+    </div>
+
+    <div class="table-wrap reveal" style="overflow-x:auto">
+      <table style="width:100%;max-width:640px;margin:0 auto;border-collapse:collapse;text-align:center;font-size:.9rem">
+        <thead><tr style="border-bottom:1px solid var(--ink)">
+          <th style="padding:14px 10px;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase">Taille</th>
+          <th style="padding:14px 10px;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase">Diamètre</th>
+          <th style="padding:14px 10px;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase">Circonférence</th>
+        </tr></thead>
+        <tbody id="sizeTable"></tbody>
+      </table>
+    </div>
+    <p class="center" style="color:var(--muted);font-size:.82rem;margin-top:20px">Si vous hésitez entre deux tailles, nous vous conseillons de choisir la plus grande.<br>
+    Pour toute question, notre équipe est à votre disposition : <a href="mailto:showroom@ballin-paris.fr" style="color:var(--gold-deep)">showroom@ballin-paris.fr</a>.</p>
+
+    <div class="center" style="margin-top:44px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-primary" href="contact.html">Demander mon baguier offert</a>
+      <a class="btn btn-outline" href="showroom.html">Essayer au showroom</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+<div id="cookie"></div>
+<div id="toast-slot"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  const rows = [
+    [45,14.33],[46,14.64],[47,14.96],[48,15.28],[49,15.60],[50,15.92],[51,16.24],[52,16.56],[53,16.88],[54,17.20],
+    [55,17.52],[56,17.70],[57,18.10],[58,18.47],[59,18.79],[60,19.11],[61,19.43],[62,19.75],[63,20.06],[64,20.38],
+    [65,20.70],[66,21.02],[67,21.34],[68,21.66]
+  ];
+
+  document.getElementById("sizeTable").innerHTML = rows.map(r =>
+    `<tr style="border-bottom:1px solid var(--line)"><td style="padding:12px 10px;font-family:var(--serif);font-size:1.05rem">${r[0]}</td><td style="padding:12px 10px">${r[1].toFixed(2).replace(".", ",")} mm</td><td style="padding:12px 10px">${r[0]},0 mm</td></tr>`
+  ).join("");
+</script>
+</body>
+</html>

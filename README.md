@@ -55,4 +55,6 @@ Aussi déployable tel quel sur GitHub Pages, Netlify, Vercel (dossier racine = c
 
 - Panier, favoris et consentement cookies fonctionnent en localStorage (démo côté client).
 - Les rendus 3D sont générés procéduralement en WebGL (aucun fichier externe).
-- Les visuels sont des illustrations SVG : prévoir de vraies photographies produits pour la production.
+- Les visuels produits/pages sont des **photographies générées par IA** (assets/img/**/*.jpg),
+  dans une direction artistique cohérente (ivoire, champagne, or) : à remplacer par les vraies
+  photos produits pour la production. Logo, favicon et placeholder restent en SVG.

@@ -8,23 +8,112 @@
   const headerHTML = `
   <header class="site-header">
     <div class="header-top">
-      <span>Service client 7j/7 · +33 1 84 60 20 24</span>
-      <span><a href="contact.html">Nous contacter</a> · <a href="contact.html">Prendre rendez-vous</a></span>
-      <span>Livraison offerte &amp; retour 30 jours</span>
+      <span>Artisanat · Qualité · Élégance</span>
     </div>
     <div class="container">
-      <div class="header-main">
+      <div class="header-logo-row">
         <a class="logo" href="index.html" aria-label="BALLIN Paris — Accueil">
           <img src="assets/img/logo.svg" alt="BALLIN Paris">
         </a>
+      </div>
+      <div class="header-main">
+        <div class="header-left">
+          <a class="phone-link" href="tel:+33184602024" aria-label="Nous appeler">
+            <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+            <span class="phone-tip">+33 1 84 60 20 24</span>
+          </a>
+          <a class="phone-link rdv-link" href="contact.html" title="Prendre rendez-vous" aria-label="Prendre rendez-vous">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg>
+          </a>
+          <div class="nav-item lang-item">
+            <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-label="Choisir la langue">
+              <span id="langLabel">FR</span>
+            </button>
+            <div class="dropdown lang-menu" id="langMenu">
+              <a href="#" data-lang="fr" class="active">Français</a>
+              <a href="#" data-lang="en">English</a>
+              <a href="#" data-lang="de">Deutsch</a>
+              <a href="#" data-lang="es">Español</a>
+              <a href="#" data-lang="it">Italiano</a>
+              <a href="#" data-lang="ru">Русский</a>
+              <a href="#" data-lang="zh">中文</a>
+            </div>
+          </div>
+        </div>
         <nav class="main-nav" id="mainNav">
-          <a href="joaillerie.html">Joaillerie</a>
-          <a href="fiancailles.html">Fiançailles</a>
-          <a href="alliances.html">Alliances</a>
-          <a href="bagues.html">Bagues</a>
-          <a href="colliers.html">Colliers</a>
-          <a href="boucles-oreilles.html">Boucles d'oreilles</a>
-          <a href="la-maison.html">La Maison</a>
+          <div class="nav-item has-drop">
+            <a class="drop-toggle" href="fiancailles.html">Fiançailles</a>
+            <div class="dropdown mega">
+              <div class="drop-inner">
+                <div class="drop-links">
+                  <a href="fiancailles.html#solitaires" data-img="assets/img/pages/fin-solitaire.jpg">Solitaires</a>
+                  <a href="fiancailles.html#paves" data-img="assets/img/pages/fin-halo.jpg">Solitaires pavés</a>
+                  <a href="fiancailles.html#epaules" data-img="assets/img/pages/fin-trilogie.jpg">Solitaires épaulés</a>
+                  <a href="fiancailles.html#entoures" data-img="assets/img/pages/fin-halo.jpg">Solitaires entourés</a>
+                  <a href="fiancailles.html" class="gem-all" data-img="assets/img/pages/cat-fiancailles.jpg?v=2">Toutes nos bagues de fiançailles</a>
+                </div>
+                <div class="drop-media"><img src="assets/img/pages/fin-solitaire.jpg" alt="Fiançailles" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item has-drop">
+            <a class="drop-toggle" href="alliances.html">Alliances</a>
+            <div class="dropdown mega">
+              <div class="drop-inner">
+                <div class="drop-links">
+                  <a href="alliances.html#femmes-classiques" data-img="assets/img/pages/alliances-femmes.jpg">Alliances femme classiques</a>
+                  <a href="alliances.html#hommes-classiques" data-img="assets/img/pages/alliances-hommes.jpg">Alliances homme classiques</a>
+                  <a href="alliances.html" class="gem-all" data-img="assets/img/pages/cat-alliances.jpg?v=2">Toutes nos alliances</a>
+                </div>
+                <div class="drop-media"><img src="assets/img/pages/alliances-femmes.jpg" alt="Alliances" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item has-drop">
+            <a class="drop-toggle" href="joaillerie.html">Joaillerie</a>
+            <div class="dropdown mega">
+              <div class="drop-inner">
+                <div class="drop-links">
+                  <a href="bagues.html" data-img="assets/img/pages/cat-bagues.jpg">Bagues</a>
+                  <a href="colliers.html" data-img="assets/img/pages/cat-colliers.jpg">Colliers</a>
+                  <a href="bracelets.html" data-img="assets/img/pages/cat-bracelets.jpg">Bracelets</a>
+                  <a href="boucles-oreilles.html" data-img="assets/img/pages/cat-boucles.jpg">Boucles d'oreilles</a>
+                  <a href="joaillerie.html" class="gem-all" data-img="assets/img/pages/sel-joaillerie.jpg?v=13">Toute la joaillerie</a>
+                </div>
+                <div class="drop-media"><img src="assets/img/pages/sel-joaillerie.jpg?v=13" alt="Joaillerie" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item has-drop">
+            <a class="drop-toggle" href="nos-pierres.html">Nos pierres</a>
+            <div class="dropdown mega gems">
+              <div class="drop-inner">
+                <div class="drop-links">
+                  <a href="nos-pierres.html#pierre-rubis" data-img="assets/img/pages/gem-rubis.jpg">Rubis</a>
+                  <a href="nos-pierres.html#pierre-saphir" data-img="assets/img/pages/gem-saphir.jpg">Saphir</a>
+                  <a href="nos-pierres.html#pierre-diamant" data-img="assets/img/pages/gem-diamant.jpg">Diamant</a>
+                  <a href="nos-pierres.html#pierre-emeraude" data-img="assets/img/pages/gem-emeraude.jpg">Émeraude</a>
+                  <a href="nos-pierres.html" class="gem-all" data-img="assets/img/pages/gem-all.jpg">Toutes nos pierres</a>
+                </div>
+                <div class="drop-media"><img src="assets/img/pages/gem-all.jpg" alt="Nos pierres" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item has-drop">
+            <a class="drop-toggle" href="la-maison.html">La Maison</a>
+            <div class="dropdown mega">
+              <div class="drop-inner">
+                <div class="drop-links">
+                  <a href="la-maison.html">Notre histoire</a>
+                  <a href="engagements.html">Nos engagements</a>
+                  <a href="livraison-retours.html">Livraisons et retour</a>
+                  <a href="showroom.html" class="gem-all">Prendre rendez-vous</a>
+                </div>
+                <div class="drop-media"><img src="assets/img/pages/atelier-home.jpg?v=16" alt="BALLIN Paris" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'"></div>
+              </div>
+            </div>
+          </div>
+          <a href="showroom.html">Showroom</a>
         </nav>
         <div class="header-actions">
           <button class="icon-btn" id="searchBtn" aria-label="Rechercher">
@@ -68,6 +157,7 @@
           <h4>La Maison</h4>
           <ul>
             <li><a href="la-maison.html">Notre histoire</a></li>
+            <li><a href="showroom.html">Showroom</a></li>
             <li><a href="atelier.html">L'atelier</a></li>
             <li><a href="engagements.html">Nos engagements</a></li>
             <li><a href="nos-pierres.html">Nos pierres &amp; diamants</a></li>
@@ -80,6 +170,7 @@
           <ul>
             <li><a href="livraison-retours.html">Livraison &amp; retours</a></li>
             <li><a href="garanties.html">Garanties</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="sav.html#baguier">Baguier offert</a></li>
             <li><a href="cgv.html">CGV</a></li>
             <li><a href="politique-de-confidentialite.html">Confidentialité</a></li>
@@ -106,19 +197,104 @@
 
   const toastHTML = `<div class="toast" id="toast"></div>`;
 
+  // Assistant IA (pop-up bas droite, refermable)
+  const chatHTML = `
+  <div class="chat-widget" id="chatWidget">
+    <button class="chat-fab" id="chatFab" aria-label="Ouvrir l'assistant IA">
+      <svg viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1z"/></svg>
+    </button>
+    <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Assistant BALLIN">
+      <div class="chat-head">
+        <div><b>Assistant BALLIN</b><span class="chat-status">En ligne — réponse immédiate</span></div>
+        <button class="chat-close" id="chatClose" aria-label="Fermer">×</button>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <div class="msg bot">Bonjour 👋 Je suis l'assistant BALLIN. Une question sur une bague, une taille, une livraison ?</div>
+      </div>
+      <form class="chat-input" id="chatForm">
+        <input type="text" id="chatText" placeholder="Écrivez votre question…" autocomplete="off">
+        <button type="submit" aria-label="Envoyer">➤</button>
+      </form>
+    </div>
+  </div>`;
+
+  function mountChat() {
+    document.body.insertAdjacentHTML("beforeend", chatHTML);
+    const fab = document.getElementById("chatFab");
+    const panel = document.getElementById("chatPanel");
+    const close = document.getElementById("chatClose");
+    const form = document.getElementById("chatForm");
+    const body = document.getElementById("chatBody");
+    const input = document.getElementById("chatText");
+    if (!fab) return;
+    fab.addEventListener("click", () => panel.classList.toggle("open"));
+    close.addEventListener("click", () => panel.classList.remove("open"));
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const q = input.value.trim(); if (!q) return;
+      body.insertAdjacentHTML("beforeend", `<div class="msg user">${q.replace(/</g,"&lt;")}</div>`);
+      input.value = "";
+      setTimeout(() => {
+        body.insertAdjacentHTML("beforeend", `<div class="msg bot">Merci pour votre question ! Un conseiller BALLIN vous répond sous peu — ou appelez-nous au +33 1 84 60 20 24.</div>`);
+        body.scrollTop = body.scrollHeight;
+      }, 600);
+      body.scrollTop = body.scrollHeight;
+    });
+  }
+
   function mount() {
     const h = document.getElementById("header"); if (h) h.innerHTML = headerHTML;
     const f = document.getElementById("footer"); if (f) f.innerHTML = footerHTML;
     const c = document.getElementById("cookie"); if (c) c.innerHTML = cookieHTML;
     const t = document.getElementById("toast-slot"); if (t) t.innerHTML = toastHTML;
 
+    // mega-menu : la photo de droite change au survol de chaque lien
+    document.querySelectorAll(".dropdown.mega .drop-links a[data-img]").forEach(a => {
+      a.addEventListener("mouseenter", () => {
+        const dd = a.closest(".dropdown");
+        const img = dd && dd.querySelector(".drop-media img");
+        if (img && a.dataset.img) img.src = a.dataset.img;
+      });
+    });
+
     const nav = document.getElementById("mainNav");
     const burger = document.getElementById("burger");
-    if (burger && nav) burger.addEventListener("click", () => nav.classList.toggle("open"));
+    if (burger && nav) burger.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      burger.classList.toggle("open");
+    });
+    const header = document.querySelector(".site-header");
+    const onScroll = () => header && header.classList.toggle("scrolled", window.scrollY > 8);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
     const here = location.pathname.split("/").pop() || "index.html";
     document.querySelectorAll(".main-nav a").forEach(a => {
       if (a.getAttribute("href") === here) a.classList.add("active");
     });
+    if (["joaillerie.html", "bagues.html", "bracelets.html", "colliers.html", "boucles-oreilles.html"].includes(here)) {
+      const t = document.querySelector(".main-nav .drop-toggle");
+      if (t) t.classList.add("active");
+    }
+
+    /* Sélecteur de langue */
+    const langMenu = document.getElementById("langMenu");
+    if (langMenu) {
+      const CODES = { fr: "FR", en: "EN", de: "DE", es: "ES", it: "IT", ru: "RU", zh: "ZH" };
+      const applyLang = code => {
+        langMenu.querySelectorAll("a[data-lang]").forEach(a => a.classList.toggle("active", a.dataset.lang === code));
+        document.getElementById("langLabel").textContent = CODES[code] || "FR";
+      };
+      langMenu.addEventListener("click", e => {
+        const a = e.target.closest("a[data-lang]");
+        if (!a) return;
+        e.preventDefault();
+        const code = a.dataset.lang;
+        store.set("lang", code);
+        applyLang(code);
+        showToast(code === "fr" ? "Langue : Français" : "Langue : " + a.textContent.trim() + " — traduction bientôt disponible");
+      });
+      applyLang(store.get("lang", "fr"));
+    }
   }
 
   /* ---------- Toast ---------- */
@@ -142,7 +318,12 @@
   function refreshCart() {
     const cart = store.get("cart", []);
     const el = document.getElementById("cartCount");
-    if (el) el.textContent = cart.reduce((n, i) => n + i.qty, 0);
+    if (el) {
+      el.textContent = cart.reduce((n, i) => n + i.qty, 0);
+      el.classList.remove("bump");
+      void el.offsetWidth;
+      el.classList.add("bump");
+    }
   }
   window.addToCart = function (productId, opts) {
     const cart = store.get("cart", []);
@@ -167,15 +348,18 @@
 
   window.productCard = function (p) {
     const wished = store.get("wishlist", []).includes(p.id);
+    const goldBadge = ["Icône", "Bestseller", "Haute joaillerie"].includes(p.badge);
     return `
     <article class="product-card reveal">
-      <a class="thumb" href="produit.html?id=${p.id}" aria-label="${p.name}">
-        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'">
-        ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
-      </a>
-      <button class="wish ${wished ? "active" : ""}" data-wish="${p.id}" aria-label="Ajouter aux favoris">
-        <svg viewBox="0 0 24 24"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.6 3.5 7 5.5 5 8 5c1.6 0 3.1.8 4 2.1C12.9 5.8 14.4 5 16 5c2.5 0 4.5 2 4.5 4.6 0 3.7-3.5 6.9-8.5 10.9z"/></svg>
-      </button>
+      <div class="thumb">
+        <a href="produit.html?id=${p.id}" aria-label="${p.name}">
+          <img src="${p.img}" alt="${p.name}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/img/placeholder.svg'">
+        </a>
+        ${p.badge ? `<span class="badge ${goldBadge ? "gold" : ""}">${p.badge}</span>` : ""}
+        <button class="wish ${wished ? "active" : ""}" data-wish="${p.id}" aria-label="Ajouter aux favoris" title="Ajouter aux favoris">
+          <svg viewBox="0 0 24 24"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.6 3.5 7 5.5 5 8 5c1.6 0 3.1.8 4 2.1C12.9 5.8 14.4 5 16 5c2.5 0 4.5 2 4.5 4.6 0 3.7-3.5 6.9-8.5 10.9z"/></svg>
+        </button>
+      </div>
       <div class="info">
         <span class="cat-tag">${labelOf(p.cat)}${p.sub ? " · " + labelOf(p.sub) : ""}</span>
         <h3><a href="produit.html?id=${p.id}">${p.name}</a></h3>
@@ -248,6 +432,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     mount();
+    mountChat();
     initHeader();
     initCookies();
     bindWishes(document);
